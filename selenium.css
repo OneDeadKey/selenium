@@ -1,0 +1,197 @@
+/*****************************************************************************
+ * Keyboard Geometry
+******************************************************************************/
+
+/* XXX magic numbers */
+#left  .matrix { transform-origin: -8px 56px; }
+#right .matrix { transform-origin: 67px 56px; }
+.leftThumb  .thumb { transform-origin: -14px -62px; }
+.rightThumb .thumb { transform-origin:  74px -62px; }
+
+/* XXX Quacken Zero 25.07 */
+.zero #left    { transform: translate(-9px, 3px); }
+.zero #right   { transform: translate(914px, 3px); }
+.zero #outline { transform: translate(-194px, -242px) scale(3.34); }
+
+/* XXX Quacken Flex 25.12 */
+.flex #left    { transform: translate(-12px, 45px); }
+.flex #right   { transform: translate(908px, 45px); }
+.flex #outline { transform: translate(478px, 191px) scale(3.338, -3.338); }
+
+/* QuackMatrix */
+.qmx #right { transform: translate(1000px, 0px); }
+/* .qmx #outline { display: none; } */
+
+/* Generic ortholinear view */
+.ortho #right { transform: translate(870px, 0px); }
+.ortho .col6 { display: none; }
+
+.board {
+  fill:   rgba(130, 156, 175, 0.40);
+  stroke: rgba(130, 156, 175, 0.10);
+  stroke-width: 1px;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  display: none;
+}
+.keycaps {
+  stroke: navy;
+  stroke-width: 0.5px;
+  stroke-dasharray: 1 2;
+  /* display: none; */
+  display: none !important;
+}
+.zero .zero, .flex .flex, .qmx .qmx, .ortho .ortho {
+  display: block;
+}
+
+
+/*****************************************************************************
+ * Labels: text, symbols
+******************************************************************************/
+
+text {
+  font: normal 16px sans-serif;
+  text-align: center;
+  text-anchor: middle;
+}
+.specialKey text {
+  font-size: 14px;
+}
+text.pc {
+  font-size: 12px;
+}
+text.shortcut {
+  font-size: 10px;
+}
+
+/*
+text.level0, use.level0,
+text.level1, use.level1,
+text.level2, use.level2 { opacity: 0.3; }
+text.colorNav,
+text.colorNum,
+text.colorFun,
+text.colorSym,
+text.colorMod,
+.thumbCluster use.level0,
+.thumbCluster use.level1,
+.thumbCluster use.level2 { opacity: 1; }
+*/
+
+/* symbols */
+use.level0,
+use.level2,
+use.layerNav,
+use.layerVim {
+  stroke-width: 2.5px;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  fill: none;
+}
+
+.matrix .layerNav { display: none; }
+.matrix .layerVim { display: none; }
+.matrix .layerFun { display: none; }
+.matrix .layerSym { display: none; }
+.matrix .layerNum { display: none; }
+.matrix .mac      { display: none; }
+
+[layer3="nav"] .layerNav { display: block; }
+[layer3="vim"] .layerVim { display: block; }
+[layer3="fun"] .layerFun { display: block; }
+[layer4="sym"] .layerSym { display: block; }
+[layer4="num"] .layerNum { display: block; }
+.lt .dualKey, .lt .colorMod,
+.ez .dualKey, .ez .colorMod { display: none; }
+
+#select {
+  transform: translate(70px, 280px);
+}
+#select text {
+  font-size: 10px;
+  text-align: left;
+  text-anchor: start;
+}
+
+
+/*****************************************************************************
+ * Color Theme
+******************************************************************************/
+
+:root {
+  color-scheme: light dark;
+}
+
+rect {
+  fill: #fff;
+  stroke: #666;
+  stroke-width: .5px;
+  /* opacity: 0.7; */
+}
+.col6 rect {
+  fill: #ddd;
+}
+text {
+  fill: #444;
+}
+use.level0,
+use.level2 { stroke: #444; } /* same as key text */
+
+/* Modifier keys */
+rect.colorMod  { fill: #eee; }
+rect.colorSpc  { fill: #ddd; }
+
+/* Symbol layer */
+text.layerSym  { fill: #4646ff; }
+text.colorSym  { fill: #4f4fac; }
+rect.colorSym  { fill: #ceceff; }
+
+/* Numeric layer (NumRow) */
+text.layerNum  { fill: #009900; }
+text.colorNum  { fill: #437a43; }
+rect.colorNum  { fill: #a2e7a2; }
+
+/* Function/Media layer */
+text.layerFun  { fill: #930404; }
+text.colorFun  { fill: #930404; }
+rect.colorFun  { fill: #faabe2; }
+
+/* Navigation layers (NavNum, VimNav) */
+use.layerVim,
+use.layerNav { stroke: rgb(198, 106, 29); }
+text.layerVim,
+text.layerNav  { fill: rgb(198, 106, 29); }
+text.colorNav  { fill: #aa422b; }
+rect.colorNav  { fill: #ffd2ac; }
+
+@media (prefers-color-scheme: dark) {
+  use.level0,
+  use.level2   { stroke: #aaa; }
+  text           { fill: #aaa; }
+  rect           { fill: #333; }
+  .col6 rect     { fill: #444; }
+
+  use.layerVim,
+  use.layerNav { stroke: #e94; }
+  text.layerVim,
+  text.layerNav  { fill: #e94; }
+  text.colorNav  { fill: #832; }
+  rect.colorNav  { fill: #a75; }
+
+  text.layerFun  { fill: #e77; }
+  text.colorFun  { fill: #522; }
+  rect.colorFun  { fill: #955; }
+
+  text.layerSym  { fill: #99f; }
+  text.colorSym  { fill: #11a; }
+  rect.colorSym  { fill: #66b; }
+
+  text.layerNum  { fill: #5b5; }
+  text.colorNum  { fill: #141; }
+  rect.colorNum  { fill: #484; }
+
+  text.colorMod  { fill: #bbb; }
+  rect.colorMod  { fill: #666; }
+  rect.colorSpc  { fill: #444; }
+}

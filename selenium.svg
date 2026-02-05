@@ -1,0 +1,732 @@
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 0 0" class="ortho">
+  <link xmlns="http://www.w3.org/1999/xhtml" rel="stylesheet" href="selenium.css" type="text/css"/>
+
+  <g id="outline">
+    <path class="zero board"
+      d="M202.5044,90.8471
+         C140.9044,53.5471 94.8044,67.1471 83.6412,71.2564
+         C83.6412,71.2564 80.3085,72.5178 79.8817 75.2507
+         L71.7680 124.9104
+         A1.8 1.8 0.0 0 0 73.2281,126.9956
+         C107.7473,132.4522 121.1562,136.9421 136.5319 142.7535
+         A1.8 1.8 0.0 0 1 137.6077 145.0605
+         L135.5413 150.7749
+         A1.8 1.8 0.0 0 0 136.6171,153.0819
+         C160.0803,161.4340 167.3012,166.5870 182.2492 184.4651
+         A1.8 1.8 0.0 0 0 184.7851 184.6870
+         L200.9015 171.1650
+         A2.2627 2.2627 0.0 0 1 204.1088 171.1650
+         L220.2237 184.6870
+         A1.8 1.8 0.0 0 0 222.7596,184.4651
+         C237.7076,166.5870 244.9285,161.4340 268.3916 153.0820
+         A1.8 1.8 0.0 0 0 269.4675 150.7749
+         L267.4053 145.0590
+         A1.8 1.8 0.0 0 1 268.4769,142.7535
+         C283.8526,136.9421 297.2615,132.4522 331.7807 126.9956
+         A1.8 1.8 0.0 0 0 333.2408 124.9104
+         L325.1271,75.2507
+         C324.7003,72.5178 321.3676,71.2564 321.3676,71.2564
+         C310.2044,67.1471 264.1044,53.5471 202.5044,90.8471"/>
+    <path class="zero keycaps"
+      d="m292.56 110.43 17.73-3.12M295.51 127.17l-2.95-16.74M310.29 107.3l2.95 16.75M313.24 124.05l-17.73 3.12M76.48 107.53l2.95-16.74M79.43 90.79l17.73 3.12M94.2 110.65l-17.72-3.12M97.16 93.91l-2.96 16.74M91.84 124.05l2.95-16.74M94.8 107.3l17.72 3.13M109.57 127.17l-17.73-3.12M112.52 110.43l-2.95 16.74M116.03 100.79l4.68-16.35M120.71 84.44l17.3 4.97M133.33 105.75l-17.3-4.96M138.01 89.4l-4.68 16.35M172.68 105.48l5.82-15.98M178.5 89.5l16.91 6.16M189.6 111.63l-16.92-6.15M195.41 95.66l-5.81 15.97M245.22 140.7l16.91-6.16M251.03 156.67l-5.81-15.97M262.13 134.54l5.81 15.98M267.94 150.52l-16.91 6.15M304.97 77.17l17.73-3.13M307.92 93.91l-2.95-16.74M322.7 74.04l2.95 16.75M325.65 90.79l-17.73 3.12M231.26 102.36l16.92-6.16M237.08 118.34l-5.82-15.98M248.18 96.2l5.81 15.98M253.99 112.18l-16.91 6.16M252.54 108.19l16.91-6.16M258.35 124.16l-5.81-15.97M269.45 102.03l5.82 15.97M275.27 118l-16.92 6.16M120.71 84.44l4.69-16.34M125.4 68.1l17.3 4.96M138.01 89.4l-17.3-4.96M142.7 73.06l-4.69 16.35M237.08 118.34l16.91-6.16M242.89 134.31l-5.81-15.97M253.99 112.18l5.81 15.97M259.8 128.15l-16.91 6.16M79.43 90.79l2.95-16.75M82.38 74.04l17.73 3.13M97.16 93.91 79.43 90.8M100.1 77.17l-2.94 16.74M166.87 121.45l5.81-15.97M172.68 105.48l16.92 6.15M183.78 127.6l-16.91-6.15M189.6 111.63l-5.82 15.98M137.14 150.52l5.81-15.98M142.95 134.54l16.91 6.16M154.05 156.67l-16.91-6.15M159.86 140.7l-5.81 15.97M289.6 93.69l17.73-3.13M292.56 110.43 289.6 93.7M307.33 90.56l2.96 16.75M310.29 107.3l-17.73 3.13M271.75 105.75l17.3-4.96M276.44 122.09l-4.69-16.34M289.05 100.79l4.69 16.34M293.74 117.13l-17.3 4.96M215.48 111.63l16.91-6.15M221.3 127.6l-5.82-15.97M232.4 105.48l5.8 15.97M238.2 121.45l-16.9 6.16M240.9 76.24l16.92-6.16M246.72 92.21l-5.81-15.97M257.82 70.08l5.82 15.97M263.64 86.05l-16.92 6.16M224.84 153.69l14.75-10.33M234.6 167.61l-9.76-13.92M239.59 143.36l9.75 13.93M249.34 157.29l-14.75 10.32M141.44 86.05l5.82-15.97M147.26 70.08l16.91 6.16M158.36 92.21l-16.92-6.16M164.17 76.24l-5.81 15.97M73.53 124.27l2.95-16.74M76.48 107.53l17.72 3.12M91.25 127.4l-17.72-3.13M94.2 110.65l-2.95 16.75M171.96 168.65l13.02-10.93M183.53 182.44l-11.57-13.8M184.98 157.72l11.57 13.79M196.55 171.5l-13.02 10.94M155.74 157.29l9.75-13.93M165.5 143.36l14.74 10.33M170.49 167.61l-14.75-10.32M180.24 153.69l-9.75 13.92M156.9 96.2l5.82-15.97M162.72 80.23l16.91 6.16M173.82 102.36 156.9 96.2M179.63 86.39l-5.81 15.97M94.8 107.3l2.95-16.74M97.75 90.56l17.72 3.13M112.52 110.43l-17.73-3.12M115.47 93.69l-2.95 16.74M246.72 92.21l16.92-6.16M252.54 108.19l-5.82-15.98M263.64 86.05l5.81 15.98M269.45 102.03l-16.91 6.16M129.81 118l5.82-15.97M135.63 102.03l16.91 6.16M146.73 124.16 129.8 118M152.54 108.19l-5.81 15.97M307.92 93.91l17.73-3.12M310.88 110.65l-2.96-16.74M325.65 90.79l2.95 16.74M328.6 107.53l-17.72 3.12M225.45 86.39l16.91-6.16M231.26 102.36l-5.81-15.97M242.36 80.23l5.82 15.97M248.18 96.2l-16.92 6.16M145.28 128.15l5.81-15.97M151.09 112.18l16.91 6.16M162.19 134.31l-16.91-6.16M168 118.34l-5.81 15.97M161.06 137.43l5.81-15.98M166.87 121.45l16.91 6.16M177.97 143.58l-16.91-6.15M183.78 127.6l-5.8 15.98M286.65 76.95l17.73-3.13M289.6 93.69l-2.95-16.74M304.38 73.82l2.95 16.74M307.33 90.56l-17.72 3.13M208.53 171.5l11.57-13.78M220.1 157.72l13.02 10.93M221.55 182.44l-13.02-10.93M233.12 168.65l-11.57 13.79M221.3 127.6l16.9-6.15M227.1 143.58l-5.8-15.97M238.2 121.45l5.82 15.98M244.02 137.43l-16.91 6.15M111.34 117.13l4.69-16.34M116.03 100.79l17.3 4.96M128.64 122.09l-17.3-4.96M133.33 105.75l-4.69 16.34M209.67 95.66l16.91-6.16M215.48 111.63l-5.81-15.97M226.58 89.5l5.81 15.98M232.4 105.48l-16.92 6.15M262.38 73.06l17.3-4.96M267.06 89.4l-4.68-16.34M279.68 68.1l4.69 16.34M284.37 84.44l-17.3 4.97M267.06 89.4l17.3-4.96M271.75 105.75l-4.69-16.34M284.37 84.44l4.68 16.35M289.05 100.79l-17.3 4.96M310.88 110.65l17.72-3.12M313.83 127.4l-2.95-16.75M328.6 107.53l2.95 16.74M331.55 124.27l-17.72 3.13M135.63 102.03l5.81-15.98M141.44 86.05l16.92 6.16M152.54 108.19l-16.91-6.16M158.36 92.21l-5.82 15.98M151.09 112.18l5.81-15.98M156.9 96.2l16.92 6.16M168 118.34l-16.91-6.16M173.82 102.36 168 118.34M97.75 90.56l2.95-16.74M100.7 73.82l17.73 3.13M115.47 93.69l-17.72-3.13M118.43 76.95l-2.96 16.74"/>
+
+    <g class="flex board">
+      <path id="flex-half" d="m0 42 q-51 28-131 10 v-68 q86 0 112 -35 l19 15z"/>
+      <use href="#flex-half" transform="scale(-1 1)"/>
+    </g>
+    <g class="flex keycaps">
+      <path d="m19.033-46.774 9.411 10.093-10.092 9.411L8.94-37.362l10.093-9.412Z"/>
+      <path d="m-28.426-36.681 9.412-10.093 10.092 9.412-9.411 10.092-10.093-9.411Z"/>
+      <path d="m32.023-33.783 11.829 7.107-7.108 11.829-11.829-7.108 7.108-11.828Z"/>
+      <path d="m-43.833-26.676 11.829-7.107 7.107 11.828-11.829 7.108-7.107-11.829Z"/>
+      <path d="m48.09-24.877 13.33 3.572-3.572 13.33-13.33-3.572 3.572-13.33Z"/>
+      <path d="m49.417 39.718 13.33 3.571-3.572 13.33-13.33-3.572 3.572-13.33Z"/>
+      <path d="m-46.442 34.525 13.33-3.571 3.572 13.33-13.33 3.571-3.572-13.33Z"/>
+      <path d="m16.602 23.093 13.33 3.572-3.572 13.33-13.33-3.572 3.572-13.33Z"/>
+      <path d="m-29.913 26.665 13.33-3.572 3.571 13.33-13.33 3.571-3.571-13.33Z"/>
+      <path d="m-34.313 10.244 13.33-3.572 3.571 13.33-13.33 3.572-3.571-13.33Z"/>
+      <path d="m-55.242 1.684 13.33-3.572 3.572 13.33-13.33 3.572-3.572-13.33Z"/>
+      <path d="m-67.128 26.869 13.33-3.572 3.571 13.33-13.33 3.571-3.571-13.33Z"/>
+      <path d="m-71.528 10.448 13.33-3.572 3.571 13.33-13.33 3.572-3.571-13.33Z"/>
+      <path d="m-61.401-21.305 13.33-3.572 3.571 13.33-13.33 3.572-3.571-13.33Z"/>
+      <path d="m33.13 30.954 13.33 3.571-3.572 13.33-13.33-3.571 3.572-13.33Z"/>
+      <path d="m-62.728 43.29 13.33-3.572 3.571 13.33-13.33 3.571-3.571-13.33Z"/>
+      <path d="m21.002 6.672 13.33 3.572-3.572 13.33-13.33-3.572 3.572-13.33Z"/>
+      <path d="m25.401-9.749 13.33 3.572-3.571 13.33L21.83 3.58 25.4-9.749Z"/>
+      <path d="m37.53 14.533 13.33 3.572-3.572 13.33-13.33-3.572 3.572-13.33Z"/>
+      <path d="m41.93-1.888 13.33 3.572-3.572 13.33-13.33-3.572 3.572-13.33Z"/>
+      <path d="m53.817 23.297 13.33 3.572-3.572 13.33-13.33-3.572 3.572-13.33Z"/>
+      <path d="m58.217 6.876 13.33 3.572-3.572 13.33-13.33-3.572 3.572-13.33Z"/>
+      <path d="m-38.713-6.177 13.33-3.572 3.572 13.33-13.33 3.572-3.572-13.33Z"/>
+      <path d="m-50.842 18.105 13.33-3.572 3.572 13.33-13.33 3.571-3.572-13.33Z"/>
+      <path d="m71.425 39.06 13.63 2.158-2.159 13.63-13.63-2.159 2.159-13.63Z"/>
+      <path d="m-87.696 24.427 13.63-2.158 2.159 13.63-13.63 2.159-2.16-13.63Z"/>
+      <path d="m-90.356 7.637 13.63-2.159 2.16 13.63-13.63 2.159-2.16-13.63Z"/>
+      <path d="m74.084 22.269 13.63 2.158-2.158 13.63-13.63-2.158 2.158-13.63Z"/>
+      <path d="m-85.037 41.218 13.63-2.159 2.16 13.63-13.631 2.16-2.159-13.63Z"/>
+      <path d="m76.744 5.478 13.63 2.159-2.159 13.63-13.63-2.159 2.159-13.63Z"/>
+      <path d="M112.798 11.47h13.8v13.8h-13.8v-13.8Z"/>
+      <path d="M112.798-5.53h13.8v13.8h-13.8v-13.8Z"/>
+      <path d="M-126.58 11.47h13.8v13.8h-13.8v-13.8Z"/>
+      <path d="M-126.58-5.53h13.8v13.8h-13.8v-13.8Z"/>
+      <path d="M112.798 28.47h13.8v13.8h-13.8v-13.8Z"/>
+      <path d="M-126.58 28.47h13.8v13.8h-13.8v-13.8Z"/>
+      <path d="M94.798 31.785h13.8v13.8h-13.8v-13.8Z"/>
+      <path d="M94.798 14.785h13.8v13.8h-13.8v-13.8Z"/>
+      <path d="M94.798-2.215h13.8v13.8h-13.8v-13.8Z"/>
+      <path d="M-108.58 31.785h13.8v13.8h-13.8v-13.8Z"/>
+      <path d="M-108.58 14.785h13.8v13.8h-13.8v-13.8Z"/>
+      <path d="M-108.58-2.215h13.8v13.8h-13.8v-13.8Z"/>
+      <path d="m.01 2.038 3.535 3.535L.009 9.11l-3.535-3.536L.009 2.038Z"/>
+    </g>
+
+    <path class="ortho board" d="M100-10 h730 v260 h-730z M465-10 v260"/>
+  </g>
+
+  <defs>
+    <path class="symbol" transform="scale(0.4) translate(-24, -30)" id="glyph_backspace" d="M22,19l10,10 M22,29l10-10 M6,24l10,13h26v-26h-26z"/>
+    <path class="symbol" transform="scale(0.4) translate(-24, -30)" id="glyph_delete"    d="M16,19l10,10 M16,29l10-10 M42,24l-10,13h-26v-26h26z"/>
+    <path class="symbol" transform="scale(0.4) translate(-24, -30)" id="glyph_return"    d="M42,13V27H6 m8-8l-8,8l8,8"/>
+    <path class="symbol" transform="scale(0.4) translate(-24, -30)" id="glyph_space"     d="M42,24V32H6V24"/>
+    <path class="symbol" transform="scale(0.4) translate(-24, -30)" id="glyph_escape"    d="M24,24l-18-18 m0,10v-10h10 M24,6A18,18,0,1,1,6,24"/>
+    <path class="symbol" transform="scale(0.4) translate(-24, -30)" id="glyph_up"        d="M24,42v-36 m-8,6l8-8l8,8"/>
+    <path class="symbol" transform="scale(0.4) translate(-24, -30)" id="glyph_down"      d="M24,6v36 m-8,-6l8,8l8-8"/>
+    <path class="symbol" transform="scale(0.4) translate(-24, -30)" id="glyph_pgup"      d="M16,32h16 M16,24h16 M24,42v-36 m-8,6l8-8l8,8"/>
+    <path class="symbol" transform="scale(0.4) translate(-24, -30)" id="glyph_pgdown"    d="M16,16h16 M16,24h16 M24,6v36 m-8,-6l8,8l8-8"/>
+    <path class="symbol" transform="scale(0.4) translate(-24, -30)" id="glyph_left"      d="M42,24h-36 m6-8l-8,8l8,8"/>
+    <path class="symbol" transform="scale(0.4) translate(-24, -30)" id="glyph_right"     d="M6,24h36 m-6-8l8,8l-8,8"/>
+    <path class="symbol" transform="scale(0.4) translate(-24, -30)" id="glyph_tab"       d="M6,24h27 m-6-8l8,8l-8,8 M42,12V36"/>
+    <path class="symbol" transform="scale(0.4) translate(-24, -30)" id="glyph_btab"      d="M42,24h-27 m6-8l-8,8l8,8 M6,12V36"/>
+    <path class="symbol" transform="scale(0.4) translate(-24, -30)" id="glyph_home"      d="M42,42l-28-28 m0,10v-10h10 m8-8h-26v26"/>
+    <path class="symbol" transform="scale(0.4) translate(-24, -30)" id="glyph_end"       d="M6,6l28,28 m0-10v10h-10 m-8,8h26v-26"/>
+    <!-- <path class="symbol" transform="scale(0.4) translate(-24, -30)" id="glyph_prevpg"    d="M33,24h-27 m6-8l-8,8l8,8 M24,6V42H42V6z"/> -->
+    <!-- <path class="symbol" transform="scale(0.4) translate(-24, -30)" id="glyph_nextpg"    d="M15,24h27 m-6-8l8,8l-8,8 M24,6V42H6V6z"/> -->
+    <path class="symbol" transform="scale(0.4) translate(-24, -30)" id="glyph_prev"      d="M24,6A18,18,0,1,1,24,42A18,18,0,1,1,24,6 M26,16l-8,8l8,8"/>
+    <path class="symbol" transform="scale(0.4) translate(-24, -30)" id="glyph_next"      d="M24,6A18,18,0,1,1,24,42A18,18,0,1,1,24,6 M22,16l8,8l-8,8"/>
+    <path class="symbol" transform="scale(0.4) translate(-24, -30)" id="glyph_shift"     d="M23,7l14,20h-7v16h-14v-16h-7l14,-20"/>
+    <path class="symbol" transform="scale(0.4) translate(-24, -30)" id="glyph_caps"      d="M24,7l14,20h-7v6h-14v-6h-7l14,-20 M31,38v5h-14v-5z"/>
+
+    <!-- easy mode (no dual keys) -->
+    <g class="leftThumb" id="leftThumb-ez">
+      <g class="tucked thumb">
+        <g class="specialKey">
+          <rect class="colorMod"/>
+          <text class="colorMod level0">alt</text>
+        </g>
+        <g class="comfy thumb">
+          <g class="specialKey">
+            <rect class="colorMod"/>
+            <text class="colorMod level0">ctrl</text>
+          </g>
+          <g class="reachy thumb">
+            <g class="specialKey showFun">
+              <rect class="colorMod"/>
+              <text class="colorMod level0">os</text>
+              <text class="layerNav pc">fun</text>
+            </g>
+          </g>
+        </g>
+      </g>
+    </g>
+    <g class="rightThumb" id="rightThumb-ez">
+      <g class="tucked thumb">
+        <g class="specialKey showSym">
+          <rect class="colorSym"/>
+          <text class="level0 colorSym">sym</text>
+          <text class="layerNav shortcut">altgr</text>
+        </g>
+        <g class="comfy thumb">
+          <g class="specialKey">
+            <rect/>
+            <use  class="level0" href="#glyph_space"/>
+          </g>
+          <g class="reachy thumb">
+            <g class="specialKey showNav">
+              <rect class="colorNav"/>
+              <text class="colorNav level0">nav</text>
+            </g>
+          </g>
+        </g>
+      </g>
+    </g>
+
+    <!-- layer-taps -->
+    <g class="leftThumb" id="leftThumb-lt">
+      <g class="tucked thumb">
+        <g class="specialKey">
+          <rect class="colorMod"/>
+          <text class="level0 colorMod">shift</text>
+          <use  class="layerNav" href="#glyph_caps"/>
+        </g>
+        <g class="comfy thumb">
+          <g class="key">
+            <rect/>
+            <rect class="dualKey colorMod"/>
+            <text class="level1  colorMod pc">ctrl</text>
+            <use  class="level2"   href="#glyph_backspace"/>
+            <use  class="layerNav" href="#glyph_delete"/>
+          </g>
+          <g class="reachy thumb">
+            <g class="key showFun">
+              <rect/>
+              <rect class="dualKey colorMod"/>
+              <text class="level1  colorMod pc">os</text>
+              <use  class="level2"   href="#glyph_tab"/>
+              <use  class="layerNav" href="#glyph_btab"/>
+            </g>
+          </g>
+        </g>
+      </g>
+    </g>
+    <g class="rightThumb" id="rightThumb-lt">
+      <g class="tucked thumb">
+        <g class="specialKey showSym">
+          <rect class="colorSym"/>
+          <text class="level0 colorSym">sym</text>
+          <text class="layerNav shortcut">altgr</text>
+        </g>
+        <g class="comfy thumb">
+          <g class="key">
+            <rect/>
+            <rect class="dualKey colorNav"/>
+            <text class="level1  colorNav pc">nav</text>
+            <use  class="level2" href="#glyph_space"/>
+            <text class="layerNav pc">fun</text>
+          </g>
+          <g class="reachy thumb">
+            <g class="key showFun">
+              <rect/>
+              <rect class="dualKey colorMod"/>
+              <text class="level1  colorMod pc">alt</text>
+              <use  class="level2"   href="#glyph_return"/>
+              <use  class="layerNav" href="#glyph_escape"/>
+            </g>
+          </g>
+        </g>
+      </g>
+    </g>
+
+    <!-- homerow-mods -->
+    <g class="leftThumb" id="leftThumb-hrm">
+      <g class="tucked thumb">
+        <g class="specialKey">
+          <rect class="colorMod"/>
+          <text class="level0 colorMod">shift</text>
+          <use  class="layerNav" href="#glyph_caps"/>
+        </g>
+        <g class="comfy thumb">
+          <g class="key showNav">
+            <rect/>
+            <rect class="dualKey colorNav"/>
+            <text class="level1  colorNav pc">nav</text>
+            <use  class="level2"   href="#glyph_backspace"/>
+            <use  class="layerNav" href="#glyph_delete"/>
+          </g>
+          <g class="reachy thumb">
+            <g class="key showFun">
+              <rect/>
+              <rect class="dualKey colorFun"/>
+              <text class="level1  colorFun pc">fun</text>
+              <use  class="level2"   href="#glyph_tab"/>
+              <use  class="layerNav" href="#glyph_btab"/>
+            </g>
+          </g>
+        </g>
+      </g>
+    </g>
+    <g class="rightThumb" id="rightThumb-hrm">
+      <g class="tucked thumb">
+        <g class="specialKey showSym">
+          <rect class="colorSym"/>
+          <text class="level0 colorSym">sym</text>
+          <text class="layerNav shortcut">altgr</text>
+        </g>
+        <g class="comfy thumb">
+          <g class="key toggleNavFun">
+            <rect/>
+            <rect class="dualKey colorNav"/>
+            <text class="level1  colorNav pc">nav</text>
+            <use  class="level2" href="#glyph_space"/>
+            <text class="layerNav pc">fun</text>
+          </g>
+          <g class="reachy thumb">
+            <g class="key showFun">
+              <rect/>
+              <rect class="dualKey colorFun"/>
+              <text class="level1  colorFun pc">fun</text>
+              <use  class="level2"   href="#glyph_return"/>
+              <use  class="layerNav" href="#glyph_escape"/>
+            </g>
+          </g>
+        </g>
+      </g>
+    </g>
+
+    <!-- Vim-fu -->
+    <g class="leftThumb" id="leftThumb-vim">
+      <g class="tucked thumb">
+        <g class="specialKey">
+          <rect class="colorMod"/>
+          <text class="level0 colorMod">shift</text>
+          <use  class="layerVim" href="#glyph_caps"/>
+        </g>
+        <g class="comfy thumb">
+          <g class="key showNav">
+            <rect/>
+            <rect class="dualKey colorNav"/>
+            <text class="level1  colorNav pc">nav</text>
+            <use  class="level2"   href="#glyph_backspace"/>
+            <use  class="layerVim" href="#glyph_delete"/>
+          </g>
+          <g class="reachy thumb">
+            <g class="specialKey showNum">
+              <rect/>
+              <rect class="dualKey colorNum"/>
+              <text class="level1  colorNum">num</text>
+              <use  class="level2" href="#glyph_escape"/>
+            </g>
+          </g>
+        </g>
+      </g>
+    </g>
+    <g class="rightThumb" id="rightThumb-vim">
+      <g class="tucked thumb">
+        <g class="specialKey showSym">
+          <rect class="colorSym"/>
+          <text class="level0 colorSym">sym</text>
+          <text class="layerVim pc">altgr</text>
+        </g>
+        <g class="comfy thumb">
+          <g class="key toggleNavFun">
+            <rect/>
+            <rect class="dualKey colorNav"/>
+            <text class="level1  colorNav pc">nav</text>
+            <use  class="level2" href="#glyph_space"/>
+            <text class="layerVim pc">fun</text>
+          </g>
+          <g class="reachy thumb">
+            <g class="specialKey showNum">
+              <rect/>
+              <rect class="dualKey colorNum"/>
+              <text class="level1  colorNum">num</text>
+              <use  class="level2" href="#glyph_return"/>
+            </g>
+          </g>
+        </g>
+      </g>
+    </g>
+  </defs>
+
+  <g id="left">
+    <g class="outer matrix">
+      <g class="col6m">
+        <g class="key top"/>
+        <g class="key home"/>
+      </g>
+      <g class="col6">
+        <g class="specialKey top">
+          <rect/>
+          <use class="level0" href="#glyph_tab"/>
+        </g>
+        <g class="specialKey home">
+          <rect/>
+          <use class="level0" href="#glyph_caps"/>
+        </g>
+        <g class="specialKey bottom">
+          <rect/>
+          <use class="level0" href="#glyph_shift"/>
+        </g>
+      </g>
+
+      <g class="pinky matrix">
+        <g class="col5m">
+          <g class="key top"/>
+          <g class="key home"/>
+        </g>
+        <g class="col5">
+          <g class="key top">
+            <rect/>
+            <text class="level2">Q</text>
+            <text class="layerSym">^</text>
+            <text class="layerNum">€</text>
+            <text class="layerNav"></text>
+            <text class="layerVim"></text>
+            <text class="layerFun pc">F1</text>
+          </g>
+          <g class="key home">
+            <rect/>
+            <text class="level2">A</text>
+            <text class="layerSym">{</text>
+            <text class="layerNum">1</text>
+            <text class="layerNav shortcut">all</text>
+            <text class="layerVim shortcut">all</text>
+            <text class="layerFun pc">F5</text>
+          </g>
+          <g class="key bottom">
+            <rect/>
+            <text class="level2">Z</text>
+            <text class="layerSym">~</text>
+            <text class="layerNum"></text>
+            <text class="layerNav shortcut">undo</text>
+            <text class="layerVim shortcut">undo</text>
+            <text class="layerFun pc">F9</text>
+          </g>
+        </g>
+
+        <g class="ring matrix">
+          <g class="col4">
+            <g class="key top">
+              <rect/>
+              <text class="level2">C</text>
+              <text class="layerSym">&lt;</text>
+              <text class="layerNum">«</text>
+              <use  class="layerNav" href="#glyph_home"/>
+              <text class="layerVim shortcut">close</text>
+              <text class="layerFun pc">F2</text>
+            </g>
+            <g class="key home dual">
+              <rect/>
+              <rect class="dualKey colorMod"/>
+              <text class="level1  colorMod mac">⌥</text>
+              <text class="level1  colorMod pc">os</text>
+              <text class="level2">S</text>
+              <text class="layerSym">(</text>
+              <text class="layerNum">2</text>
+              <use  class="layerNav" href="#glyph_left"/>
+              <text class="layerVim shortcut">save</text>
+              <text class="layerFun pc">F6</text>
+            </g>
+            <g class="key bottom">
+              <rect/>
+              <text class="level2">X</text>
+              <text class="layerSym">[</text>
+              <text class="layerNum"></text>
+              <text class="layerNav shortcut">cut</text>
+              <text class="layerVim shortcut">cut</text>
+              <text class="layerFun pc">F10</text>
+            </g>
+          </g>
+
+          <g class="middle matrix">
+            <g class="col3">
+              <g class="key top">
+                <rect/>
+                <text class="level2">O</text>
+                <text class="layerSym">&gt;</text>
+                <text class="layerNum">»</text>
+                <use  class="layerNav" href="#glyph_up"/>
+                <use  class="layerVim" href="#glyph_prev"/>
+                <text class="layerFun pc">F3</text>
+              </g>
+              <g class="key home dual">
+                <rect/>
+                <rect class="dualKey colorMod"/>
+                <text class="level1  colorMod mac">⌘</text>
+                <text class="level1  colorMod pc">ctrl</text>
+                <text class="level2">E</text>
+                <text class="layerSym">)</text>
+                <text class="layerNum">3</text>
+                <use  class="layerNav" href="#glyph_down"/>
+                <use  class="layerVim" href="#glyph_btab"/>
+                <text class="layerFun pc">F7</text>
+              </g>
+              <g class="key bottom">
+                <rect/>
+                <text class="level1">-</text>
+                <text class="level2">?</text>
+                <text class="layerSym">]</text>
+                <text class="layerNum"></text>
+                <text class="layerNav shortcut">copy</text>
+                <text class="layerVim shortcut">copy</text>
+                <text class="layerFun pc">F11</text>
+              </g>
+            </g>
+
+            <g class="index matrix">
+              <g class="col2">
+                <g class="key top">
+                  <rect/>
+                  <text class="level2">P</text>
+                  <text class="layerSym">$</text>
+                  <text class="layerNum">$</text>
+                  <use  class="layerNav" href="#glyph_end"/>
+                  <use  class="layerVim" href="#glyph_next"/>
+                  <text class="layerFun pc">F4</text>
+                </g>
+                <g class="key home dual">
+                  <rect/>
+                  <rect class="dualKey colorMod"/>
+                  <text class="level1  colorMod mac">⌃</text>
+                  <text class="level1  colorMod pc">alt</text>
+                  <text class="level2">N</text>
+                  <text class="layerSym">}</text>
+                  <text class="layerNum">4</text>
+                  <use  class="layerNav" href="#glyph_right"/>
+                  <use  class="layerVim" href="#glyph_tab"/>
+                  <text class="layerFun pc">F8</text>
+                </g>
+                <g class="key bottom">
+                  <rect/>
+                  <text class="level2">V</text>
+                  <text class="layerSym">_</text>
+                  <text class="layerNum"></text>
+                  <text class="layerNav shortcut">paste</text>
+                  <text class="layerVim shortcut">paste</text>
+                  <text class="layerFun pc">F12</text>
+                </g>
+              </g>
+
+              <use class="thumbCluster"/>
+
+              <g class="inner matrix">
+                <g class="col1">
+                  <g class="key top">
+                    <rect/>
+                    <text class="level2">W</text>
+                    <text class="layerSym">%</text>
+                    <text class="layerNum">%</text>
+                    <use  class="layerNav" href="#glyph_pgup"/>
+                    <text class="layerVim"></text>
+                  </g>
+                  <g class="key home">
+                    <rect/>
+                    <text class="level2">F</text>
+                    <text class="layerSym"> = </text>
+                    <text class="layerNum">5</text>
+                    <use  class="layerNav" href="#glyph_pgdown"/>
+                    <text class="layerVim"></text>
+                  </g>
+                  <g class="key bottom">
+                    <rect/>
+                    <text class="level2">B</text>
+                    <text class="layerSym">#</text>
+                    <text class="layerNum"></text>
+                    <text class="layerNav shortcut">redo</text>
+                    <text class="layerVim shortcut">redo</text>
+                  </g>
+                </g>
+                <g class="col1m">
+                  <g class="key top"/>
+                  <g class="key home"/>
+                </g>
+              </g>
+            </g>
+          </g>
+        </g>
+      </g>
+    </g>
+  </g>
+
+  <g id="right">
+    <g class="outer matrix">
+      <g class="col6m">
+        <g class="key top"/>
+        <g class="key home"/>
+      </g>
+      <g class="col6">
+        <g class="specialKey top">
+          <rect/>
+          <use class="level0" href="#glyph_backspace"/>
+        </g>
+        <g class="specialKey home">
+          <rect/>
+          <use class="level0" href="#glyph_return"/>
+        </g>
+        <g class="specialKey bottom">
+          <rect/>
+          <use class="level0" href="#glyph_shift"/>
+        </g>
+      </g>
+
+      <g class="pinky matrix">
+        <g class="col5m">
+          <g class="key top"/>
+          <g class="key home"/>
+        </g>
+        <g class="col5">
+          <g class="key top">
+            <rect/>
+            <text class="level2">Y</text>
+            <text class="layerSym">`</text>
+            <text class="layerNum">@</text>
+          </g>
+          <g class="key home">
+            <rect/>
+            <text class="level2">U</text>
+            <text class="layerSym">"</text>
+            <text class="layerNum">0</text>
+            <text class="layerNav">0</text>
+            <text class="layerVim"></text>
+          </g>
+          <g class="key bottom">
+            <rect/>
+            <text class="level2">K</text>
+            <text class="layerSym">?</text>
+            <text class="layerNum">/</text>
+            <text class="layerNav">.</text>
+            <text class="layerVim"></text>
+          </g>
+        </g>
+
+        <g class="ring matrix">
+          <g class="col4">
+            <g class="key top">
+              <rect/>
+              <text class="level1">★</text>
+              <text class="level2">!</text>
+              <text class="layerSym">'</text>
+              <text class="layerNum">#</text>
+              <text class="layerNav">9</text>
+              <use class="layerVim" href="#glyph_end"/>
+              <text class="layerFun shortcut">lock</text>
+            </g>
+            <g class="key home dual">
+              <rect/>
+              <rect class="dualKey colorMod"/>
+              <text class="level1  colorMod mac">⌥</text>
+              <text class="level1  colorMod pc">os</text>
+              <text class="level2">I</text>
+              <text class="layerSym">/</text>
+              <text class="layerNum">9</text>
+              <text class="layerNav">6</text>
+              <use  class="layerVim" href="#glyph_right"/>
+              <text class="layerFun shortcut">mute</text>
+            </g>
+            <g class="key bottom">
+              <rect/>
+              <text class="level1">,</text>
+              <text class="level2">;</text>
+              <text class="layerSym">:</text>
+              <text class="layerNum">:</text>
+              <text class="layerNav">3</text>
+              <text class="layerVim"></text>
+              <text class="layerFun shortcut">play</text>
+            </g>
+          </g>
+
+          <g class="middle matrix">
+            <g class="col3">
+              <g class="key top">
+                <rect/>
+                <text class="level2">D</text>
+                <text class="layerSym">*</text>
+                <text class="layerNum">*</text>
+                <text class="layerNav">8</text>
+                <use  class="layerVim" href="#glyph_pgup"/>
+                <text class="layerFun shortcut">br+</text>
+              </g>
+              <g class="key home dual">
+                <rect/>
+                <rect class="dualKey colorMod"/>
+                <text class="level1  colorMod mac">⌘</text>
+                <text class="level1  colorMod pc">ctrl</text>
+                <text class="level2">T</text>
+                <text class="layerSym">-</text>
+                <text class="layerNum">8</text>
+                <text class="layerNav">5</text>
+                <use  class="layerVim" href="#glyph_up"/>
+                <text class="layerFun shortcut">vol+</text>
+              </g>
+              <g class="key bottom">
+                <rect/>
+                <text class="level2">G</text>
+                <text class="layerSym">;</text>
+                <text class="layerNum">.</text>
+                <text class="layerNav">2</text>
+                <text class="layerVim"></text>
+                <text class="layerFun shortcut">next</text>
+              </g>
+           </g>
+
+            <g class="index matrix">
+              <g class="col2">
+                <g class="key top">
+                  <rect/>
+                  <text class="level2">M</text>
+                  <text class="layerSym">&amp;</text>
+                  <text class="layerNum">&amp;</text>
+                  <text class="layerNav">7</text>
+                  <use  class="layerVim" href="#glyph_pgdown"/>
+                  <text class="layerFun shortcut">br-</text>
+                </g>
+                <g class="key home dual">
+                  <rect/>
+                  <rect class="dualKey colorMod"/>
+                  <text class="level1  colorMod mac">⌃</text>
+                  <text class="level1  colorMod pc">alt</text>
+                  <text class="level2">R</text>
+                  <text class="layerSym">+</text>
+                  <text class="layerNum">7</text>
+                  <text class="layerNav">4</text>
+                  <use  class="layerVim" href="#glyph_down"/>
+                  <text class="layerFun shortcut">vol-</text>
+                </g>
+                <g class="key bottom">
+                  <rect/>
+                  <text class="level2">H</text>
+                  <text class="layerSym">!</text>
+                  <text class="layerNum">,</text>
+                  <text class="layerNav">1</text>
+                  <text class="layerVim"></text>
+                  <text class="layerFun shortcut">prev</text>
+                </g>
+              </g>
+
+              <use class="thumbCluster"/>
+
+              <g class="inner matrix">
+                <g class="col1">
+                  <g class="key top">
+                    <rect/>
+                    <text class="level2">J</text>
+                    <text class="layerSym">@</text>
+                    <text class="layerNum">^</text>
+                    <text class="layerNav">/</text>
+                    <use  class="layerVim" href="#glyph_home"/>
+                  </g>
+                  <g class="key home">
+                    <rect/>
+                    <text class="level2">L</text>
+                    <text class="layerSym">\</text>
+                    <text class="layerNum">6</text>
+                    <text class="layerNav">-</text>
+                    <use  class="layerVim" href="#glyph_left"/>
+                  </g>
+                  <g class="key bottom">
+                    <rect/>
+                    <text class="level1">.</text>
+                    <text class="level2">:</text>
+                    <text class="layerSym">|</text>
+                    <text class="layerNum">-</text>
+                    <text class="layerNav">,</text>
+                    <text class="layerVim"></text>
+                  </g>
+                </g>
+                <g class="col1m">
+                  <g class="key top"/>
+                  <g class="key home"/>
+                </g>
+              </g>
+            </g>
+          </g>
+        </g>
+      </g>
+    </g>
+  </g>
+
+  <g id="select">
+    <text y="10" id="ez">EZ : no dual keys</text>
+    <text y="25" id="lt">LT : layer-taps</text>
+    <text y="40" id="hrm">HRM : homerow-mods</text>
+    <text y="55" id="vim">Vim : homerow-mods + VimNav</text>
+  </g>
+
+  <script xmlns="http://www.w3.org/1999/xhtml" src="selenium.js" type="text/javascript"/>
+  <script type="text/javascript"><![CDATA[
+    setGeometry("flex");
+    setConfig("hrm");
+    drawKeys();
+    drawLabels();
+  ]]></script>
+</svg>
