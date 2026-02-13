@@ -1,0 +1,430 @@
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<!-- <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 425 610"> -->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 400">
+  <link xmlns="http://www.w3.org/1999/xhtml" rel="stylesheet" href="selenium.css" type="text/css"/>
+  <style>
+    #ez  { transform: translate(10px,  10px); }
+    #tt  { transform: translate(10px, 110px); }
+    #hrm { transform: translate(10px, 210px); }
+    #s34 { transform: translate(10px, 310px); }
+
+    #vim-ez  { transform: translate(480px,  10px); }
+    #vim-tt  { transform: translate(480px, 110px); }
+    #vim-hrm { transform: translate(480px, 210px); }
+    #vim-s34 { transform: translate(480px, 310px); }
+
+    #s34 .left,  #vim-s34 .left  { transform: translate(30px, 0px); }
+    #s34 .right, #vim-s34 .right { transform: translate(-30px, 0px); }
+
+    .left  .tucked { transform: translate(  0px, 10px); }
+    .left  .comfy  { transform: translate( 64px, 10px); }
+    .left  .reachy { transform: translate(128px, 10px); }
+    .right .reachy { transform: translate(220px, 10px); }
+    .right .comfy  { transform: translate(284px, 10px); }
+    .right .tucked { transform: translate(348px, 10px); }
+
+    .title {
+      font-size: 14px;
+      /* text-anchor: start; */
+      transform: translateX(204px);
+    }
+  </style>
+
+  <defs>
+    <path class="symbol" transform="scale(0.4) translate(-24, -30)" id="glyph_backspace" d="M22,19l10,10 M22,29l10-10 M6,24l10,13h26v-26h-26z"/>
+    <path class="symbol" transform="scale(0.4) translate(-24, -30)" id="glyph_delete"    d="M16,19l10,10 M16,29l10-10 M42,24l-10,13h-26v-26h26z"/>
+    <path class="symbol" transform="scale(0.4) translate(-24, -30)" id="glyph_return"    d="M42,13V27H6 m8-8l-8,8l8,8"/>
+    <path class="symbol" transform="scale(0.4) translate(-24, -30)" id="glyph_space"     d="M42,24V32H6V24"/>
+    <path class="symbol" transform="scale(0.4) translate(-24, -30)" id="glyph_escape"    d="M24,24l-18-18 m0,10v-10h10 M24,6A18,18,0,1,1,6,24"/>
+    <path class="symbol" transform="scale(0.4) translate(-24, -30)" id="glyph_up"        d="M24,42v-36 m-8,6l8-8l8,8"/>
+    <path class="symbol" transform="scale(0.4) translate(-24, -30)" id="glyph_down"      d="M24,6v36 m-8,-6l8,8l8-8"/>
+    <path class="symbol" transform="scale(0.4) translate(-24, -30)" id="glyph_pgup"      d="M16,32h16 M16,24h16 M24,42v-36 m-8,6l8-8l8,8"/>
+    <path class="symbol" transform="scale(0.4) translate(-24, -30)" id="glyph_pgdown"    d="M16,16h16 M16,24h16 M24,6v36 m-8,-6l8,8l8-8"/>
+    <path class="symbol" transform="scale(0.4) translate(-24, -30)" id="glyph_left"      d="M42,24h-36 m6-8l-8,8l8,8"/>
+    <path class="symbol" transform="scale(0.4) translate(-24, -30)" id="glyph_right"     d="M6,24h36 m-6-8l8,8l-8,8"/>
+    <path class="symbol" transform="scale(0.4) translate(-24, -30)" id="glyph_tab"       d="M6,24h27 m-6-8l8,8l-8,8 M42,12V36"/>
+    <path class="symbol" transform="scale(0.4) translate(-24, -30)" id="glyph_btab"      d="M42,24h-27 m6-8l-8,8l8,8 M6,12V36"/>
+    <path class="symbol" transform="scale(0.4) translate(-24, -30)" id="glyph_home"      d="M42,42l-28-28 m0,10v-10h10 m8-8h-26v26"/>
+    <path class="symbol" transform="scale(0.4) translate(-24, -30)" id="glyph_end"       d="M6,6l28,28 m0-10v10h-10 m-8,8h26v-26"/>
+    <path class="symbol" transform="scale(0.4) translate(-24, -30)" id="glyph_prev"      d="M24,6A18,18,0,1,1,24,42A18,18,0,1,1,24,6 M26,16l-8,8l8,8"/>
+    <path class="symbol" transform="scale(0.4) translate(-24, -30)" id="glyph_next"      d="M24,6A18,18,0,1,1,24,42A18,18,0,1,1,24,6 M22,16l8,8l-8,8"/>
+    <path class="symbol" transform="scale(0.4) translate(-24, -30)" id="glyph_shift"     d="M23,7l14,20h-7v16h-14v-16h-7l14,-20"/>
+    <path class="symbol" transform="scale(0.4) translate(-24, -30)" id="glyph_caps"      d="M24,7l14,20h-7v6h-14v-6h-7l14,-20 M31,38v5h-14v-5z"/>
+  </defs>
+
+  <!-- easy mode (no dual keys) -->
+  <g id="ez">
+    <text class="title">EZ : no hold-taps</text>
+
+    <g class="left">
+      <g class="tucked specialKey">
+        <rect class="colorMod"/>
+        <text class="colorMod level0">alt</text>
+        <text class="layerSym shortcut">num</text>
+      </g>
+      <g class="comfy specialKey">
+        <rect class="colorMod"/>
+        <text class="colorMod level0">ctrl</text>
+        <use  class="layerSym" href="#glyph_space"/>
+      </g>
+      <g class="reachy specialKey">
+        <rect class="colorMod"/>
+        <text class="colorMod level0">os</text>
+        <text class="layerNav pc">fun</text>
+        <use  class="layerSym" href="#glyph_return"/>
+      </g>
+    </g>
+
+    <g class="right">
+      <g class="reachy specialKey">
+        <rect class="colorNav"/>
+        <text class="colorNav level0">nav</text>
+      </g>
+      <g class="comfy specialKey">
+        <rect/>
+        <use  class="level0" href="#glyph_space"/>
+      </g>
+      <g class="tucked specialKey">
+        <rect class="colorSym"/>
+        <text class="level0 colorSym">sym</text>
+        <text class="layerNav shortcut">altgr</text>
+      </g>
+    </g>
+  </g>
+
+  <!-- thumb-taps -->
+  <g id="tt">
+    <text class="title">TT : thumb-taps</text>
+
+    <g class="left">
+      <g class="tucked">
+        <rect/>
+        <rect class="colorMod sticky"/>
+        <text class="colorMod sticky pc">shift</text>
+        <use  class="layerVim" href="#glyph_caps"/>
+        <text class="layerSym shortcut">num</text>
+      </g>
+      <g class="comfy key">
+        <rect/>
+        <rect class="dualKey colorMod"/>
+        <text class="level1  colorMod pc">ctrl</text>
+        <use  class="level2"   href="#glyph_backspace"/>
+        <use  class="layerNav" href="#glyph_delete"/>
+        <use  class="layerSym" href="#glyph_space"/>
+      </g>
+      <g class="reachy key">
+        <rect/>
+        <rect class="dualKey colorMod"/>
+        <text class="level1  colorMod pc">os</text>
+        <use  class="level2"   href="#glyph_tab"/>
+        <use  class="layerNav" href="#glyph_btab"/>
+        <use  class="layerSym" href="#glyph_return"/>
+      </g>
+    </g>
+
+    <g class="right">
+      <g class="reachy key">
+        <rect/>
+        <rect class="dualKey colorMod"/>
+        <text class="level1  colorMod pc">alt</text>
+        <use  class="level2"   href="#glyph_return"/>
+      </g>
+      <g class="comfy key">
+        <rect/>
+        <rect class="dualKey borderNav tap-pref"/>
+        <text class="level1  borderNav pc">nav</text>
+        <use  class="level2" href="#glyph_space"/>
+        <text class="layerNav pc">fun</text>
+      </g>
+      <g class="tucked">
+        <rect/>
+        <rect class="colorSym sticky"/>
+        <text class="colorSym sticky pc">sym</text>
+        <text class="layerNav shortcut">altgr</text>
+      </g>
+    </g>
+  </g>
+
+  <!-- homerow-mods -->
+  <g id="hrm">
+    <text class="title">HRM : homerow mods</text>
+
+    <g class="left">
+      <g class="tucked">
+        <rect/>
+        <rect class="colorMod sticky"/>
+        <text class="colorMod sticky pc">shift</text>
+        <use  class="layerVim" href="#glyph_caps"/>
+        <text class="layerSym shortcut">num</text>
+      </g>
+      <g class="comfy key">
+        <rect/>
+        <rect class="dualKey colorNav"/>
+        <text class="level1  colorNav pc">nav</text>
+        <use  class="level2"   href="#glyph_backspace"/>
+        <use  class="layerNav" href="#glyph_delete"/>
+        <use  class="layerSym" href="#glyph_space"/>
+      </g>
+      <g class="reachy key">
+        <rect/>
+        <rect class="dualKey colorFun"/>
+        <text class="level1  colorFun pc">fun</text>
+        <use  class="level2"   href="#glyph_tab"/>
+        <use  class="layerNav" href="#glyph_btab"/>
+        <use  class="layerSym" href="#glyph_return"/>
+      </g>
+    </g>
+
+    <g class="right">
+      <g class="reachy key">
+        <rect/>
+        <rect class="dualKey colorFun"/>
+        <text class="level1  colorFun pc">fun</text>
+        <use  class="level2"   href="#glyph_return"/>
+      </g>
+      <g class="comfy key">
+        <rect/>
+        <rect class="dualKey borderNav tap-pref"/>
+        <text class="level1  borderNav pc">nav</text>
+        <use  class="level2" href="#glyph_space"/>
+        <text class="layerNav pc">fun</text>
+      </g>
+      <g class="tucked">
+        <rect/>
+        <rect class="colorSym sticky"/>
+        <text class="colorSym sticky pc">sym</text>
+        <text class="layerNav shortcut">altgr</text>
+      </g>
+    </g>
+  </g>
+
+  <!-- 34 keys -->
+  <g id="s34">
+    <text class="title">S34: homerow-mods, 34 keys</text>
+
+    <g class="left">
+      <g class="tucked key">
+        <rect/>
+        <rect class="dualKey colorMod"/>
+        <text class="level1 colorMod pc">shift</text>
+        <use  class="level2"   href="#glyph_tab"/>
+        <use  class="layerNav" href="#glyph_btab"/>
+        <use  class="layerSym" href="#glyph_caps"/>
+      </g>
+      <g class="comfy key">
+        <rect/>
+        <rect class="dualKey colorNav"/>
+        <text class="level1  colorNav pc">nav</text>
+        <use  class="level2"   href="#glyph_backspace"/>
+        <use  class="layerNav" href="#glyph_delete"/>
+        <use  class="layerSym" href="#glyph_space"/>
+      </g>
+    </g>
+
+    <g class="right">
+      <g class="comfy key">
+        <rect/>
+        <rect class="dualKey borderNav tap-pref"/>
+        <text class="level1  borderNav pc">nav</text>
+        <use  class="level2" href="#glyph_space"/>
+        <text class="layerNav pc">fun</text>
+      </g>
+      <g class="tucked key">
+        <rect/>
+        <rect class="dualKey colorSym"/>
+        <text class="level1  colorSym pc">sym</text>
+        <use  class="level2" href="#glyph_return"/>
+        <text class="layerNav shortcut">altgr</text>
+      </g>
+    </g>
+  </g>
+
+  <!-- Vim + easy mode (no dual keys) -->
+  <g id="vim-ez">
+    <text class="title">Vim-EZ : no hold-taps</text>
+
+    <g class="left">
+      <g class="tucked specialKey">
+        <rect class="colorMod"/>
+        <text class="colorMod level0">alt</text>
+        <text class="layerSym shortcut">num</text>
+      </g>
+      <g class="comfy specialKey">
+        <rect class="colorMod"/>
+        <text class="colorMod level0">ctrl</text>
+        <use  class="layerSym" href="#glyph_space"/>
+      </g>
+      <g class="reachy specialKey">
+        <rect class="colorMod"/>
+        <text class="colorMod level0">os</text>
+        <text class="layerNav pc">fun</text>
+        <use  class="layerSym" href="#glyph_return"/>
+      </g>
+    </g>
+
+    <g class="right">
+      <g class="reachy specialKey">
+        <rect class="colorNav"/>
+        <text class="colorNav level0">nav</text>
+      </g>
+      <g class="comfy specialKey">
+        <rect/>
+        <use  class="level0" href="#glyph_space"/>
+      </g>
+      <g class="tucked specialKey">
+        <rect class="colorSym"/>
+        <text class="level0 colorSym">sym</text>
+        <text class="layerNav shortcut">altgr</text>
+      </g>
+    </g>
+  </g>
+
+  <!-- Vim + thumb-taps -->
+  <g id="vim-tt">
+    <text class="title">Vim-TT : thumb-taps</text>
+
+    <g class="left">
+      <g class="tucked">
+        <rect/>
+        <rect class="colorMod sticky"/>
+        <text class="colorMod sticky pc">shift</text>
+        <use  class="layerVim" href="#glyph_caps"/>
+        <text class="layerSym shortcut">num</text>
+      </g>
+      <g class="comfy key">
+        <rect/>
+        <rect class="dualKey colorMod"/>
+        <text class="level1  colorMod pc">ctrl</text>
+        <use  class="level2"   href="#glyph_backspace"/>
+        <use  class="layerNav" href="#glyph_delete"/>
+        <use  class="layerSym" href="#glyph_space"/>
+      </g>
+      <g class="reachy key">
+        <rect/>
+        <rect class="dualKey colorMod"/>
+        <text class="level1  colorMod pc">os</text>
+        <use  class="level2"   href="#glyph_escape"/>
+        <use  class="layerSym" href="#glyph_return"/>
+      </g>
+    </g>
+
+    <g class="right">
+      <g class="reachy key">
+        <rect/>
+        <rect class="dualKey colorMod"/>
+        <text class="level1  colorMod pc">alt</text>
+        <use  class="level2" href="#glyph_return"/>
+      </g>
+      <g class="comfy key">
+        <rect/>
+        <rect class="dualKey borderNav tap-pref"/>
+        <text class="level1  borderNav pc">nav</text>
+        <use  class="level2" href="#glyph_space"/>
+        <text class="layerNav pc">fun</text>
+      </g>
+      <g class="tucked">
+        <rect/>
+        <rect class="colorSym sticky"/>
+        <text class="colorSym sticky pc">sym</text>
+        <text class="layerNav shortcut">altgr</text>
+      </g>
+    </g>
+  </g>
+
+  <!-- Vim + homerow-mods -->
+  <g id="vim-hrm">
+    <text class="title">Vim-HRM : homerow mods</text>
+
+    <g class="left">
+      <g class="tucked">
+        <rect/>
+        <rect class="colorMod sticky"/>
+        <text class="colorMod sticky pc">shift</text>
+        <use  class="layerVim" href="#glyph_caps"/>
+        <text class="layerSym shortcut">num</text>
+      </g>
+      <g class="comfy key">
+        <rect/>
+        <rect class="dualKey colorNav"/>
+        <text class="level1  colorNav pc">nav</text>
+        <use  class="level2"   href="#glyph_backspace"/>
+        <use  class="layerVim" href="#glyph_delete"/>
+        <use  class="layerSym" href="#glyph_space"/>
+      </g>
+      <g class="reachy key">
+        <rect/>
+        <rect class="dualKey colorNum"/>
+        <text class="level1  colorNum pc">num</text>
+        <use  class="level2"   href="#glyph_escape"/>
+        <use  class="layerSym" href="#glyph_return"/>
+      </g>
+    </g>
+
+    <g class="right">
+      <g class="reachy key">
+        <rect/>
+        <rect class="dualKey colorNum"/>
+        <text class="level1  colorNum pc">num</text>
+        <use  class="level2" href="#glyph_return"/>
+      </g>
+      <g class="comfy key">
+        <rect/>
+        <rect class="dualKey borderNav tap-pref"/>
+        <text class="level1  borderNav pc">nav</text>
+        <use  class="level2" href="#glyph_space"/>
+        <text class="layerVim pc">fun</text>
+      </g>
+      <g class="tucked key">
+        <rect/>
+        <rect class="colorSym sticky"/>
+        <text class="colorSym sticky pc">sym</text>
+        <text class="layerVim shortcut">altgr</text>
+      </g>
+    </g>
+  </g>
+
+  <!-- Vim + 34 keys -->
+  <g id="vim-s34">
+    <text class="title">Vim-S34: homerow-mods, 34 keys</text>
+
+    <g class="left">
+      <g class="tucked key">
+        <rect/>
+        <rect class="dualKey colorMod"/>
+        <text class="level1  colorMod pc">shift</text>
+        <use  class="level2" href="#glyph_escape"/>
+        <text class="layerSym shortcut">num</text>
+      </g>
+      <g class="comfy key">
+        <rect/>
+        <rect class="dualKey colorNav"/>
+        <text class="level1  colorNav pc">nav</text>
+        <use  class="level2"   href="#glyph_backspace"/>
+        <use  class="layerSym" href="#glyph_space"/>
+      </g>
+    </g>
+
+    <g class="right">
+      <g class="comfy key">
+        <rect/>
+        <rect class="dualKey borderNum tap-pref"/>
+        <text class="level1  borderNum pc">num</text>
+        <use  class="level2" href="#glyph_space"/>
+        <text class="layerNav pc">fun</text>
+      </g>
+      <g class="tucked key">
+        <rect/>
+        <rect class="dualKey colorSym"/>
+        <text class="level1  colorSym pc">sym</text>
+        <use  class="level2" href="#glyph_return"/>
+        <text class="layerNav shortcut">altgr</text>
+      </g>
+    </g>
+  </g>
+
+  <script xmlns="http://www.w3.org/1999/xhtml" src="selenium.js" type="text/javascript"/>
+  <script type="text/javascript"><![CDATA[
+    drawKeys();
+    drawLabels();
+  ]]></script>
+</svg>
