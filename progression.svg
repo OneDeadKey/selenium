@@ -6,15 +6,15 @@
     #ez  { transform: translate(10px,  10px); }
     #tt  { transform: translate(10px, 110px); }
     #hrm { transform: translate(10px, 210px); }
-    #s34 { transform: translate(10px, 310px); }
+    #dtk { transform: translate(10px, 310px); }
 
     #vim-ez  { transform: translate(480px,  10px); }
     #vim-tt  { transform: translate(480px, 110px); }
     #vim-hrm { transform: translate(480px, 210px); }
-    #vim-s34 { transform: translate(480px, 310px); }
+    #vim-dtk { transform: translate(480px, 310px); }
 
-    #s34 .left,  #vim-s34 .left  { transform: translate(30px, 0px); }
-    #s34 .right, #vim-s34 .right { transform: translate(-30px, 0px); }
+    #dtk .left,  #vim-dtk .left  { transform: translate(30px, 0px); }
+    #dtk .right, #vim-dtk .right { transform: translate(-30px, 0px); }
 
     .left  .tucked { transform: translate(  0px, 10px); }
     .left  .comfy  { transform: translate( 64px, 10px); }
@@ -106,7 +106,7 @@
       </g>
       <g class="comfy key">
         <rect/>
-        <rect class="dualKey colorMod"/>
+        <rect class="holdTap colorMod"/>
         <text class="level1  colorMod pc">ctrl</text>
         <use  class="level2"   href="#glyph_backspace"/>
         <use  class="layerNav" href="#glyph_delete"/>
@@ -114,7 +114,7 @@
       </g>
       <g class="reachy key">
         <rect/>
-        <rect class="dualKey colorMod"/>
+        <rect class="holdTap colorMod"/>
         <text class="level1  colorMod pc">os</text>
         <use  class="level2"   href="#glyph_tab"/>
         <use  class="layerNav" href="#glyph_btab"/>
@@ -125,13 +125,13 @@
     <g class="right">
       <g class="reachy key">
         <rect/>
-        <rect class="dualKey colorMod"/>
+        <rect class="holdTap colorMod"/>
         <text class="level1  colorMod pc">alt</text>
         <use  class="level2"   href="#glyph_return"/>
       </g>
       <g class="comfy key">
         <rect/>
-        <rect class="dualKey borderNav tap-pref"/>
+        <rect class="holdTap borderNav tap-pref"/>
         <text class="level1  borderNav pc">nav</text>
         <use  class="level2" href="#glyph_space"/>
         <text class="layerNav pc">fun</text>
@@ -159,7 +159,7 @@
       </g>
       <g class="comfy key">
         <rect/>
-        <rect class="dualKey colorNav"/>
+        <rect class="holdTap colorNav"/>
         <text class="level1  colorNav pc">nav</text>
         <use  class="level2"   href="#glyph_backspace"/>
         <use  class="layerNav" href="#glyph_delete"/>
@@ -167,7 +167,7 @@
       </g>
       <g class="reachy key">
         <rect/>
-        <rect class="dualKey colorFun"/>
+        <rect class="holdTap colorFun"/>
         <text class="level1  colorFun pc">fun</text>
         <use  class="level2"   href="#glyph_tab"/>
         <use  class="layerNav" href="#glyph_btab"/>
@@ -178,13 +178,13 @@
     <g class="right">
       <g class="reachy key">
         <rect/>
-        <rect class="dualKey colorFun"/>
+        <rect class="holdTap colorFun"/>
         <text class="level1  colorFun pc">fun</text>
         <use  class="level2"   href="#glyph_return"/>
       </g>
       <g class="comfy key">
         <rect/>
-        <rect class="dualKey borderNav tap-pref"/>
+        <rect class="holdTap borderNav tap-pref"/>
         <text class="level1  borderNav pc">nav</text>
         <use  class="level2" href="#glyph_space"/>
         <text class="layerNav pc">fun</text>
@@ -199,13 +199,13 @@
   </g>
 
   <!-- 34 keys -->
-  <g id="s34">
-    <text class="title">S34: homerow-mods, 34 keys</text>
+  <g id="dtk">
+    <text class="title">2TK: two thumb keys</text>
 
     <g class="left">
       <g class="tucked key">
         <rect/>
-        <rect class="dualKey colorMod"/>
+        <rect class="holdTap colorMod"/>
         <text class="level1 colorMod pc">shift</text>
         <use  class="level2"   href="#glyph_tab"/>
         <use  class="layerNav" href="#glyph_btab"/>
@@ -213,7 +213,7 @@
       </g>
       <g class="comfy key">
         <rect/>
-        <rect class="dualKey colorNav"/>
+        <rect class="holdTap colorNav"/>
         <text class="level1  colorNav pc">nav</text>
         <use  class="level2"   href="#glyph_backspace"/>
         <use  class="layerNav" href="#glyph_delete"/>
@@ -224,14 +224,14 @@
     <g class="right">
       <g class="comfy key">
         <rect/>
-        <rect class="dualKey borderNav tap-pref"/>
+        <rect class="holdTap borderNav tap-pref"/>
         <text class="level1  borderNav pc">nav</text>
         <use  class="level2" href="#glyph_space"/>
         <text class="layerNav pc">fun</text>
       </g>
       <g class="tucked key">
         <rect/>
-        <rect class="dualKey colorSym"/>
+        <rect class="holdTap colorSym"/>
         <text class="level1  colorSym pc">sym</text>
         <use  class="level2" href="#glyph_return"/>
         <text class="layerNav shortcut">altgr</text>
@@ -293,7 +293,7 @@
       </g>
       <g class="comfy key">
         <rect/>
-        <rect class="dualKey colorMod"/>
+        <rect class="holdTap colorMod"/>
         <text class="level1  colorMod pc">ctrl</text>
         <use  class="level2"   href="#glyph_backspace"/>
         <use  class="layerNav" href="#glyph_delete"/>
@@ -301,7 +301,7 @@
       </g>
       <g class="reachy key">
         <rect/>
-        <rect class="dualKey colorMod"/>
+        <rect class="holdTap colorMod"/>
         <text class="level1  colorMod pc">os</text>
         <use  class="level2"   href="#glyph_escape"/>
         <use  class="layerSym" href="#glyph_return"/>
@@ -311,13 +311,13 @@
     <g class="right">
       <g class="reachy key">
         <rect/>
-        <rect class="dualKey colorMod"/>
+        <rect class="holdTap colorMod"/>
         <text class="level1  colorMod pc">alt</text>
         <use  class="level2" href="#glyph_return"/>
       </g>
       <g class="comfy key">
         <rect/>
-        <rect class="dualKey borderNav tap-pref"/>
+        <rect class="holdTap borderNav tap-pref"/>
         <text class="level1  borderNav pc">nav</text>
         <use  class="level2" href="#glyph_space"/>
         <text class="layerNav pc">fun</text>
@@ -345,7 +345,7 @@
       </g>
       <g class="comfy key">
         <rect/>
-        <rect class="dualKey colorNav"/>
+        <rect class="holdTap colorNav"/>
         <text class="level1  colorNav pc">nav</text>
         <use  class="level2"   href="#glyph_backspace"/>
         <use  class="layerVim" href="#glyph_delete"/>
@@ -353,7 +353,7 @@
       </g>
       <g class="reachy key">
         <rect/>
-        <rect class="dualKey colorNum"/>
+        <rect class="holdTap colorNum"/>
         <text class="level1  colorNum pc">num</text>
         <use  class="level2"   href="#glyph_escape"/>
         <use  class="layerSym" href="#glyph_return"/>
@@ -363,13 +363,13 @@
     <g class="right">
       <g class="reachy key">
         <rect/>
-        <rect class="dualKey colorNum"/>
+        <rect class="holdTap colorNum"/>
         <text class="level1  colorNum pc">num</text>
         <use  class="level2" href="#glyph_return"/>
       </g>
       <g class="comfy key">
         <rect/>
-        <rect class="dualKey borderNav tap-pref"/>
+        <rect class="holdTap borderNav tap-pref"/>
         <text class="level1  borderNav pc">nav</text>
         <use  class="level2" href="#glyph_space"/>
         <text class="layerVim pc">fun</text>
@@ -384,20 +384,20 @@
   </g>
 
   <!-- Vim + 34 keys -->
-  <g id="vim-s34">
-    <text class="title">Vim-S34: homerow-mods, 34 keys</text>
+  <g id="vim-dtk">
+    <text class="title">Vim-2TK: two thumb keys</text>
 
     <g class="left">
       <g class="tucked key">
         <rect/>
-        <rect class="dualKey colorMod"/>
+        <rect class="holdTap colorMod"/>
         <text class="level1  colorMod pc">shift</text>
         <use  class="level2" href="#glyph_escape"/>
         <text class="layerSym shortcut">num</text>
       </g>
       <g class="comfy key">
         <rect/>
-        <rect class="dualKey colorNav"/>
+        <rect class="holdTap colorNav"/>
         <text class="level1  colorNav pc">nav</text>
         <use  class="level2"   href="#glyph_backspace"/>
         <use  class="layerSym" href="#glyph_space"/>
@@ -407,14 +407,14 @@
     <g class="right">
       <g class="comfy key">
         <rect/>
-        <rect class="dualKey borderNum tap-pref"/>
+        <rect class="holdTap borderNum tap-pref"/>
         <text class="level1  borderNum pc">num</text>
         <use  class="level2" href="#glyph_space"/>
         <text class="layerNav pc">fun</text>
       </g>
       <g class="tucked key">
         <rect/>
-        <rect class="dualKey colorSym"/>
+        <rect class="holdTap colorSym"/>
         <text class="level1  colorSym pc">sym</text>
         <use  class="level2" href="#glyph_return"/>
         <text class="layerNav shortcut">altgr</text>

@@ -195,12 +195,12 @@ const drawKeys = () => {
   document.querySelectorAll("rect.sticky").forEach(rect => {
     rect.setAttribute("width",  ikw / 2);
   });
-  document.querySelectorAll("rect.dualKey").forEach(rect => {
+  document.querySelectorAll("rect.holdTap").forEach(rect => {
     rect.setAttribute("y", padding + ikh / 2);
     rect.setAttribute("width",  ikw / 2);
     rect.setAttribute("height", ikh / 2);
   });
-  document.querySelectorAll(".specialKey rect.dualKey").forEach(rect => {
+  document.querySelectorAll(".specialKey rect.holdTap").forEach(rect => {
     rect.setAttribute("width", ikw);
   });
 };

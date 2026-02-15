@@ -164,7 +164,7 @@
         <g class="comfy thumb">
           <g class="key">
             <rect/>
-            <rect class="dualKey colorMod"/>
+            <rect class="holdTap colorMod"/>
             <text class="level1  colorMod pc">ctrl</text>
             <use  class="level2"   href="#glyph_backspace"/>
             <use  class="layerNav" href="#glyph_delete"/>
@@ -173,7 +173,7 @@
           <g class="reachy thumb">
             <g class="key showFun">
               <rect/>
-              <rect class="dualKey colorMod"/>
+              <rect class="holdTap colorMod"/>
               <text class="level1  colorMod pc">os</text>
               <use  class="level2"   href="#glyph_tab"/>
               <use  class="layerNav" href="#glyph_btab"/>
@@ -194,7 +194,7 @@
         <g class="comfy thumb">
           <g class="key">
             <rect/>
-            <rect class="dualKey borderNav tap-pref"/>
+            <rect class="holdTap borderNav tap-pref"/>
             <text class="level1  borderNav pc">nav</text>
             <use  class="level2" href="#glyph_space"/>
             <text class="layerNav pc">fun</text>
@@ -202,7 +202,7 @@
           <g class="reachy thumb">
             <g class="key showFun">
               <rect/>
-              <rect class="dualKey colorMod"/>
+              <rect class="holdTap colorMod"/>
               <text class="level1  colorMod pc">alt</text>
               <use  class="level2"   href="#glyph_return"/>
             </g>
@@ -224,7 +224,7 @@
         <g class="comfy thumb">
           <g class="key showNav">
             <rect/>
-            <rect class="dualKey colorNav"/>
+            <rect class="holdTap colorNav"/>
             <text class="level1  colorNav pc">nav</text>
             <use  class="level2"   href="#glyph_backspace"/>
             <use  class="layerNav" href="#glyph_delete"/>
@@ -233,7 +233,7 @@
           <g class="reachy thumb">
             <g class="key showFun">
               <rect/>
-              <rect class="dualKey colorFun"/>
+              <rect class="holdTap colorFun"/>
               <text class="level1  colorFun pc">fun</text>
               <use  class="level2"   href="#glyph_tab"/>
               <use  class="layerNav" href="#glyph_btab"/>
@@ -254,7 +254,7 @@
         <g class="comfy thumb">
           <g class="key toggleNavFun">
             <rect/>
-            <rect class="dualKey borderNav tap-pref"/>
+            <rect class="holdTap borderNav tap-pref"/>
             <text class="level1  borderNav pc">nav</text>
             <use  class="level2" href="#glyph_space"/>
             <text class="layerNav pc">fun</text>
@@ -262,7 +262,7 @@
           <g class="reachy thumb">
             <g class="key showFun">
               <rect/>
-              <rect class="dualKey colorFun"/>
+              <rect class="holdTap colorFun"/>
               <text class="level1  colorFun pc">fun</text>
               <use  class="level2"   href="#glyph_return"/>
             </g>
@@ -284,7 +284,7 @@
         <g class="comfy thumb">
           <g class="key showNav">
             <rect/>
-            <rect class="dualKey colorNav"/>
+            <rect class="holdTap colorNav"/>
             <text class="level1  colorNav pc">nav</text>
             <use  class="level2"   href="#glyph_backspace"/>
             <use  class="layerVim" href="#glyph_delete"/>
@@ -293,7 +293,7 @@
           <g class="reachy thumb">
             <g class="key showNum">
               <rect/>
-              <rect class="dualKey colorNum"/>
+              <rect class="holdTap colorNum"/>
               <text class="level1  colorNum pc">num</text>
               <use  class="level2"   href="#glyph_escape"/>
               <use  class="layerSym" href="#glyph_return"/>
@@ -313,7 +313,7 @@
         <g class="comfy thumb">
           <g class="key toggleNavFun">
             <rect/>
-            <rect class="dualKey borderNav tap-pref"/>
+            <rect class="holdTap borderNav tap-pref"/>
             <text class="level1  borderNav pc">nav</text>
             <use  class="level2" href="#glyph_space"/>
             <text class="layerVim pc">fun</text>
@@ -321,7 +321,7 @@
           <g class="reachy thumb">
             <g class="key showNum">
               <rect/>
-              <rect class="dualKey colorNum"/>
+              <rect class="holdTap colorNum"/>
               <text class="level1  colorNum pc">num</text>
               <use  class="level2" href="#glyph_return"/>
             </g>
@@ -400,7 +400,7 @@
             </g>
             <g class="key home dual">
               <rect/>
-              <rect class="dualKey borderMod tap-pref"/>
+              <rect class="holdTap borderMod tap-pref"/>
               <text class="level1  borderMod mac">⌥</text>
               <text class="level1  borderMod pc">os</text>
               <text class="level2">S</text>
@@ -434,7 +434,7 @@
               </g>
               <g class="key home dual">
                 <rect/>
-                <rect class="dualKey borderMod tap-pref"/>
+                <rect class="holdTap borderMod tap-pref"/>
                 <text class="level1  borderMod mac">⌘</text>
                 <text class="level1  borderMod pc">ctrl</text>
                 <text class="level2">E</text>
@@ -469,7 +469,7 @@
                 </g>
                 <g class="key home dual">
                   <rect/>
-                  <rect class="dualKey borderMod tap-pref"/>
+                  <rect class="holdTap borderMod tap-pref"/>
                   <text class="level1  borderMod mac">⌃</text>
                   <text class="level1  borderMod pc">alt</text>
                   <text class="level2">N</text>
@@ -571,6 +571,7 @@
             <text class="layerNum">0</text>
             <text class="layerNav">0</text>
             <text class="layerVim"></text>
+            <text class="layerFun shortcut">prscr</text>
           </g>
           <g class="key bottom">
             <rect/>
@@ -592,11 +593,11 @@
               <text class="layerNum">#</text>
               <text class="layerNav">9</text>
               <use class="layerVim" href="#glyph_end"/>
-              <text class="layerFun shortcut">lock</text>
+              <text class="layerFun shortcut">bri+</text>
             </g>
             <g class="key home dual">
               <rect/>
-              <rect class="dualKey borderMod tap-pref"/>
+              <rect class="holdTap borderMod tap-pref"/>
               <text class="level1  borderMod mac">⌥</text>
               <text class="level1  borderMod pc">os</text>
               <text class="level2">I</text>
@@ -604,7 +605,7 @@
               <text class="layerNum">9</text>
               <text class="layerNav">6</text>
               <use  class="layerVim" href="#glyph_right"/>
-              <text class="layerFun shortcut">mute</text>
+              <text class="layerFun shortcut">lock</text>
             </g>
             <g class="key bottom">
               <rect/>
@@ -614,7 +615,7 @@
               <text class="layerNum">:</text>
               <text class="layerNav">3</text>
               <text class="layerVim"></text>
-              <text class="layerFun shortcut">play</text>
+              <text class="layerFun shortcut">bri-</text>
             </g>
           </g>
 
@@ -627,11 +628,11 @@
                 <text class="layerNum">*</text>
                 <text class="layerNav">8</text>
                 <use  class="layerVim" href="#glyph_pgup"/>
-                <text class="layerFun shortcut">br+</text>
+                <text class="layerFun shortcut">vol+</text>
               </g>
               <g class="key home dual">
                 <rect/>
-                <rect class="dualKey borderMod tap-pref"/>
+                <rect class="holdTap borderMod tap-pref"/>
                 <text class="level1  borderMod mac">⌘</text>
                 <text class="level1  borderMod pc">ctrl</text>
                 <text class="level2">T</text>
@@ -639,7 +640,7 @@
                 <text class="layerNum">8</text>
                 <text class="layerNav">5</text>
                 <use  class="layerVim" href="#glyph_up"/>
-                <text class="layerFun shortcut">vol+</text>
+                <text class="layerFun shortcut">mute</text>
               </g>
               <g class="key bottom">
                 <rect/>
@@ -648,7 +649,7 @@
                 <text class="layerNum">.</text>
                 <text class="layerNav">2</text>
                 <text class="layerVim"></text>
-                <text class="layerFun shortcut">next</text>
+                <text class="layerFun shortcut">vol-</text>
               </g>
            </g>
 
@@ -661,11 +662,11 @@
                   <text class="layerNum">&amp;</text>
                   <text class="layerNav">7</text>
                   <use  class="layerVim" href="#glyph_pgdown"/>
-                  <text class="layerFun shortcut">br-</text>
+                  <text class="layerFun shortcut">prev</text>
                 </g>
                 <g class="key home dual">
                   <rect/>
-                  <rect class="dualKey borderMod tap-pref"/>
+                  <rect class="holdTap borderMod tap-pref"/>
                   <text class="level1  borderMod mac">⌃</text>
                   <text class="level1  borderMod pc">alt</text>
                   <text class="level2">R</text>
@@ -673,7 +674,7 @@
                   <text class="layerNum">7</text>
                   <text class="layerNav">4</text>
                   <use  class="layerVim" href="#glyph_down"/>
-                  <text class="layerFun shortcut">vol-</text>
+                  <text class="layerFun shortcut">play</text>
                 </g>
                 <g class="key bottom">
                   <rect/>
@@ -682,7 +683,7 @@
                   <text class="layerNum">,</text>
                   <text class="layerNav">1</text>
                   <text class="layerVim"></text>
-                  <text class="layerFun shortcut">prev</text>
+                  <text class="layerFun shortcut">next</text>
                 </g>
               </g>
 
@@ -737,7 +738,7 @@
 
   <script xmlns="http://www.w3.org/1999/xhtml" src="selenium.js" type="text/javascript"/>
   <script type="text/javascript"><![CDATA[
-    setGeometry("flex");
+    setGeometry("ortho");
     setConfig("hrm");
     drawKeys();
     drawLabels();
