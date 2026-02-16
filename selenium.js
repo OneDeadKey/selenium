@@ -148,10 +148,6 @@ function setConfig(cfg, vim) {
     element.setAttribute("style", "cursor: pointer");
     element.setAttribute("onclick", "setLayer4('sym')");
   })
-  document.querySelectorAll("#select text").forEach(element => {
-    element.setAttribute("style", "cursor: pointer");
-    element.setAttribute("onclick", `setConfig('${element.id}')`);
-  })
 }
 
 const drawKeys = () => {

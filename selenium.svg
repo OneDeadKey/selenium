@@ -108,166 +108,260 @@
     <path class="symbol" transform="scale(0.4) translate(-24, -30)" id="glyph_caps"      d="M24,7l14,20h-7v6h-14v-6h-7l14,-20 M31,38v5h-14v-5z"/>
 
     <!-- easy mode (no dual keys) -->
-    <g class="leftThumb" id="leftThumb-ez">
+    <g id="leftThumb-ez-tucked"  class="specialKey">
+      <rect class="colorMod"/>
+      <text class="colorMod level0">alt</text>
+      <text class="layerSym shortcut">num</text>
+    </g>
+    <g id="leftThumb-ez-comfy"   class="specialKey">
+      <rect class="colorMod"/>
+      <text class="colorMod level0">ctrl</text>
+      <use  class="layerSym" href="#glyph_space"/>
+    </g>
+    <g id="leftThumb-ez-reachy"  class="specialKey showFun">
+      <rect class="colorMod"/>
+      <text class="colorMod level0">os</text>
+      <text class="layerNav pc">fun</text>
+      <use  class="layerSym" href="#glyph_return"/>
+    </g>
+    <g id="rightThumb-ez-reachy" class="specialKey showNav">
+      <rect class="colorNav"/>
+      <text class="colorNav level0">nav</text>
+    </g>
+    <g id="rightThumb-ez-comfy"  class="specialKey">
+      <rect/>
+      <use  class="level0" href="#glyph_space"/>
+    </g>
+    <g id="rightThumb-ez-tucked" class="specialKey showSym">
+      <rect class="colorSym"/>
+      <text class="level0 colorSym">sym</text>
+      <text class="layerNav shortcut">altgr</text>
+    </g>
+
+    <!-- easy mode + Emacs -->
+    <g class="leftThumb"  id="leftThumb-ez">
       <g class="tucked thumb">
-        <g class="specialKey">
-          <rect class="colorMod"/>
-          <text class="colorMod level0">alt</text>
-          <text class="layerSym shortcut">num</text>
-        </g>
+        <use href="#leftThumb-ez-tucked"/>
         <g class="comfy thumb">
-          <g class="specialKey">
-            <rect class="colorMod"/>
-            <text class="colorMod level0">ctrl</text>
-            <use  class="layerSym" href="#glyph_space"/>
-          </g>
+          <use href="#leftThumb-ez-comfy"/>
           <g class="reachy thumb">
-            <g class="specialKey showFun">
-              <rect class="colorMod"/>
-              <text class="colorMod level0">os</text>
-              <text class="layerNav pc">fun</text>
-              <use  class="layerSym" href="#glyph_return"/>
-            </g>
+            <use href="#leftThumb-ez-reachy"/>
           </g>
         </g>
       </g>
     </g>
     <g class="rightThumb" id="rightThumb-ez">
       <g class="tucked thumb">
-        <g class="specialKey showSym">
-          <rect class="colorSym"/>
-          <text class="level0 colorSym">sym</text>
-          <text class="layerNav shortcut">altgr</text>
-        </g>
+        <use href="#rightThumb-ez-tucked"/>
         <g class="comfy thumb">
-          <g class="specialKey">
-            <rect/>
-            <use  class="level0" href="#glyph_space"/>
-          </g>
+          <use href="#rightThumb-ez-comfy"/>
           <g class="reachy thumb">
-            <g class="specialKey showNav">
-              <rect class="colorNav"/>
-              <text class="colorNav level0">nav</text>
-            </g>
+            <use href="#rightThumb-ez-reachy"/>
           </g>
         </g>
       </g>
     </g>
 
-    <!-- layer-taps -->
-    <g class="leftThumb" id="leftThumb-tt">
+    <!-- easy mode + Vim -->
+    <g class="leftThumb"  id="leftThumb-ez-vim">
       <g class="tucked thumb">
-        <g class="key">
-          <rect/>
-          <rect class="colorMod sticky"/>
-          <text class="colorMod sticky pc">shift</text>
-          <use  class="layerVim" href="#glyph_caps"/>
-          <text class="layerSym shortcut">num</text>
-        </g>
+        <use href="#leftThumb-ez-tucked"/>
         <g class="comfy thumb">
-          <g class="key">
-            <rect/>
-            <rect class="holdTap colorMod"/>
-            <text class="level1  colorMod pc">ctrl</text>
-            <use  class="level2"   href="#glyph_backspace"/>
-            <use  class="layerNav" href="#glyph_delete"/>
-            <use  class="layerSym" href="#glyph_space"/>
-          </g>
+          <use href="#leftThumb-ez-comfy"/>
           <g class="reachy thumb">
-            <g class="key showFun">
-              <rect/>
-              <rect class="holdTap colorMod"/>
-              <text class="level1  colorMod pc">os</text>
-              <use  class="level2"   href="#glyph_tab"/>
-              <use  class="layerNav" href="#glyph_btab"/>
-              <use  class="layerSym" href="#glyph_return"/>
-            </g>
+            <use href="#leftThumb-ez-reachy"/>
+          </g>
+        </g>
+      </g>
+    </g>
+    <g class="rightThumb" id="rightThumb-ez-vim">
+      <g class="tucked thumb">
+        <use href="#rightThumb-ez-tucked"/>
+        <g class="comfy thumb">
+          <use href="#rightThumb-ez-comfy"/>
+          <g class="reachy thumb">
+            <use href="#rightThumb-ez-reachy"/>
+          </g>
+        </g>
+      </g>
+    </g>
+
+    <!-- thumb-taps -->
+    <g id="leftThumb-tt-tucked"  class="key">
+      <rect/>
+      <rect class="colorMod sticky"/>
+      <text class="colorMod sticky pc">shift</text>
+      <use  class="layerVim" href="#glyph_caps"/>
+      <text class="layerSym shortcut">num</text>
+    </g>
+    <g id="leftThumb-tt-comfy"   class="key">
+      <rect/>
+      <rect class="holdTap colorMod"/>
+      <text class="level1  colorMod pc">ctrl</text>
+      <use  class="level2"   href="#glyph_backspace"/>
+      <use  class="layerNav" href="#glyph_delete"/>
+      <use  class="layerSym" href="#glyph_space"/>
+    </g>
+    <g id="leftThumb-tt-reachy"  class="key showFun">
+      <rect/>
+      <rect class="holdTap colorMod"/>
+      <text class="level1  colorMod pc">os</text>
+      <use  class="level2"   href="#glyph_tab"/>
+      <use  class="layerNav" href="#glyph_btab"/>
+      <use  class="layerSym" href="#glyph_return"/>
+    </g>
+    <g id="rightThumb-tt-reachy" class="key showFun">
+      <rect/>
+      <rect class="holdTap colorMod"/>
+      <text class="level1  colorMod pc">alt</text>
+      <use  class="level2" href="#glyph_return"/>
+    </g>
+    <g id="rightThumb-tt-comfy"  class="key">
+      <rect/>
+      <rect class="holdTap borderNav tap-pref"/>
+      <text class="level1  borderNav pc">nav</text>
+      <use  class="level2" href="#glyph_space"/>
+      <text class="layerNav pc">fun</text>
+    </g>
+    <g id="rightThumb-tt-tucked" class="key showSym">
+      <rect/>
+      <rect class="colorSym sticky"/>
+      <text class="colorSym sticky pc">sym</text>
+      <text class="layerNav shortcut">altgr</text>
+    </g>
+
+    <!-- thumb-taps + Emacs -->
+    <g class="leftThumb"  id="leftThumb-tt">
+      <g class="tucked thumb">
+        <use href="#leftThumb-tt-tucked"/>
+        <g class="comfy thumb">
+          <use href="#leftThumb-tt-comfy"/>
+          <g class="reachy thumb">
+            <use href="#leftThumb-tt-reachy"/>
           </g>
         </g>
       </g>
     </g>
     <g class="rightThumb" id="rightThumb-tt">
       <g class="tucked thumb">
-        <g class="key showSym">
-          <rect/>
-          <rect class="colorSym sticky"/>
-          <text class="colorSym sticky pc">sym</text>
-          <text class="layerNav shortcut">altgr</text>
-        </g>
+        <use href="#rightThumb-tt-tucked"/>
         <g class="comfy thumb">
-          <g class="key">
-            <rect/>
-            <rect class="holdTap borderNav tap-pref"/>
-            <text class="level1  borderNav pc">nav</text>
-            <use  class="level2" href="#glyph_space"/>
-            <text class="layerNav pc">fun</text>
-          </g>
+          <use href="#rightThumb-tt-comfy"/>
           <g class="reachy thumb">
-            <g class="key showFun">
-              <rect/>
-              <rect class="holdTap colorMod"/>
-              <text class="level1  colorMod pc">alt</text>
-              <use  class="level2"   href="#glyph_return"/>
-            </g>
+            <use href="#rightThumb-tt-reachy"/>
           </g>
         </g>
       </g>
     </g>
 
-    <!-- homerow-mods -->
-    <g class="leftThumb" id="leftThumb-hrm">
+    <!-- thumb-taps + Vim -->
+    <g class="leftThumb"  id="leftThumb-tt-vim">
       <g class="tucked thumb">
-        <g class="key">
-          <rect/>
-          <rect class="colorMod sticky"/>
-          <text class="colorMod sticky pc">shift</text>
-          <use  class="layerNav" href="#glyph_caps"/>
-          <text class="layerSym shortcut">num</text>
-        </g>
+        <use href="#leftThumb-tt-tucked"/>
         <g class="comfy thumb">
-          <g class="key showNav">
-            <rect/>
-            <rect class="holdTap colorNav"/>
-            <text class="level1  colorNav pc">nav</text>
-            <use  class="level2"   href="#glyph_backspace"/>
-            <use  class="layerNav" href="#glyph_delete"/>
-            <use  class="layerSym" href="#glyph_space"/>
-          </g>
+          <use href="#leftThumb-tt-comfy"/>
           <g class="reachy thumb">
             <g class="key showFun">
               <rect/>
-              <rect class="holdTap colorFun"/>
-              <text class="level1  colorFun pc">fun</text>
-              <use  class="level2"   href="#glyph_tab"/>
-              <use  class="layerNav" href="#glyph_btab"/>
+              <rect class="holdTap colorMod"/>
+              <rect class="holdTap colorMod"/>
+              <text class="level1  colorMod pc">os</text>
+              <use  class="level2"   href="#glyph_escape"/>
               <use  class="layerSym" href="#glyph_return"/>
             </g>
           </g>
         </g>
       </g>
     </g>
+    <g class="rightThumb" id="rightThumb-tt-vim">
+      <g class="tucked thumb">
+        <use href="#rightThumb-tt-tucked"/>
+        <g class="comfy thumb">
+          <use href="#rightThumb-tt-comfy"/>
+          <g class="reachy thumb">
+            <use href="#rightThumb-tt-reachy"/>
+          </g>
+        </g>
+      </g>
+    </g>
+
+    <!-- homerow-mods -->
+    <g id="leftThumb-hrm-comfy"   class="key showNav">
+      <rect/>
+      <rect class="holdTap colorNav"/>
+      <text class="level1  colorNav pc">nav</text>
+      <use  class="level2"   href="#glyph_backspace"/>
+      <use  class="layerNav" href="#glyph_delete"/>
+      <use  class="layerSym" href="#glyph_space"/>
+    </g>
+    <g id="leftThumb-hrm-reachy"  class="key showFun">
+      <rect/>
+      <rect class="holdTap colorFun"/>
+      <text class="level1  colorFun pc">fun</text>
+      <use  class="level2"   href="#glyph_tab"/>
+      <use  class="layerNav" href="#glyph_btab"/>
+      <use  class="layerSym" href="#glyph_return"/>
+    </g>
+    <g id="rightThumb-hrm-reachy" class="key showFun">
+      <rect/>
+      <rect class="holdTap colorFun"/>
+      <text class="level1  colorFun pc">fun</text>
+      <use  class="level2" href="#glyph_return"/>
+    </g>
+
+    <!-- homerow-mods + Emacs -->
+    <g class="leftThumb"  id="leftThumb-hrm">
+      <g class="tucked thumb">
+        <use href="#leftThumb-tt-tucked"/>
+        <g class="comfy thumb">
+          <use href="#leftThumb-hrm-comfy"/>
+          <g class="reachy thumb">
+            <use href="#leftThumb-hrm-reachy"/>
+          </g>
+        </g>
+      </g>
+    </g>
     <g class="rightThumb" id="rightThumb-hrm">
       <g class="tucked thumb">
-        <g class="key showSym">
-          <rect/>
-          <rect class="colorSym sticky"/>
-          <text class="colorSym sticky pc">sym</text>
-          <text class="layerNav shortcut">altgr</text>
-        </g>
+        <use href="#rightThumb-tt-tucked"/>
         <g class="comfy thumb">
-          <g class="key toggleNavFun">
-            <rect/>
-            <rect class="holdTap borderNav tap-pref"/>
-            <text class="level1  borderNav pc">nav</text>
-            <use  class="level2" href="#glyph_space"/>
-            <text class="layerNav pc">fun</text>
-          </g>
+          <use href="#rightThumb-tt-comfy"/>
           <g class="reachy thumb">
-            <g class="key showFun">
+            <use href="#rightThumb-hrm-reachy"/>
+          </g>
+        </g>
+      </g>
+    </g>
+
+    <!-- homerow-mods + Vim -->
+    <g class="leftThumb"  id="leftThumb-hrm-vim">
+      <g class="tucked thumb">
+        <use href="#leftThumb-tt-tucked"/>
+        <g class="comfy thumb">
+          <use href="#leftThumb-hrm-comfy"/>
+          <g class="reachy thumb">
+            <g class="key showNum">
               <rect/>
-              <rect class="holdTap colorFun"/>
-              <text class="level1  colorFun pc">fun</text>
-              <use  class="level2"   href="#glyph_return"/>
+              <rect class="holdTap colorNum"/>
+              <text class="level1  colorNum pc">num</text>
+              <use  class="level2"   href="#glyph_escape"/>
+              <use  class="layerSym" href="#glyph_return"/>
+            </g>
+          </g>
+        </g>
+      </g>
+    </g>
+    <g class="rightThumb" id="rightThumb-hrm-vim">
+      <g class="tucked thumb">
+        <use href="#rightThumb-tt-tucked"/>
+        <g class="comfy thumb">
+          <use href="#rightThumb-tt-comfy"/>
+          <g class="reachy thumb">
+            <g class="key showNum">
+              <rect/>
+              <rect class="holdTap colorNum"/>
+              <text class="level1  colorNum pc">num</text>
+              <use  class="level2" href="#glyph_return"/>
             </g>
           </g>
         </g>
@@ -275,7 +369,7 @@
     </g>
 
     <!-- two thumb keys -->
-    <g class="leftThumb" id="leftThumb-2tk">
+    <g class="leftThumb"  id="leftThumb-2tk">
       <g class="tucked thumb">
         <g class="key">
           <rect/>
@@ -313,172 +407,6 @@
             <text class="level1  borderNav pc">nav</text>
             <use  class="level2" href="#glyph_space"/>
             <text class="layerNav pc">fun</text>
-          </g>
-        </g>
-      </g>
-    </g>
-
-    <!-- Vim + easy mode (no dual keys) -->
-    <g class="leftThumb" id="leftThumb-ez-vim">
-      <g class="tucked thumb">
-        <g class="specialKey">
-          <rect class="colorMod"/>
-          <text class="colorMod level0">alt</text>
-          <text class="layerSym shortcut">num</text>
-        </g>
-        <g class="comfy thumb">
-          <g class="specialKey">
-            <rect class="colorMod"/>
-            <text class="colorMod level0">ctrl</text>
-            <use  class="layerSym" href="#glyph_space"/>
-          </g>
-          <g class="reachy thumb">
-            <g class="specialKey showFun">
-              <rect class="colorMod"/>
-              <text class="colorMod level0">os</text>
-              <text class="layerNav pc">fun</text>
-              <use  class="layerSym" href="#glyph_return"/>
-            </g>
-          </g>
-        </g>
-      </g>
-    </g>
-    <g class="rightThumb" id="rightThumb-ez-vim">
-      <g class="tucked thumb">
-        <g class="specialKey showSym">
-          <rect class="colorSym"/>
-          <text class="level0 colorSym">sym</text>
-          <text class="layerNav shortcut">altgr</text>
-        </g>
-        <g class="comfy thumb">
-          <g class="specialKey">
-            <rect/>
-            <use  class="level0" href="#glyph_space"/>
-          </g>
-          <g class="reachy thumb">
-            <g class="specialKey showNav">
-              <rect class="colorNav"/>
-              <text class="colorNav level0">nav</text>
-            </g>
-          </g>
-        </g>
-      </g>
-    </g>
-
-    <!-- Vim + layer-taps -->
-    <g class="leftThumb" id="leftThumb-tt-vim">
-      <g class="tucked thumb">
-        <g class="key">
-          <rect/>
-          <rect class="colorMod sticky"/>
-          <text class="colorMod sticky pc">shift</text>
-          <use  class="layerVim" href="#glyph_caps"/>
-          <text class="layerSym shortcut">num</text>
-        </g>
-        <g class="comfy thumb">
-          <g class="key">
-            <rect/>
-            <rect class="holdTap colorMod"/>
-            <text class="level1  colorMod pc">ctrl</text>
-            <use  class="level2"   href="#glyph_backspace"/>
-            <use  class="layerNav" href="#glyph_delete"/>
-            <use  class="layerSym" href="#glyph_space"/>
-          </g>
-          <g class="reachy thumb">
-            <g class="key showFun">
-              <rect/>
-              <rect class="holdTap colorMod"/>
-              <rect class="holdTap colorMod"/>
-              <text class="level1  colorMod pc">os</text>
-              <use  class="level2"   href="#glyph_escape"/>
-              <use  class="layerSym" href="#glyph_return"/>
-            </g>
-          </g>
-        </g>
-      </g>
-    </g>
-    <g class="rightThumb" id="rightThumb-tt-vim">
-      <g class="tucked thumb">
-        <g class="key showSym">
-          <rect/>
-          <rect class="colorSym sticky"/>
-          <text class="colorSym sticky pc">sym</text>
-          <text class="layerNav shortcut">altgr</text>
-        </g>
-        <g class="comfy thumb">
-          <g class="key">
-            <rect/>
-            <rect class="holdTap borderNav tap-pref"/>
-            <text class="level1  borderNav pc">nav</text>
-            <use  class="level2" href="#glyph_space"/>
-            <text class="layerNav pc">fun</text>
-          </g>
-          <g class="reachy thumb">
-            <g class="key showFun">
-              <rect/>
-              <rect class="holdTap colorMod"/>
-              <text class="level1  colorMod pc">alt</text>
-              <use  class="level2"   href="#glyph_return"/>
-            </g>
-          </g>
-        </g>
-      </g>
-    </g>
-
-    <!-- Vim + homerow-mods -->
-    <g class="leftThumb" id="leftThumb-hrm-vim">
-      <g class="tucked thumb">
-        <g class="key">
-          <rect/>
-          <rect class="colorMod sticky"/>
-          <text class="colorMod sticky pc">shift</text>
-          <use  class="layerVim" href="#glyph_caps"/>
-          <text class="layerSym shortcut">num</text>
-        </g>
-        <g class="comfy thumb">
-          <g class="key showNav">
-            <rect/>
-            <rect class="holdTap colorNav"/>
-            <text class="level1  colorNav pc">nav</text>
-            <use  class="level2"   href="#glyph_backspace"/>
-            <use  class="layerVim" href="#glyph_delete"/>
-            <use  class="layerSym" href="#glyph_space"/>
-          </g>
-          <g class="reachy thumb">
-            <g class="key showNum">
-              <rect/>
-              <rect class="holdTap colorNum"/>
-              <text class="level1  colorNum pc">num</text>
-              <use  class="level2"   href="#glyph_escape"/>
-              <use  class="layerSym" href="#glyph_return"/>
-            </g>
-          </g>
-        </g>
-      </g>
-    </g>
-    <g class="rightThumb" id="rightThumb-hrm-vim">
-      <g class="tucked thumb">
-        <g class="key showSym">
-          <rect/>
-          <rect class="colorSym sticky"/>
-          <text class="colorSym sticky pc">sym</text>
-          <text class="layerVim shortcut">altgr</text>
-        </g>
-        <g class="comfy thumb">
-          <g class="key toggleNavFun">
-            <rect/>
-            <rect class="holdTap borderNav tap-pref"/>
-            <text class="level1  borderNav pc">nav</text>
-            <use  class="level2" href="#glyph_space"/>
-            <text class="layerVim pc">fun</text>
-          </g>
-          <g class="reachy thumb">
-            <g class="key showNum">
-              <rect/>
-              <rect class="holdTap colorNum"/>
-              <text class="level1  colorNum pc">num</text>
-              <use  class="level2" href="#glyph_return"/>
-            </g>
           </g>
         </g>
       </g>
