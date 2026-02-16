@@ -36,9 +36,7 @@ const keyboards = {
   },
 };
 
-    // thumbs: [ "tucked3", "tucked2", "tucked1", "comfy", "reachy" ],
-
-const setGeometry = (name) => {
+function setGeometry(name) {
   const geometry = keyboards[name];
   document.documentElement.className.baseVal = name;
   document.documentElement.setAttribute("viewBox", geometry.view_box);
@@ -100,7 +98,7 @@ const setGeometry = (name) => {
     svgTransform(`.leftThumb  .${name}`, left);
     svgTransform(`.rightThumb .${name}`, right);
   });
-};
+}
 
 let funState = false;
 const setLayer3 = (id) => {
@@ -118,15 +116,16 @@ const toggleNavFun = () => {
   setLayer3(funState ? "nav" : "fun");
 };
 
-const setConfig = (cfg) => {
+function setConfig(cfg, vim) {
   document.querySelector("#left").setAttribute("class", cfg);
   document.querySelector("#right").setAttribute("class", cfg);
-  const nav = (cfg === "vim") ? "vim" : "nav";
+  const nav = vim ? "vim" : "nav";
   setLayer3(nav);
   setLayer4("sym");
 
+  const thumb = `${cfg}${vim ? '-vim' : ''}`;
   ["left", "right"].forEach(id => {
-    document.querySelector(`#${id} .thumbCluster`).setAttribute("href", `#${id}Thumb-${cfg}`);
+    document.querySelector(`#${id} .thumbCluster`).setAttribute("href", `#${id}Thumb-${thumb}`);
   })
 
   document.querySelectorAll(".toggleNavFun *").forEach(element => {
@@ -153,7 +152,7 @@ const setConfig = (cfg) => {
     element.setAttribute("style", "cursor: pointer");
     element.setAttribute("onclick", `setConfig('${element.id}')`);
   })
-};
+}
 
 const drawKeys = () => {
   // show keys and dual keys
@@ -223,8 +222,21 @@ const drawLabels = () => {
   });
 };
 
-const setChar = (element, level, char) => {
-  const text = element?.querySelector(`[class="level${level}"]`);
+const digits = {
+  "Digit1": [ "KeyQ", "KeyA" ],
+  "Digit2": [ "KeyW", "KeyS" ],
+  "Digit3": [ "KeyE", "KeyD" ],
+  "Digit4": [ "KeyR", "KeyF" ],
+  "Digit5": [ "KeyT", "KeyG" ],
+  "Digit6": [ "KeyY", "KeyH" ],
+  "Digit7": [ "KeyU", "KeyJ" ],
+  "Digit8": [ "KeyI", "KeyK" ],
+  "Digit9": [ "KeyO", "KeyL" ],
+  "Digit0": [ "KeyP", "Semicolon" ],
+};
+const setChar = (id, level, char) => {
+  const key = document.getElementById(id);
+  const text = key?.querySelector(`[class="${level}"]`);
   if (!text) {
     return;
   }
@@ -243,9 +255,14 @@ async function setLayout(name) {
   const result   = await response.json();
   for (const id in result.keymap) {
     const chars = result.keymap[id];
-    const key = document.getElementById(id);
-    setChar(key, 2, chars[1]);
-    setChar(key, 1, chars[0].toUpperCase() !== chars[1]
-                  ? chars[0] : "");
+    if (digits[id]) {
+      setChar(digits[id][0], "layerNum", chars[1]);
+      setChar(digits[id][1], "layerNum", chars[0]);
+    }
+    else {
+      setChar(id, "level2", chars[1]);
+      setChar(id, "level1", chars[0].toUpperCase() !== chars[1]
+                          ? chars[0] : "");
+    }
   }
 }

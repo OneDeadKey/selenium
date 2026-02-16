@@ -1,0 +1,20 @@
+:root {
+  color-scheme: light dark;
+}
+
+body {
+  width: 99%;
+  font-family: sans-serif;
+  font-size: 1em;
+}
+
+form p {
+  /* text-align: center; */
+}
+object {
+  width: 100%;
+}
+
+header {
+  text-align: center;
+}

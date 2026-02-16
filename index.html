@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf8">
+    <title>Selenium</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="select.js" defer></script>
+  </head>
+  <body>
+    <header>
+      <h1>Selenium</h1>
+      <p>A configurable <a href="">Arsenik</a> variant for split keyboards.</p>
+    </header>
+
+    <form>
+      <p>
+        <select id="geometry">
+          <option value="ortho" selected>Ortho</option>
+          <option value="flex">Quacken</option>
+        </select>
+        <select id="layout">
+          <option>QWERTY</option>
+          <option>Colemak</option>
+          <option>Sturdy</option>
+          <option>Ergol</option>
+        </select>
+      </p>
+      <object type="image/svg+xml" class="odk" data="selenium.svg"></object>
+      <p>
+        <input type="radio" name="mode" id="mode-ez" value="ez">
+        <label for="mode-ez"><strong>EZ</strong>: no hold-taps</label>
+        <br>
+        <input type="radio" name="mode" id="mode-tt" value="tt">
+        <label for="mode-tt"><strong>TT</strong>: thumb-taps</label>
+        <br>
+        <input type="radio" name="mode" id="mode-hrm" value="hrm" checked>
+        <label for="mode-hrm"><strong>HRM</strong>: homerow-mods</label>
+        <br>
+        <input type="radio" name="mode" id="mode-2tk" value="2tk">
+        <label for="mode-2tk"><strong>2TK</strong>: two thumb keys</label>
+      </p>
+      <p>
+        <input type="checkbox" name="vim" id="option-vim" value="vim">
+        <label for="option-vim">Vim mode</label>
+      </p>
+   </form>
+  </body>
+</html>
