@@ -35,7 +35,7 @@ const keyboards = {
     view_box: "100 -10 730 260",
   },
   none: {
-    view_box: "100 -10 670 200",
+    view_box: "100 0 670 180",
   },
 };
 
@@ -249,11 +249,9 @@ const setChar = (id, level, char) => {
     text.textContent = char[1];
   }
 }
-async function setLayout(name) {
-  const response = await fetch(`layouts/${name}.json`);
-  const result   = await response.json();
-  for (const id in result.keymap) {
-    const chars = result.keymap[id];
+function setLayout(keymap) {
+  for (const id in keymap) {
+    const chars = keymap[id];
     if (digits[id]) {
       setChar(digits[id][0], "layerNum", chars[1]);
       setChar(digits[id][1], "layerNum", chars[0]);
