@@ -1,5 +1,64 @@
+/**
+ * ╭───────────────────────────────────────────────────────────────╮
+ * │                         Color Palette                         │
+ * ╰───────────────────────────────────────────────────────────────╯
+**/
+
 :root {
   color-scheme: light dark;
+
+  /* <html|body|main> background and text colors */
+  --bg-root:          #ccc;
+  --bg-main:          #f8f8f8;
+  --bg-main-shadow:   #888;
+  --fg-main-border:   #aaa;
+  --fg-main:          #222;
+
+  /* banner -- the foreground matches the favicon #rocket color */
+  --bg-banner:        #e9e9e9;
+  --fg-banner-border: #5446;
+  --fg-banner:        #544;
+
+  /* <h2|a|code> and specific emphasis */
+  --bg-accent:        #b884;
+  --fg-accent-border: brown;
+  --fg-accent:        brown;
+
+  /* <kbd> and special inline content */
+  --bg-key:           #8884;
+  --fg-key-border:    #888;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    /* <html|body|main> background and text colors */
+    --bg-root:          #151417;
+    --bg-main:          #1a1a1f;
+    --bg-main-shadow:   #111;
+    --fg-main-border:   #111;
+    --fg-main:          #ccc;
+
+    /* banner -- the foreground matches the favicon #rocket color */
+    --bg-banner:        #29292d;
+    --fg-banner-border: #cbb5;
+    --fg-banner:        #cbb;
+
+    /* <h2|a|code> and specific emphasis */
+    --fg-accent-border: #f967;
+    --fg-accent:        #f96;
+  }
+}
+
+
+/**
+ * ╭───────────────────────────────────────────────────────────────╮
+ * │                          Main Layout                          │
+ * ╰───────────────────────────────────────────────────────────────╯
+**/
+
+:root {
+  --main-padding: 12px;
+  --list-indent: 1.5em;
 }
 
 body {
@@ -13,6 +72,10 @@ header {
   text-align: center;
 }
 
+form {
+  text-align: left;
+}
+
 form div {
   display: flex;
   flex-direction: row;
@@ -24,4 +87,116 @@ form div {
 
 object {
   width: 100%;
+}
+
+html {
+  height: 100%;
+  width:  100%;
+  font-family: sans-serif;
+  background-color: var(--bg-root);
+  /* scroll-behavior: smooth; */
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin: auto;
+  max-width: 60em;
+  min-height: 100%;
+
+  line-height: 1.4em;
+  border-left:  1px solid var(--fg-main-border);
+  border-right: 1px solid var(--fg-main-border);
+  box-shadow: 0px 1px 10px var(--bg-main-shadow);
+  background-color: var(--bg-main);
+  color: var(--fg-main);
+}
+
+main {
+  display: block; /* enable 'flex' here on a per-page basis */
+  flex: fit-content;
+  flex-direction: column;
+  justify-content: space-evenly;
+  padding: 0 var(--main-padding);
+}
+
+h2 {
+  color: var(--fg-accent);
+  border-bottom: 1px inset var(--fg-accent-border);
+}
+
+h3 {
+  border-bottom: 1px dotted;
+}
+
+h2, h3, footer {
+  margin-top: 2em;
+}
+
+ol, ul {
+  padding-left: var(--list-indent);
+  margin-left: 0;
+}
+
+li {
+  margin: 0.2em 0;
+}
+
+a[href] {
+  color: var(--fg-accent);
+  text-decoration: none;
+}
+
+a[href]:hover {
+  text-decoration: underline;
+}
+
+
+/**
+ * ╭───────────────────────────────────────────────────────────────╮
+ * │                          Keys & Chars                         │
+ * ╰───────────────────────────────────────────────────────────────╯
+**/
+
+table { /* behaviors */
+  max-width: 42em;
+  margin: auto;
+}
+td {
+  padding: 0.5em;
+}
+
+kbd { /* key */
+  margin: 0 2px;
+  font-family: serif;
+  font-size: 1em;
+  border: 1px outset var(--bg-key-border);
+  background-color: var(--bg-key);
+  padding: 2px 3px;
+}
+
+code { /* character, digrams, trigrams */
+  font-weight: bold;
+  font-family: serif;
+  background-color: var(--bg-accent);
+  padding: 2px 4px;
+  border-radius: 2px;
+}
+
+
+/**
+ * ╭───────────────────────────────────────────────────────────────╮
+ * │                          Desktop Mode                         │
+ * ╰───────────────────────────────────────────────────────────────╯
+**/
+
+@media only screen and (min-width: 768px) {
+  :root {
+    --main-padding: 40px;
+    --list-indent: 2.5em;
+  }
+  .highlight {
+    border-radius: 6px;
+  }
 }

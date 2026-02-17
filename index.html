@@ -4,6 +4,7 @@
     <meta charset="utf8">
     <title>Selenium</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="selenium.css">
     <script src="select.js" defer></script>
   </head>
   <body>
@@ -11,43 +12,162 @@
       <h1>Selenium</h1>
       <p>A configurable <a href="https://github.com/OneDeadKey/arsenik">Arsenik</a>
         variant for split keyboards.</p>
+      <form>
+        <div>
+          <select id="geometry">
+            <option value="ortho" selected>Ortho</option>
+            <option value="flex">Quacken</option>
+          </select>
+          <select id="layout">
+            <option>QWERTY</option>
+            <option>Colemak</option>
+            <option>Sturdy</option>
+            <option>Ergol</option>
+          </select>
+        </div>
+        <object type="image/svg+xml" class="odk" data="selenium.svg"></object>
+        <div>
+          <p>
+            <input type="radio" name="mode" id="mode-ez" value="ez">
+            <label for="mode-ez"><strong>EZ</strong>: no hold-taps</label>
+            <br>
+            <input type="radio" name="mode" id="mode-tt" value="tt">
+            <label for="mode-tt"><strong>TT</strong>: thumb-taps</label>
+            <br>
+            <input type="radio" name="mode" id="mode-hrm" value="hrm" checked>
+            <label for="mode-hrm"><strong>HRM</strong>: homerow-mods</label>
+            <br>
+            <input type="radio" name="mode" id="mode-2tk" value="2tk">
+            <label for="mode-2tk"><strong>2TK</strong>: two thumb keys</label>
+          </p>
+          <p>
+            <label for="option-vim">Vim mode</label>
+            <input type="checkbox" name="vim" id="option-vim" value="vim">
+          </p>
+        </div>
+      </form>
     </header>
 
-    <form>
-      <div>
-        <select id="geometry">
-          <option value="ortho" selected>Ortho</option>
-          <option value="flex">Quacken</option>
-        </select>
-        <span></span>
-        <select id="layout">
-          <option>QWERTY</option>
-          <option>Colemak</option>
-          <option>Sturdy</option>
-          <option>Ergol</option>
-        </select>
-      </div>
-      <object type="image/svg+xml" class="odk" data="selenium.svg"></object>
-      <div>
-        <p>
-          <input type="radio" name="mode" id="mode-ez" value="ez">
-          <label for="mode-ez"><strong>EZ</strong>: no hold-taps</label>
-          <br>
-          <input type="radio" name="mode" id="mode-tt" value="tt">
-          <label for="mode-tt"><strong>TT</strong>: thumb-taps</label>
-          <br>
-          <input type="radio" name="mode" id="mode-hrm" value="hrm" checked>
-          <label for="mode-hrm"><strong>HRM</strong>: homerow-mods</label>
-          <br>
-          <input type="radio" name="mode" id="mode-2tk" value="2tk">
-          <label for="mode-2tk"><strong>2TK</strong>: two thumb keys</label>
-        </p>
-        <span></span>
-        <p>
-          <label for="option-vim">Vim mode</label>
-          <input type="checkbox" name="vim" id="option-vim" value="vim">
-        </p>
-      </div>
-   </form>
+    <main>
+      <h2>From 42 to 34 Keys (and beyond)</h2>
+      <p>Like Arsenik, Selenium allows a step-by-step approach:</p>
+      <ul>
+        <li><strong>EZ</strong>: no hold-taps.
+          <ul>
+            <li>a beginner-friendly keymap for 42-key keebs</li>
+          </ul>
+        </li>
+        <li><strong>TT</strong>: thumb-taps. This is where it gets comfy:
+          <ul>
+            <li>access the `Nav` layer with a long press on the <kbd>Space</kbd> key</li>
+            <li>do <kbd>Backspace</kbd> and <kbd>Return</kbd> with a quick tap on thumb keys</li>
+          </ul>
+        </li>
+        <li><strong>HRM</strong>: homerow-mods. A sane default:
+          <ul>
+            <li>all modifiers are on homerow keys, nice and symmetricalc
+            <li>all layer-shifts are on thumb keys</li>
+          </ul>
+        </li>
+        <li><strong>2TK</strong>: two thumb keys.</li>
+      </ul>
+      <p>These 4 modes share the same layers: only the thumb clusters change.</p>
+
+      <h2>Hold-Taps That Just Work</h2>
+      <p>Unreliable hold-taps are very frustrating. We believe Selenium fixes that.</p>
+
+      <h3>Timing is Key</h3>
+      <p>The common approach for compact keyboard keymaps is to use a single behavior for all hold-taps,
+        which is often a compromise between “tap-preferred” and “hold-preferred” (like QMK’s
+        “permissive hold”), and then rely on mitigating measures and fine timing adjustments to limit
+        the number of typos.</p>
+      <p>In our experience, this doesn’t work reliably for most users and never will, because
+        <strong>homerow-mods and thumb modifiers have two mutually excusive goals</strong>.
+        Instead, Selenium uses three distinct kinds of hold-tap keys:</p>
+      <table>
+        <tr>
+          <td>
+            <svg viewBox="0 0 60 57" width="60" height="57">
+              <defs>
+                <path class="symbol" transform="scale(0.4) translate(-24, -30)" id="glyph_space"     d="M42,24V32H6V24"/>
+              </defs>
+              <g class="key">
+                <rect x="1" y="1" rx="4" ry="4" width="58" height="54.67"/>
+                <rect class="holdTap borderNav tap-pref" x="1" y="28.335" rx="4" ry="4" width="29" height="27.335"/>
+                <text class="level1  borderNav pc" x="15" y="45.336">nav</text>
+                <use  class="level2" href="#glyph_space" x="15" y="18.1344"/>
+              </g>
+            </svg>
+          </td>
+          <td>
+            <strong>Tap-Preferred</strong><br>
+            the <kbd>Space</kbd> key and homerow-mods must be pressed at least 300ms to become a
+            modifier / layer-shift
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <svg viewBox="0 0 60 57" width="60" height="57">
+              <defs>
+                <path class="symbol" transform="scale(0.4) translate(-24, -30)" id="glyph_return"    d="M42,13V27H6 m8-8l-8,8l8,8"/>
+              </defs>
+              <g class="key">
+                <rect x="1" y="1" rx="4" ry="4" width="58" height="54.67"/>
+                <rect class="holdTap colorFun" x="1" y="28.335" rx="4" ry="4" width="29" height="27.335"/>
+                <text class="level1  colorFun pc" x="15" y="45.336">fun</text>
+                <use  class="level2" href="#glyph_return" x="15" y="18.1344"/>
+              </g>
+            </svg>
+          </td>
+          <td>
+            <strong>Hold-Preferred</strong><br>
+            <kbd>Enter</kbd> or <kbd>Backspace</kbd> must be tapped quickly (150ms by default)
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <svg viewBox="0 0 60 57" width="60" height="57">
+              <rect x="1" y="1" rx="4" ry="4" width="58" height="54.67"/>
+              <rect class="colorSym sticky" y="1" rx="4" ry="4" width="29" height="54.67"/>
+              <text class="colorSym sticky pc" x="-28.335" y="20">sym</text>
+            </svg>
+          </td>
+          <td>
+            <strong>Sticky</strong><br>
+            the <kbd>Shift</kbd> and <kbd>Symbols</kbd> keys behave as one-time-shifts when tapped,
+            and as regular modifiers / layer-shifters when hold.
+          </td>
+        </tr>
+      </table>
+      <p>The main point in this approach is that you’ll never have to think of it: as long as
+        your keymap respects the proper behavior/key associations, it just works.</p>
+
+      <h3>Thumb-Shifting</h3>
+      TODO
+
+      <h2>Layers</h2>
+
+      <h3>Symbols</h3>
+      <p>The Symbol layer has been fine-tuned to chain common programming symbols.</p>
+      <p>It’s also been desinged with Vim in mind, to make advanced navigation tricks more
+        comfortable.</p>
+
+      <h3>Num/Nav</h3>
+      TODO
+
+      <h3>Fun/Media</h3>
+      TODO
+
+      <h2>Configurable</h2>
+
+      <h3>Vim option</h3>
+      TODO
+
+      <h3><kbd>Space</kbd>/<kbd>Backspace</kbd> Swap</h3>
+      TODO
+
+      <h3><kbd>Shift</kbd> as Pinky HRM</h3>
+      TODO
+    </main>
   </body>
 </html>
