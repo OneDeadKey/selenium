@@ -15,20 +15,20 @@
       <form>
         <div>
           <span>
-            <select name="geometry">
-              <option value="ortho" selected>Ortho</option>
-              <option value="flex">Quacken</option>
-            </select>
+            <input type="checkbox" name="vim" id="option-vim" value="vim">
+            <label for="option-vim">Vim variant</label>
+          </span>
+          <span>
             <select name="layout">
               <option>QWERTY</option>
               <option>Colemak</option>
               <option>Sturdy</option>
               <option>Ergol</option>
             </select>
-          </span>
-          <span>
-            <label for="option-vim">Vim variant</label>
-            <input type="checkbox" name="vim" id="option-vim" value="vim">
+            <select name="geometry">
+              <option value="ortho" selected>Ortho</option>
+              <option value="flex">Quacken</option>
+            </select>
           </span>
         </div>
         <object type="image/svg+xml" data="keeb.svg" class="main"></object>
