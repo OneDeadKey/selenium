@@ -208,6 +208,7 @@ kbd { /* key */
   border: 1px outset var(--bg-key-border);
   background-color: var(--bg-key);
   padding: 2px 3px;
+  text-wrap: nowrap;
 }
 
 code { /* character, digrams, trigrams */
@@ -216,6 +217,7 @@ code { /* character, digrams, trigrams */
   background-color: var(--bg-accent);
   padding: 2px 4px;
   border-radius: 2px;
+  text-wrap: nowrap;
 }
 
 
