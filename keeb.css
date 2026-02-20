@@ -74,19 +74,17 @@ text.shortcut {
   font-size: 10px;
 }
 
-/*
 text.level0, use.level0,
 text.level1, use.level1,
-text.level2, use.level2 { opacity: 0.3; }
-text.colorNav,
-text.colorNum,
-text.colorFun,
-text.colorSym,
-text.colorMod,
-.thumbCluster use.level0,
-.thumbCluster use.level1,
-.thumbCluster use.level2 { opacity: 1; }
-*/
+text.level2, use.level2 { opacity: 0.5; }
+text.colorNav, text.borderNav,
+text.colorNum, text.borderNum,
+text.colorFun, text.borderFun,
+text.colorSym, text.borderSym,
+text.colorMod, text.borderMod,
+.thumb use.level0,
+.thumb use.level1,
+.thumb use.level2 { opacity: 1; }
 
 /* symbols */
 use.level0,
