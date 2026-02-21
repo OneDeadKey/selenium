@@ -119,14 +119,14 @@ const toggleNavFun = () => {
   setLayer3(funState ? "nav" : "fun");
 };
 
-function setConfig(cfg, vim) {
-  document.querySelector("#left").setAttribute("class", cfg);
-  document.querySelector("#right").setAttribute("class", cfg);
+function setConfig(flavor, vim) {
+  document.querySelector("#left").setAttribute("class", flavor);
+  document.querySelector("#right").setAttribute("class", flavor);
   const nav = vim ? "vim" : "nav";
   setLayer3(nav);
   setLayer4("sym");
 
-  const thumb = `${cfg}${vim ? '-vim' : ''}`;
+  const thumb = `${flavor}${vim ? '-vim' : ''}`;
   ["left", "right"].forEach(id => {
     document.querySelector(`#${id} .thumbCluster`).setAttribute("href", `#${id}Thumb-${thumb}`);
   })

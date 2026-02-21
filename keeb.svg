@@ -313,7 +313,7 @@
     <g class="leftThumb"  id="leftThumb-2tk-vim">
       <g class="tucked thumb">
         <g class="comfy thumb">
-          <g class="key">
+          <g class="key showNum">
             <rect/>
             <rect class="holdTap colorMod"/>
             <text class="level1  colorMod pc">shift</text>
@@ -343,12 +343,12 @@
             <text class="layerNav shortcut">altgr</text>
           </g>
           <g class="reachy thumb">
-            <g class="key toggleNavFun">
+            <g class="key showNum">
               <rect/>
               <rect class="holdTap borderNum tap-pref"/>
               <text class="level1  borderNum shortcut">num</text>
               <use  class="level2" href="#glyph_space"/>
-              <text class="layerNav shortcut">fun</text>
+              <text class="layerNav shortcut ">fun</text>
             </g>
           </g>
         </g>

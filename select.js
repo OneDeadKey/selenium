@@ -15,13 +15,17 @@ async function setLayout(name) {
   });
 }
 
+const applyFlavor = () => {
+  const flavor = selected().id.substr(5);
+  const vim = document.getElementById("option-vim").checked;
+  svg.contentWindow.setConfig(flavor, vim);
+}
+
 const applyConfig = () => {
-  const mode = selected().id.substr(5);
   const data = Object.fromEntries(new FormData(cfg));
   setLayout(data.layout.toLowerCase());
-  svg.contentWindow.setConfig(data.mode, !!data.vim);
   svg.contentWindow.setGeometry(data.geometry);
-  document.querySelector("object.thumbs").contentWindow.setVim(!!data.vim);
+  applyFlavor();
 };
 
 svg.addEventListener("load", applyConfig);
@@ -43,10 +47,8 @@ init("vim", "vim", "num");
 // menu
 document.querySelectorAll("#menu tr").forEach((tr) => {
   tr.addEventListener("click", (event) => {
-    const mode = tr.id.substr(5);
-    const data = Object.fromEntries(new FormData(cfg));
-    svg.contentWindow.setConfig(mode, !!data.vim);
     selected().classList.remove("selected");
     tr.classList.add("selected");
+    applyFlavor();
   });
 });
