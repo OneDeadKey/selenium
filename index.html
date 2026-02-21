@@ -69,28 +69,29 @@
         <table id="menu">
           <tr id="menu-ez">
             <th> EZ </th>
-            <td> <strong>No hold-taps.</strong>
+            <td> <strong>No hold-taps</strong>
               <br> A beginner-friendly keymap for 42-key keebs.
+              <br> Modifiers, <kbd>Backspace</kbd> and <kbd>Return</kbd> in pinky extensions.
             </td>
           </tr>
           <tr id="menu-tt">
             <th> TT </th>
-            <td> <strong>Thumb-taps</strong>: learning how to thumb-shift.
+            <td> <strong>Thumb-taps</strong>: spare your pinkies
               <br>`Nav` layer with a long press on the <kbd>Space</kbd> key.
               <br><kbd>Backspace</kbd> and <kbd>Return</kbd> with a quick tap on thumb keys.
             </td>
           </tr>
           <tr id="menu-hrm" class="selected">
             <th> HRM </th>
-            <td> <strong>Homerow-mods</strong>: the sane default.
+            <td> <strong>Homerow-mods</strong>: the sane default
               <br>Symmetrical modifiers on the homerow.
               <br>Symmetrical layer-shifts under the thumbs.
             </td>
           </tr>
           <tr id="menu-2tk">
             <th> 2TK </th>
-            <td> <strong>Two thumb keys.</strong>
-              <br>Because two good keys can be better than three. </td>
+            <td> <strong>Two thumb keys</strong>: a sane alternative
+              <br>If three thumbs do not work for you. </td>
           </tr>
         </table>
       </form>
@@ -98,16 +99,19 @@
 
     <main>
       <h2 id="hold-taps">Hold-Taps That Just Work</h2>
-      <p>Unreliable hold-taps are very frustrating. We believe Selenium fixes that.</p>
+      <p>Compact keyboards rely on affecting several actions to some keys based on how long they
+        are tapped or held (hold-taps behaviour). Bad timing configurations can however make hold-taps unreliable and very
+        frustrating to use. We believe Selenium provides sane defaults to avoid the problem. </p>
 
       <h3 id="timing-is-key">Timing is Key</h3>
-      <p>The common approach for compact keyboard keymaps is to use a single behavior for all hold-taps,
-        which is often a compromise between “tap-preferred” and “hold-preferred” (like QMK’s
+      <p>The common approach for compact keyboard keymaps is to use a single configuration (and timing)
+        for all hold-taps, which is often a compromise between “tap-preferred” and “hold-preferred” (like QMK’s
         “permissive hold”), and then rely on mitigating measures and fine timing adjustments to limit
         the number of typos.</p>
       <p>In our experience, this doesn’t work reliably for most users and never will, because
         <strong>homerow-mods and thumb modifiers have two mutually excusive goals</strong>.
-        Instead, Selenium uses three distinct kinds of hold-tap keys:</p>
+        Instead, Selenium uses three distinct kinds of hold-tap behaviors that define which
+        action takes priority and timings:</p>
       <table>
         <tr>
           <td>
@@ -121,8 +125,8 @@
             </svg>
           </td>
           <td>
-            <strong>Tap-Preferred</strong>:<br>
-            behaves as a letter key by default, becomes a modifier / layer-shift when pressed longer
+            <strong>Tap-Preferred</strong><br>
+            Behaves as a letter key by default, becomes a modifier / layer-shift when pressed longer
             than 300ms.<br>
             Perfect for <kbd>Space</kbd> and homerow-mods.
           </td>
@@ -139,8 +143,8 @@
             </svg>
           </td>
           <td>
-            <strong>Hold-Preferred</strong>:<br>
-            behaves as a modifier / layer-shift by default, becomes an input when pressed and
+            <strong>Hold-Preferred</strong><br>
+            Behaves as a modifier / layer-shift by default, becomes an input when pressed and
             released in less than 150ms.<br>
             Perfect for adding actions like <kbd>Enter</kbd>, <kbd>Backspace</kbd>, <kbd>Tab</kbd>,
             <kbd>Esc</kbd> to any thumb modifier / layer-shift.
@@ -157,8 +161,8 @@
             </svg>
           </td>
           <td>
-            <strong>Sticky</strong>:<br>
-            behaves as a one-time-shift when tapped, and as a modifier / layer-shift when held.<br>
+            <strong>Sticky</strong><br>
+            Behaves as a one-time-shift when tapped, and as a modifier / layer-shift when held.<br>
             Perfect for <kbd>Shift</kbd> and <kbd>Symbols</kbd>.
           </td>
         </tr>
@@ -168,33 +172,37 @@
         accidental <kbd>Return</kbd> while chatting.</p>
 
       <h3 id="thumb-shifting">Thumb-Shifting</h3>
-      <p>Another opiniated choice with Selenium is that the <kbd>Shift</kbd> and <kbd>Symbols</kbd>
+      <p>An opiniated choice with Selenium is that the <kbd>Shift</kbd> and <kbd>Symbols</kbd>
         keys belong to the thumbs, <em>not</em> to the homerow:</p>
       <ul>
-        <li>this makes it much easier to chain several uppercase letters or symbols;</li>
-        <li>these keys must have “hold-preferred” priority, which is not suitable for homerow-mods.</li>
+        <li>to work seamlessly these keys must have “hold-preferred” priority, which is not suitable for homerow-mods;</li>
+        <li>this setting makes it <em></em>much easier<em></em> to chain several uppercase letters or symbols.</li>
+
       </ul>
-      <p>Having <kbd>Shift</kbd> as a homerow-mod is a very common reason why HRMs as a whole can be
+      <p>Having <kbd>Shift</kbd> as a homerow-mod is often recommended… and a very common reason why HRMs as a whole are
         so difficult to tune right: capitalizing a word while typing text requires <kbd>Shift</kbd>
-        to have an immediate action, which is exactly what you <em>do NOT</em> want for keyboard
+        to have an immediate action, which is exactly what you do <em>NOT</em> want for keyboard
         shortcuts. The problem can be partially mitigated with complex settings and practice, but it
         always ends up showing up at higher typing speeds.</p>
-      <p>By using a thumb key with hold-preferred priority for <kbd>Shift</kbd>, we can use a very
-        long tapping-term on homerow-mods (300 ms by default), and ensure they’re never misfired. </p>
+      <p>Instead, placing the <kbd>Shift</kbd> on a thumb key with hold-preferred priority allows us to use a very
+        long tapping-term on the other homerow-mods (300 ms by default), which ensures they’re never misfired. </p>
       <p> It might take a bit to get used to <kbd>Shift</kbd> under the left thumb, but it’s totally
         worth it — even without these timing considerations. Probably the biggest comfort improvement
         you can expect on a keyboard. </p>
 
       <h3 id="one-time-shift">One-Time-Shift</h3>
-      <p>In its recommended flavor, Selenium sets sticky <kbd>Shift</kbd> and <kbd>Symbols</kbd>
-        keys under the thumbs: modifiers when held, dead keys when tapped. The trick is, <em>these
-        keys behave as one-time-shift by default</em>, which gives additional safety to capitalize
-        only the first letter of a word. The faster you type, the more you’ll see the benefits of
-        such details.</p>
-      <p> Even without speed-typing, using <kbd>Shift</kbd> and <kbd>Symbols</kbd> as dead keys is
-        an incredible improvement over regular modifiers. This won’t get in the way if you don’t
-        use it, but you definitely should try <em>rolling</em> these thumb keys rather than
-        <em>chording</em> them: that’s the kind of comfort improvement you don’t want to miss. </p>
+      <p>In its recommended flavor (HRM), Selenium affects a dual behaviour to <kbd>Shift</kbd> and <kbd>Symbols</kbd>
+        keys under the thumbs:
+      <ul>
+        <li>modifiers when held, similar to the behaviour of <kbd>Shift</kbd> on an ISO keyboard</li>
+        <li>sticky key when tapped: the <em>next key</em> you tap will be affected (think of it as a dead key)</li>
+      </ul>
+      <p>Because the sticky behavior only affects the following key (a <em>one-time shift</em>, then), this action is safe
+        even with fast typing: no risk of timing your hold of <kbd>Shift</kbd> a bit wrong and ending up with two
+        capital letters instead of one.
+      <p>Besides decreasing frustration at higher speeds, these sticky behaviours provide a great confort improvement over
+        the regular modifier behaviour (hold). Try <em>rolling</em> these thumb keys rather than <em>chording</em> them,
+        and never again feel the pain of holding your thumb in place while trying to reach the top most inner key with your index!
       <p>In our opinion, these sticky keys are the main reason why you should have a keyboard with
         three good keys per thumb. Otherwise, 34 keys would be just fine.</p>
 
