@@ -1,14 +1,12 @@
 <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 425 400" class="vim">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 425 400"
+    class="emacs spaceback">
   <link xmlns="http://www.w3.org/1999/xhtml" rel="stylesheet" href="keeb.css" type="text/css"/>
   <style>
-    #ez,  #vim-ez  { transform: translate(10px,  10px); display: none; }
-    #tt,  #vim-tt  { transform: translate(10px, 110px); display: none; }
-    #hrm, #vim-hrm { transform: translate(10px, 210px); display: none; }
-    #dtk, #vim-dtk { transform: translate(10px, 310px); display: none; }
-
-    #dtk .left,  #vim-dtk .left  { transform: translate(30px, 0px); }
-    #dtk .right, #vim-dtk .right { transform: translate(-30px, 0px); }
+    #ez  { transform: translate(10px,  10px); display: none; }
+    #tt  { transform: translate(10px, 110px); }
+    #hrm { transform: translate(10px, 210px); }
+    #dtk { transform: translate(10px, 310px); }
 
     .left  .tucked { transform: translate(  0px, 10px); }
     .left  .comfy  { transform: translate( 64px, 10px); }
@@ -17,10 +15,16 @@
     .right .comfy  { transform: translate(284px, 10px); }
     .right .tucked { transform: translate(348px, 10px); }
 
-    .emacs #ez,  .vim #vim-ez,
-    .emacs #tt,  .vim #vim-tt,
-    .emacs #hrm, .vim #vim-hrm,
-    .emacs #dtk, .vim #vim-dtk { display: block; }
+    .spaceback .backspace,
+    .backspace .spaceback,
+    .emacs .vim, .vim .emacs { display: none; }
+    .backspace .backspace,
+    .spaceback .spaceback,
+    .emacs .emacs, .vim .vim { display: block; }
+
+    #menu text,
+    #menu rect { cursor: pointer; }
+    #menu { transform: translate(10px, 0px); }
 
     .title {
       font-size: 14px;
@@ -39,12 +43,53 @@
     <path class="symbol" transform="scale(0.4) translate(-24, -30)" id="glyph_btab"      d="M42,24h-27 m6-8l-8,8l8,8 M6,12V36"/>
     <path class="symbol" transform="scale(0.4) translate(-24, -30)" id="glyph_shift"     d="M23,7l14,20h-7v16h-14v-16h-7l14,-20"/>
     <path class="symbol" transform="scale(0.4) translate(-24, -30)" id="glyph_caps"      d="M24,7l14,20h-7v6h-14v-6h-7l14,-20 M31,38v5h-14v-5z"/>
+
+    <!-- common tap actions: Tab/Shift-Tab, Backspace/Delete -->
+    <g id="tap-tab">
+      <use class="level2"   href="#glyph_tab" style="opacity: 1"/>
+      <use class="layerNav" href="#glyph_btab"/>
+    </g>
+    <g id="tap-back">
+      <use class="level2"   href="#glyph_backspace" style="opacity: 1"/>
+      <use class="layerNav" href="#glyph_delete"/>
+    </g>
+    <g id="tap-space">
+      <use  class="level2" href="#glyph_space" style="opacity: 1"/>
+      <text class="layerNav shortcut">fun</text>
+    </g>
+
+    <!-- left/ext -->
+    <g id="tap-left-ext-emacs">
+      <use href="#tap-tab"/>
+      <use href="#glyph_return" class="layerSym"/>
+    </g>
+    <g id="tap-left-ext-vim">
+      <use class="level2"   href="#glyph_escape" style="opacity: 1"/>
+      <use class="layerSym" href="#glyph_return"/>
+    </g>
+
+    <!-- right/ext -->
+    <g id="tap-right-ext-backspace">
+      <use class="level2"   href="#glyph_return" style="opacity: 1"/>
+    </g>
+    <g id="tap-right-ext-spaceback">
+      <use href="#tap-back"/>
+    </g>
+
+    <!-- left/home -->
+    <g id="tap-left-home-backspace">
+      <use href="#tap-back"/>
+      <use href="#glyph_space" class="layerSym"/>
+    </g>
+    <g id="tap-left-home-spaceback">
+      <use class="level2" href="#glyph_space" style="opacity: 1"/>
+    </g>
   </defs>
 
   <!-- easy mode (no dual keys) -->
   <g id="ez">
     <text class="title">EZ : no hold-taps</text>
-    <g class="left" id="ez-left">
+    <g class="left">
       <g class="tucked specialKey">
         <rect class="colorMod"/>
         <text class="colorMod level0">alt</text>
@@ -62,12 +107,12 @@
         <use  class="layerSym" href="#glyph_return"/>
       </g>
     </g>
-    <g class="right" id="ez-right">
+    <g class="right">
       <g class="reachy specialKey">
         <rect class="colorNav"/>
         <text class="colorNav level0">nav</text>
       </g>
-      <g class="comfy specialKey">
+      <g class="comfy thumb">
         <rect/>
         <use  class="level0" href="#glyph_space"/>
       </g>
@@ -77,11 +122,6 @@
         <text class="layerNav shortcut">altgr</text>
       </g>
     </g>
-  </g>
-  <g id="vim-ez">
-    <text class="title">Vim-EZ : no hold-taps</text>
-    <use class="left"  href="#ez-left"/>
-    <use class="right" href="#ez-right"/>
   </g>
 
   <!-- thumb-taps -->
@@ -95,36 +135,41 @@
         <use  class="layerVim" href="#glyph_caps"/>
         <text class="layerSym shortcut">num</text>
       </g>
-      <g id="tt-left-comfy"  class="comfy key">
+      <g id="tt-left-comfy"  class="comfy thumb">
         <rect/>
-        <rect class="holdTap colorMod"/>
-        <text class="level1  colorMod pc">ctrl</text>
-        <use  class="level2"   href="#glyph_backspace"/>
-        <use  class="layerNav" href="#glyph_delete"/>
-        <use  class="layerSym" href="#glyph_space"/>
+        <g class="backspace">
+          <rect class="holdTap colorMod"/>
+          <text class="level1  colorMod pc">ctrl</text>
+          <use  href="#tap-left-home-backspace"/>
+        </g>
+        <g class="spaceback">
+          <rect class="holdTap borderMod tap-pref"/>
+          <text class="level1  borderMod pc">ctrl</text>
+          <use  href="#tap-left-home-spaceback"/>
+        </g>
       </g>
-      <g id="tt-left-reachy" class="reachy key">
+      <g id="tt-left-reachy" class="reachy thumb">
         <rect/>
         <rect class="holdTap colorMod"/>
         <text class="level1  colorMod pc">os</text>
-        <use  class="level2"   href="#glyph_tab"/>
-        <use  class="layerNav" href="#glyph_btab"/>
         <use  class="layerSym" href="#glyph_return"/>
+        <use  class="emacs"    href="#tap-left-ext-emacs"/>
+        <use  class="vim"      href="#tap-left-ext-vim"/>
       </g>
     </g>
     <g class="right">
-      <g id="tt-right-reachy" class="reachy key">
+      <g id="tt-right-reachy" class="reachy thumb">
         <rect/>
         <rect class="holdTap colorMod"/>
         <text class="level1  colorMod pc">alt</text>
-        <use  class="level2"   href="#glyph_return"/>
+        <use  class="backspace" href="#tap-right-ext-backspace"/>
+        <use  class="spaceback" href="#tap-right-ext-spaceback"/>
       </g>
-      <g id="tt-right-comfy"  class="comfy key">
+      <g id="tt-right-comfy"  class="comfy thumb">
         <rect/>
         <rect class="holdTap borderNav tap-pref"/>
         <text class="level1  borderNav pc">nav</text>
-        <use  class="level2" href="#glyph_space"/>
-        <text class="layerNav pc">fun</text>
+        <use  href="#tap-space"/>
       </g>
       <g id="tt-right-tucked" class="tucked">
         <rect/>
@@ -134,81 +179,54 @@
       </g>
     </g>
   </g>
-  <g id="vim-tt">
-    <text class="title">Vim-TT : thumb-taps</text>
-    <g class="left">
-      <use href="#tt-left-tucked" class="tucked"/>
-      <use href="#tt-left-comfy"  class="comfy key"/>
-      <g class="reachy key">
-        <rect/>
-        <rect class="holdTap colorMod"/>
-        <text class="level1  colorMod pc">os</text>
-        <use  class="level2"   href="#glyph_escape"/>
-        <use  class="layerSym" href="#glyph_return"/>
-      </g>
-    </g>
-    <g class="right">
-      <use href="#tt-right-reachy" class="reachy key"/>
-      <use href="#tt-right-comfy"  class="comfy key"/>
-      <use href="#tt-right-tucked" class="tucked"/>
-    </g>
-  </g>
 
   <!-- homerow-mods -->
   <g id="hrm">
     <text class="title">HRM : homerow mods</text>
     <g class="left">
       <use href="#tt-left-tucked" class="tucked"/>
-      <g id="hrm-left-comfy"  class="comfy key">
+      <g id="hrm-left-comfy-backspace"  class="comfy thumb backspace">
         <rect/>
         <rect class="holdTap colorNav"/>
         <text class="level1  colorNav pc">nav</text>
-        <use  class="level2"   href="#glyph_backspace"/>
-        <use  class="layerNav" href="#glyph_delete"/>
-        <use  class="layerSym" href="#glyph_space"/>
+        <use  href="#tap-left-home-backspace"/>
       </g>
-      <g id="hrm-left-reachy" class="reachy key">
+      <g id="hrm-left-comfy-spaceback"  class="comfy thumb spaceback">
         <rect/>
-        <rect class="holdTap colorFun"/>
-        <text class="level1  colorFun pc">fun</text>
-        <use  class="level2"   href="#glyph_tab"/>
-        <use  class="layerNav" href="#glyph_btab"/>
-        <use  class="layerSym" href="#glyph_return"/>
+        <rect class="holdTap borderNav tap-pref"/>
+        <text class="level1  borderNav pc">nav</text>
+        <use  href="#tap-left-home-spaceback"/>
+      </g>
+      <g id="hrm-left-reachy" class="reachy thumb">
+        <rect/>
+        <g class="emacs">
+          <rect class="holdTap colorFun"/>
+          <text class="level1  colorFun pc">fun</text>
+          <use href="#tap-left-ext-emacs"/>
+        </g>
+        <g class="vim">
+          <rect class="holdTap colorNum"/>
+          <text class="level1  colorNum shortcut">num</text>
+          <use href="#tap-left-ext-vim"/>
+        </g>
       </g>
     </g>
     <g class="right">
-      <g class="reachy key">
+      <g class="reachy thumb">
         <rect/>
-        <rect class="holdTap colorFun"/>
-        <text class="level1  colorFun pc">fun</text>
-        <use  class="level2"   href="#glyph_return"/>
+        <g class="emacs">
+          <rect class="holdTap colorFun"/>
+          <text class="level1  colorFun pc">fun</text>
+        </g>
+        <g class="vim">
+          <rect class="holdTap colorNum"/>
+          <text class="level1  colorNum shortcut">num</text>
+        </g>
+        <use class="backspace" href="#tap-right-ext-backspace"/>
+        <use class="spaceback" href="#tap-right-ext-spaceback"/>
       </g>
-      <use href="#tt-right-comfy"  class="comfy key"/>
+      <use href="#tt-right-comfy"  class="comfy thumb"/>
       <use href="#tt-right-tucked" class="tucked"/>
-    </g>
-  </g>
-  <g id="vim-hrm">
-    <text class="title">Vim-HRM : homerow mods</text>
-    <g class="left">
-      <use href="#tt-left-tucked" class="tucked"/>
-      <use href="#hrm-left-comfy" class="comfy key"/>
-      <g class="reachy key">
-        <rect/>
-        <rect class="holdTap colorNum"/>
-        <text class="level1  colorNum pc">num</text>
-        <use  class="level2"   href="#glyph_escape"/>
-        <use  class="layerSym" href="#glyph_return"/>
-      </g>
-    </g>
-    <g class="right">
-      <g class="reachy key">
-        <rect/>
-        <rect class="holdTap colorNum"/>
-        <text class="level1  colorNum pc">num</text>
-        <use  class="level2" href="#glyph_return"/>
-      </g>
-      <use href="#tt-right-comfy"  class="comfy key"/>
-      <use href="#tt-right-tucked" class="tucked key"/>
     </g>
   </g>
 
@@ -216,54 +234,51 @@
   <g id="dtk">
     <text class="title">2TK: two thumb keys</text>
     <g class="left">
-      <g class="tucked key">
+      <g class="comfy thumb">
         <rect/>
         <rect class="holdTap colorMod"/>
         <text class="level1 colorMod pc">shift</text>
-        <use  class="level2"   href="#glyph_tab"/>
-        <use  class="layerNav" href="#glyph_btab"/>
-        <use  class="layerSym" href="#glyph_caps"/>
+        <use  class="emacs"      href="#tap-tab"/>
+        <use  class="vim level2" href="#glyph_escape"/>
+        <use  class="layerSym spaceback" href="#glyph_return"/>
+        <text class="layerSym backspace shortcut">num</text>
       </g>
-      <use href="#hrm-left-comfy" class="comfy key"/>
+      <use class="reachy thumb backspace" href="#hrm-left-comfy-backspace"/>
+      <use class="reachy thumb spaceback" href="#hrm-left-comfy-spaceback"/>
     </g>
     <g class="right">
-      <use href="#tt-right-comfy" class="comfy key"/>
-      <g id="dtk-right-tucked" class="tucked key">
+      <use class="reachy thumb emacs" href="#tt-right-comfy"/>
+      <g   class="reachy thumb vim">
+        <rect/>
+        <rect class="holdTap borderNum tap-pref"/>
+        <text class="level1  borderNum shortcut">num</text>
+        <use  href="#tap-space"/>
+      </g>
+      <g   class="comfy thumb">
         <rect/>
         <rect class="holdTap colorSym"/>
         <text class="level1  colorSym pc">sym</text>
-        <use  class="level2" href="#glyph_return"/>
-        <text class="layerNav shortcut">altgr</text>
+        <text class="backspace layerNav shortcut">altgr</text>
+        <use  class="backspace" href="#tap-right-ext-backspace"/>
+        <use  class="spaceback" href="#tap-right-ext-spaceback"/>
       </g>
     </g>
   </g>
-  <g id="vim-dtk">
-    <text class="title">Vim-2TK: two thumb keys</text>
-    <g class="left">
-      <g class="tucked key">
-        <rect/>
-        <rect class="holdTap colorMod"/>
-        <text class="level1  colorMod pc">shift</text>
-        <use  class="level2" href="#glyph_escape"/>
-        <text class="layerSym shortcut">num</text>
-      </g>
-      <g class="comfy key">
-        <rect/>
-        <rect class="holdTap colorNav"/>
-        <text class="level1  colorNav pc">nav</text>
-        <use  class="level2"   href="#glyph_backspace"/>
-        <use  class="layerSym" href="#glyph_space"/>
+
+  <g id="menu">
+    <g class="left" id="vimist">
+      <g class="reachy specialKey">
+        <rect class="vim borderMod holdTap tap-pref"/>
+        <rect class="emacs colorMod holdTap"/>
+        <text class="level1 colorMod shortcut">vimist</text>
       </g>
     </g>
-    <g class="right">
-      <g class="comfy key">
-        <rect/>
-        <rect class="holdTap borderNum tap-pref"/>
-        <text class="level1  borderNum pc">num</text>
-        <use  class="level2" href="#glyph_space"/>
-        <text class="layerNav pc">fun</text>
+    <g class="right" id="spacist">
+      <g class="reachy specialKey">
+        <rect class="spaceback borderMod holdTap tap-pref"/>
+        <rect class="backspace colorMod holdTap"/>
+        <text class="level1 colorMod shortcut">spacist</text>
       </g>
-      <use class="tucked key" href="#dtk-right-tucked"/>
     </g>
   </g>
 
@@ -271,9 +286,13 @@
   <script type="text/javascript"><![CDATA[
     drawKeys();
     drawLabels();
-    function setLayout(keymap) {}
-    function setVim(vim) {
-      document.firstElementChild.setAttribute("class", vim ? "vim" : "emacs");
-    }
+    document.getElementById("vimist").onclick = () => {
+      document.firstElementChild.classList.toggle("vim");
+      document.firstElementChild.classList.toggle("emacs");
+    };
+    document.getElementById("spacist").onclick = () => {
+      document.firstElementChild.classList.toggle("backspace");
+      document.firstElementChild.classList.toggle("spaceback");
+    };
   ]]></script>
 </svg>
