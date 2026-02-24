@@ -480,9 +480,72 @@
       </ul>
       <p>Note: the <kbd>num</kbd> key is <em>sticky</em> in all flavors with three thumb keys.</p>
 
-      <h3>Nav/Num</h3>
+      <h3 id="layer-nav-num">Nav/Num</h3>
       <object type="image/svg+xml" data="keeb.svg" class="nav"></object>
-      TODO
+      <p>A navigation half-layer on the left:</p>
+      <ul>
+        <li>arrow keys on <kbd>E</kbd><kbd>S</kbd><kbd>D</kbd><kbd>F</kbd> (inverted T),
+          along with home/end and page up/down;</li>
+        <li>common keyboard shortcuts on
+          <kbd>A</kbd><kbd>S</kbd><kbd>Z</kbd><kbd>X</kbd><kbd>C</kbd><kbd>V</kbd>; </li>
+        <li><kbd>Escape</kbd> on <kbd>Q</kbd>.</li>
+      </ul>
+      <p>A numpad on the right:</p>
+      <ul>
+        <li>positive numbers on a 3×3 grid, <kbd>0</kbd> on the homerow; </li>
+        <li>not a full-featured numpad, but enough for numbers and dates.
+      </ul>
+      <svg viewBox="0 10 410 57">
+        <g class="left">
+          <g class="tucked thumb">
+            <rect/>
+            <rect style="opacity: 0.3" class="colorMod sticky"/>
+            <text style="opacity: 0.3" class="colorMod sticky pc">shift</text>
+            <use                       class="layerVim" href="#glyph_caps"/>
+            <text style="opacity: 0.3" class="layerSym shortcut">num</text>
+          </g>
+          <g id="hrm-left-comfy"  class="comfy thumb">
+            <rect/>
+            <rect class="holdTap colorNav"/>
+            <text class="level1  colorNav pc">nav</text>
+            <use  style="opacity: 0.3" class="level2"   href="#glyph_backspace"/>
+            <use                       class="layerNav" href="#glyph_delete"/>
+            <use  style="opacity: 0.3" class="layerSym" href="#glyph_space"/>
+          </g>
+          <g id="hrm-left-reachy" class="reachy thumb">
+            <rect/>
+            <rect style="opacity: 0.3" class="holdTap colorFun"/>
+            <text style="opacity: 0.3" class="level1  colorFun pc">fun</text>
+            <use  style="opacity: 0.3" class="level2"   href="#glyph_tab"/>
+            <use                       class="layerNav" href="#glyph_btab"/>
+            <use  style="opacity: 0.3" class="layerSym" href="#glyph_return"/>
+          </g>
+        </g>
+        <g class="right">
+          <g class="reachy thumb">
+            <rect/>
+            <rect style="opacity: 0.3" class="holdTap colorFun"/>
+            <text style="opacity: 0.3" class="level1  colorFun pc">fun</text>
+            <use  style="opacity: 0.3" class="level2"   href="#glyph_return"/>
+          </g>
+          <g class="comfy thumb">
+            <rect/>
+            <rect                      class="holdTap borderNav tap-pref"/>
+            <text                      class="level1  borderNav pc">nav</text>
+            <use  style="opacity: 0.3" class="level2" href="#glyph_space"/>
+            <text                      class="layerNav shortcut">fun</text>
+          </g>
+          <g class="tucked">
+            <rect/>
+            <rect style="opacity: 0.3" class="colorSym sticky"/>
+            <text style="opacity: 0.3" class="colorSym sticky pc">sym</text>
+            <text                      class="layerNav shortcut">altgr</text>
+          </g>
+        </g>
+      </svg>
+      <p>The <kbd>nav</kbd> key is accessible from the home position of both thumbs, with a catch:
+        it’s a tap-preferred on the right (<kbo>Space</kbo>), a hold-preferred on the left. This
+        allows unmissable, single-hand shortcuts. </p>
 
       <h3>Fun/Media</h3>
       <object type="image/svg+xml" data="keeb.svg" class="fun"></object>
