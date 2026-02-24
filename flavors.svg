@@ -266,18 +266,18 @@
   </g>
 
   <g id="menu">
-    <g class="left" id="vimist">
+    <g class="left" id="vim">
       <g class="reachy specialKey">
         <rect class="vim borderMod holdTap tap-pref"/>
         <rect class="emacs colorMod holdTap"/>
-        <text class="level1 colorMod shortcut">vimist</text>
+        <text class="level1 colorMod shortcut">vim</text>
       </g>
     </g>
-    <g class="right" id="spacist">
+    <g class="right" id="spaceback">
       <g class="reachy specialKey">
         <rect class="spaceback borderMod holdTap tap-pref"/>
         <rect class="backspace colorMod holdTap"/>
-        <text class="level1 colorMod shortcut">spacist</text>
+        <text class="level1 colorMod shortcut">spaceback</text>
       </g>
     </g>
   </g>
@@ -286,11 +286,11 @@
   <script type="text/javascript"><![CDATA[
     drawKeys();
     drawLabels();
-    document.getElementById("vimist").onclick = () => {
+    document.getElementById("vim").onclick = () => {
       document.firstElementChild.classList.toggle("vim");
       document.firstElementChild.classList.toggle("emacs");
     };
-    document.getElementById("spacist").onclick = () => {
+    document.getElementById("spaceback").onclick = () => {
       document.firstElementChild.classList.toggle("backspace");
       document.firstElementChild.classList.toggle("spaceback");
     };

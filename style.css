@@ -158,10 +158,10 @@ object { /* keymap */
   max-width: 26em;
 }
 
-svg {
+svg, object.spaceback {
   display: block;
   margin: auto;
-  height: 60px;
+  max-width: 60%;
 }
 
 table { /* behaviors */
@@ -173,6 +173,7 @@ th, td {
 }
 td svg {
   height: 80px;
+  max-width: inherit;
 }
 td {
   text-align: left;

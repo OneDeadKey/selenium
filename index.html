@@ -560,8 +560,8 @@
       <h2 id="options">Options</h2>
 
       <h3 id="option-vim">Vim Variant</h3>
-      <object type="image/svg+xml" data="keeb.svg" class="vim"></object>
       <p>This variant uses two layers instead on the <kbd>nav/num</kbd> one.</p>
+      <object type="image/svg+xml" data="keeb.svg" class="vim"></object>
       <p>The NumRow layer mostly picks the number row of your keyboard layout (QWERTY, AZERTY…):</p>
       <ul>
         <li>Numbers on the homerow, <kbd>Shift</kbd> + number on the top row. This suits experienced
@@ -611,8 +611,24 @@
       </ul>
       <p>This variant is <em>very</em> popular and extensively tested.</p>
 
-      <h3><kbd>Space</kbd>/<kbd>Backspace</kbd> Swap</h3>
-      TODO
+      <h3 id="option-spaceback">Spaceback Variant</h3>
+      <p>If you prefer to have <kbd>Space</kbd> under the <em>left</em> thumb, this option might
+        suit your needs.</p>
+      <object type="image/svg+xml" data="flavors.svg" class="emacs spaceback"></object>
+      <p>Every sentence and ever proper noun start with an uppercase letter and follow a space; so,
+        to avoid a same-thumb bigram, <kbd>Space</kbd> and <kbd>Shift</kbd> must be under two
+        different thumbs; and as the positions of <kbd>Shift</kbd> and <kbd>Sym</kbd> are set by
+        Arsenik, we need a <kbd>Space</kbd> key under the right thumb. </p>
+      <p>The right <kbd>Space</kbd> key cannot be <em>moved</em> without breaking the compatibility
+        with Arsenik, but it can be <em>duplicated</em> on the left side: </p>
+      <ul>
+        <li> <kbd>Backspace</kbd> replaces <kbd>Enter</kbd> under the right thumb; </li>
+        <li> <kbd>Enter</kbd> remains accessible from the <kbd>Sym</kbd> layer; </li>
+        <li> <em>pro</em>: <kbd>Space</kbd> can be used while the right hand holds the mouse;</li>
+        <li> <em>con</em>: the left <kbd>nav</kbd> now has tap-preferred priority, and left-hand
+          shortcuts now require a long press to work.</li>
+      </ul>
+      <p>This variant is still experimental. Testing and feedback are welcome. </p>
 
       <h3><kbd>Shift</kbd> as Pinky HRM</h3>
       TODO
