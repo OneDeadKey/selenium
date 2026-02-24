@@ -11,7 +11,8 @@
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="keeb.css">
     <script src="select.js" defer></script>
-    <svg>
+    <script src="keeb.js"></script>
+    <svg style="display: none;">
       <defs>
         <path class="symbol" transform="scale(0.4) translate(-24, -30)" id="glyph_backspace" d="M22,19l10,10 M22,29l10-10 M6,24l10,13h26v-26h-26z"/>
         <path class="symbol" transform="scale(0.4) translate(-24, -30)" id="glyph_delete"    d="M16,19l10,10 M16,29l10-10 M42,24l-10,13h-26v-26h26z"/>
@@ -24,7 +25,6 @@
         <path class="symbol" transform="scale(0.4) translate(-24, -30)" id="glyph_caps"      d="M24,7l14,20h-7v6h-14v-6h-7l14,-20 M31,38v5h-14v-5z"/>
       </defs>
     </svg>
-    <script src="keeb.js"></script>
   </head>
   <body>
     <header>
@@ -601,7 +601,7 @@
           <use href="#tt-right-tucked" class="tucked"/>
         </g>
       </svg>
-      <p><kbd>Escape</kbd> replaces <kbd>Tab</kbd> on the homerow, which makes it even more
+      <p><kbd>Escape</kbd> replaces <kbd>Tab</kbd> on the left thumb, which makes it even more
         symmetrical: </p>
       <ul>
         <li>the right hand confirms (<kbd>Enter</kbd>, <kbd>Space</kbd>), the left hand cancels
