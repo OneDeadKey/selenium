@@ -547,15 +547,69 @@
         it’s a tap-preferred on the right (<kbo>Space</kbo>), a hold-preferred on the left. This
         allows unmissable, single-hand shortcuts. </p>
 
-      <h3>Fun/Media</h3>
+      <h3 id="layer-fun-media">Fun/Media</h3>
       <object type="image/svg+xml" data="keeb.svg" class="fun"></object>
-      TODO
+      <ul>
+        <li>Function keys on the left: <kbd>F1</kbd>-<kbd>F12</kbd> on a 3×4 grid; </li>
+        <li>Media keys on the right: prev/play/next, volume +/-/mute, brightness +/-/lock.</li>
+      </ul>
+      <p>Note: homerow-mods are always enabled on the Media half-layer, no matter which flavor is
+        chosen. This is by far the easiest way to do an <kbd>Alt</kbd>‑<kbd>F4</kbd> or a
+        <kbd>Ctrl</kbd>‑<kbd>F5</kbd> — and a safe opportunity to start learning HRMs. </p>
 
       <h2 id="options">Options</h2>
 
-      <h3>Vim Variant</h3>
+      <h3 id="option-vim">Vim Variant</h3>
       <object type="image/svg+xml" data="keeb.svg" class="vim"></object>
-      TODO
+      <p>This variant uses two layers instead on the <kbd>nav/num</kbd> one.</p>
+      <p>The NumRow layer mostly picks the number row of your keyboard layout (QWERTY, AZERTY…):</p>
+      <ul>
+        <li>Numbers on the homerow, <kbd>Shift</kbd> + number on the top row. This suits experienced
+          touch-typists, who are often more efficient with a numrow than with a numpad. </li>
+        <li>Comma, period, dash, slash, everything else needed to write numbers, hours and dates
+          under the right hand.</li>
+      </ul>
+      <p>The VimNav layer offers advanced navigation possibilities:</p>
+      <ul>
+        <li>the right part has arrows on <kbd>H</kbd><kbd>J</kbd><kbd>K</kbd><kbd>L</kbd>, along
+          with home/end and page up/down on the top row — Vim-like cursor movements in any app, no
+          matter which keyboard layout you use; </li>
+        <li>the left part has <kbd>Tab</kbd> and <kbd>Shift</kbd><kbd>Tab</kbd> on the homerow
+          (mirroring <kbd>J</kbd><kbd>K</kbd> in the right hand), <kbd>prev</kbd>/<kbd>prev</kbd> on
+          the top row, and general keyboard shortcuts. </li>
+      </ul>
+      <svg viewBox="0 10 410 57">
+        <g class="left">
+          <use href="#tt-left-tucked" class="tucked"/>
+          <use href="#hrm-left-comfy" class="comfy"/>
+          <g id="hrm-left-reachy" class="reachy thumb">
+            <rect/>
+            <rect class="holdTap colorNum"/>
+            <text class="level1  colorNum shortcut">num</text>
+            <use  class="level2"   href="#glyph_escape"/>
+            <use  class="layerSym" href="#glyph_return"/>
+          </g>
+        </g>
+        <g class="right">
+          <g class="reachy thumb">
+            <rect/>
+            <rect class="holdTap colorNum"/>
+            <text class="level1  colorNum shortcut">num</text>
+            <use  class="level2" href="#glyph_return"/>
+          </g>
+          <use href="#tt-right-comfy"  class="comfy thumb"/>
+          <use href="#tt-right-tucked" class="tucked"/>
+        </g>
+      </svg>
+      <p><kbd>Escape</kbd> replaces <kbd>Tab</kbd> on the homerow, which makes it even more
+        symmetrical: </p>
+      <ul>
+        <li>the right hand confirms (<kbd>Enter</kbd>, <kbd>Space</kbd>), the left hand cancels
+          (<kbd>Escape</kbd>, <kbd>Backspace</kbd>); </li>
+        <li><kbd>Enter</kbd> mirrors <kbd>Escape</kbd>,
+          <kbd>Space</kbd> mirrors <kbd>Backspace</kbd>.</li>
+      </ul>
+      <p>This variant is <em>very</em> popular and extensively tested.</p>
 
       <h3><kbd>Space</kbd>/<kbd>Backspace</kbd> Swap</h3>
       TODO
