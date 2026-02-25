@@ -23,6 +23,34 @@
         <path class="symbol" transform="scale(0.4) translate(-24, -30)" id="glyph_btab"      d="M42,24h-27 m6-8l-8,8l8,8 M6,12V36"/>
         <path class="symbol" transform="scale(0.4) translate(-24, -30)" id="glyph_shift"     d="M23,7l14,20h-7v16h-14v-16h-7l14,-20"/>
         <path class="symbol" transform="scale(0.4) translate(-24, -30)" id="glyph_caps"      d="M24,7l14,20h-7v6h-14v-6h-7l14,-20 M31,38v5h-14v-5z"/>
+        <g class="thumb" id="sticky-shift">
+          <rect/>
+          <rect class="colorMod sticky"/>
+          <text class="colorMod sticky pc">shift</text>
+          <use  class="layerVim" href="#glyph_caps"/>
+          <text class="layerSym pc">num</text>
+        </g>
+        <g class="thumb" id="sticky-sym">
+          <rect/>
+          <rect class="colorSym sticky"/>
+          <text class="colorSym sticky pc">sym</text>
+          <text class="layerNav shortcut">altgr</text>
+        </g>
+        <g class="thumb" id="nav-left">
+          <rect/>
+          <rect class="holdTap colorNav"/>
+          <text class="level1  colorNav pc">nav</text>
+          <use  class="level2"   href="#glyph_backspace"/>
+          <use  class="layerNav" href="#glyph_delete"/>
+          <use  class="layerSym" href="#glyph_space"/>
+        </g>
+        <g class="thumb" id="nav-right">
+          <rect/>
+          <rect class="holdTap borderNav tap-pref"/>
+          <text class="level1  borderNav pc">nav</text>
+          <use  class="level2" href="#glyph_space"/>
+          <text class="layerNav shortcut">fun</text>
+        </g>
       </defs>
     </svg>
   </head>
@@ -213,7 +241,7 @@
         or start with EZ or TT to ease the learning process if you’re unsure.</p>
 
       <h3 id="flavor-ez">EZ: No Hold-Taps</h3>
-      <svg viewBox="0 10 410 57">
+      <svg viewBox="0 10 425 57">
         <g class="left" id="ez-left">
           <g class="tucked specialKey">
             <rect class="colorMod"/>
@@ -237,7 +265,7 @@
             <rect class="colorNav"/>
             <text class="colorNav level0">nav</text>
           </g>
-          <g class="comfy specialKey">
+          <g class="comfy thumb">
             <rect/>
             <use  class="level0" href="#glyph_space"/>
           </g>
@@ -258,16 +286,10 @@
         <kbd>Tab</kbd> remain on lateral columns, like on standard ANSI/ISO keyboards. </p>
 
       <h3 id="flavor-tt">TT: Thumb-Taps</h3>
-      <svg viewBox="0 10 410 57">
+      <svg viewBox="0 10 425 57">
         <g class="left">
-          <g id="tt-left-tucked" class="tucked thumb">
-            <rect/>
-            <rect class="colorMod sticky"/>
-            <text class="colorMod sticky pc">shift</text>
-            <use  class="layerVim" href="#glyph_caps"/>
-            <text class="layerSym shortcut">num</text>
-          </g>
-          <g id="tt-left-comfy"  class="comfy thumb">
+          <use class="tucked" href="#sticky-shift"/>
+          <g class="comfy thumb">
             <rect/>
             <rect class="holdTap colorMod"/>
             <text class="level1  colorMod pc">ctrl</text>
@@ -275,7 +297,7 @@
             <use  class="layerNav" href="#glyph_delete"/>
             <use  class="layerSym" href="#glyph_space"/>
           </g>
-          <g id="tt-left-reachy" class="reachy thumb">
+          <g class="reachy thumb">
             <rect/>
             <rect class="holdTap colorMod"/>
             <text class="level1  colorMod pc">os</text>
@@ -285,25 +307,14 @@
           </g>
         </g>
         <g class="right">
-          <g id="tt-right-reachy" class="reachy thumb">
+          <g class="reachy thumb">
             <rect/>
             <rect class="holdTap colorMod"/>
             <text class="level1  colorMod pc">alt</text>
             <use  class="level2" href="#glyph_return"/>
           </g>
-          <g id="tt-right-comfy"  class="comfy thumb">
-            <rect/>
-            <rect class="holdTap borderNav tap-pref"/>
-            <text class="level1  borderNav pc">nav</text>
-            <use  class="level2" href="#glyph_space"/>
-            <text class="layerNav shortcut">fun</text>
-          </g>
-          <g id="tt-right-tucked" class="tucked">
-            <rect/>
-            <rect class="colorSym sticky"/>
-            <text class="colorSym sticky pc">sym</text>
-            <text class="layerNav shortcut">altgr</text>
-          </g>
+          <use class="comfy"  href="#nav-right"/>
+          <use class="tucked" href="#sticky-sym"/>
         </g>
       </svg>
       <p> Learning hold-taps and thumb-shifting is the next step:</p>
@@ -320,18 +331,11 @@
       </p>
 
       <h3 id="flavor-hrm">HRM: Home-Row Mods</h3>
-      <svg viewBox="0 10 410 57">
+      <svg viewBox="0 10 425 57">
         <g class="left">
-          <use x="0" y="0" href="#tt-left-tucked" class="tucked"/>
-          <g id="hrm-left-comfy"  class="comfy thumb">
-            <rect/>
-            <rect class="holdTap colorNav"/>
-            <text class="level1  colorNav pc">nav</text>
-            <use  class="level2"   href="#glyph_backspace"/>
-            <use  class="layerNav" href="#glyph_delete"/>
-            <use  class="layerSym" href="#glyph_space"/>
-          </g>
-          <g id="hrm-left-reachy" class="reachy thumb">
+          <use class="tucked" href="#sticky-shift"/>
+          <use class="comfy"  href="#nav-left"/>
+          <g class="reachy thumb">
             <rect/>
             <rect class="holdTap colorFun"/>
             <text class="level1  colorFun pc">fun</text>
@@ -347,8 +351,8 @@
             <text class="level1  colorFun pc">fun</text>
             <use  class="level2" href="#glyph_return"/>
           </g>
-          <use x="0" y="0" href="#tt-right-comfy"  class="comfy key"/>
-          <use x="0" y="0" href="#tt-right-tucked" class="tucked"/>
+          <use class="comfy"  href="#nav-right"/>
+          <use class="tucked" href="#sticky-sym"/>
         </g>
       </svg>
       <p> This is the default and recommended flavor. It pushes the symmetry even further: </p>
@@ -368,7 +372,7 @@
       <p> This flavor quickly feels like the most natural way to use a keyboard. </p>
 
       <h3 id="flavor-2tk">2TK: Two Thumb Keys</h3>
-      <svg viewBox="0 10 410 57">
+      <svg viewBox="0 10 425 57">
         <g class="left">
           <g class="comfy thumb">
             <rect/>
@@ -378,11 +382,11 @@
             <use  class="layerNav" href="#glyph_btab"/>
             <use  class="layerSym" href="#glyph_caps"/>
           </g>
-          <use x="0" y="0" href="#hrm-left-comfy" class="reachy key"/>
+          <use class="reachy" href="#nav-left"/>
         </g>
         <g class="right">
-          <use x="0" y="0" href="#tt-right-comfy" class="reachy key"/>
-          <g id="dtk-right-tucked" class="comfy thumb">
+          <use class="reachy" href="#nav-right"/>
+          <g class="comfy thumb">
             <rect/>
             <rect class="holdTap colorSym"/>
             <text class="level1  colorSym pc">sym</text>
@@ -419,16 +423,16 @@
       <p>This Symbols layer is a core part of the <a href="https://ergol.org">Ergol</a> keyboard
         layout and the <a href="https://github.com/OneDeadKey/arsenik">Arsenik</a> keymap: it’s been
         tested <em>a lot</em>, all rough edges have been polished over the years. </p>
-      <svg viewBox="0 10 410 57">
+      <svg viewBox="0 10 425 57">
         <g class="left">
-          <g id="tt-left-tucked" class="tucked thumb">
+          <g class="tucked thumb">
             <rect/>
             <rect class="dimmed colorMod sticky"/>
             <text class="dimmed colorMod sticky pc">shift</text>
             <use  class="dimmed layerVim" href="#glyph_caps"/>
             <text class="layerSym pc">num</text>
           </g>
-          <g id="hrm-left-comfy"  class="comfy thumb">
+          <g class="comfy thumb">
             <rect/>
             <rect class="dimmed holdTap colorNav"/>
             <text class="dimmed level1  colorNav pc">nav</text>
@@ -436,7 +440,7 @@
             <use  class="dimmed layerNav" href="#glyph_delete"/>
             <use  class="       layerSym" href="#glyph_space"/>
           </g>
-          <g id="hrm-left-reachy" class="reachy thumb">
+          <g class="reachy thumb">
             <rect/>
             <rect class="dimmed holdTap colorFun"/>
             <text class="dimmed level1  colorFun pc">fun</text>
@@ -459,7 +463,7 @@
             <use  class="dimmed level2" href="#glyph_space"/>
             <text class="dimmed layerNav shortcut">fun</text>
           </g>
-          <g class="tucked">
+          <g class="tucked thumb">
             <rect/>
             <rect class="colorSym sticky"/>
             <text class="colorSym sticky pc">sym</text>
@@ -495,7 +499,7 @@
         <li>positive numbers on a 3×3 grid, <kbd>0</kbd> on the homerow; </li>
         <li>not a full-featured numpad, but enough for numbers and dates.
       </ul>
-      <svg viewBox="0 10 410 57">
+      <svg viewBox="0 10 425 57">
         <g class="left">
           <g class="tucked thumb">
             <rect/>
@@ -504,7 +508,7 @@
             <use  class="       layerVim" href="#glyph_caps"/>
             <text class="dimmed layerSym shortcut">num</text>
           </g>
-          <g id="hrm-left-comfy"  class="comfy thumb">
+          <g class="comfy thumb">
             <rect/>
             <rect class="holdTap colorNav"/>
             <text class="level1  colorNav pc">nav</text>
@@ -512,7 +516,7 @@
             <use  class="       layerNav" href="#glyph_delete"/>
             <use  class="dimmed layerSym" href="#glyph_space"/>
           </g>
-          <g id="hrm-left-reachy" class="reachy thumb">
+          <g class="reachy thumb">
             <rect/>
             <rect class="dimmed holdTap colorFun"/>
             <text class="dimmed level1  colorFun pc">fun</text>
@@ -535,7 +539,7 @@
             <use  class="dimmed level2" href="#glyph_space"/>
             <text class="layerNav shortcut">fun</text>
           </g>
-          <g class="tucked">
+          <g class="tucked thumb">
             <rect/>
             <rect class="dimmed colorSym sticky"/>
             <text class="dimmed colorSym sticky pc">sym</text>
@@ -578,11 +582,11 @@
           (mirroring <kbd>J</kbd><kbd>K</kbd> in the right hand), <kbd>prev</kbd>/<kbd>prev</kbd> on
           the top row, and general keyboard shortcuts. </li>
       </ul>
-      <svg viewBox="0 10 410 57">
+      <svg viewBox="0 10 425 57">
         <g class="left">
-          <use x="0" y="0" href="#tt-left-tucked" class="tucked"/>
-          <use x="0" y="0" href="#hrm-left-comfy" class="comfy"/>
-          <g id="hrm-left-reachy" class="reachy thumb">
+          <use class="tucked" href="#sticky-shift"/>
+          <use class="comfy"  href="#nav-left"/>
+          <g class="reachy thumb">
             <rect/>
             <rect class="holdTap colorNum"/>
             <text class="level1  colorNum shortcut">num</text>
@@ -597,8 +601,8 @@
             <text class="level1  colorNum shortcut">num</text>
             <use  class="level2" href="#glyph_return"/>
           </g>
-          <use x="0" y="0" href="#tt-right-comfy"  class="comfy thumb"/>
-          <use x="0" y="0" href="#tt-right-tucked" class="tucked"/>
+          <use class="comfy"  href="#nav-right"/>
+          <use class="tucked" href="#sticky-sym"/>
         </g>
       </svg>
       <p><kbd>Escape</kbd> replaces <kbd>Tab</kbd> on the left thumb, which makes it even more
