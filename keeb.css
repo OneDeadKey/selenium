@@ -85,6 +85,8 @@ text.colorMod, text.borderMod,
 .thumb use.level0,
 .thumb use.level1,
 .thumb use.level2 { opacity: 1; }
+/* ugly but used for manual overrides only */
+.dimmed { opacity: 0.3 !important; }
 
 /* symbols */
 use.level0,
