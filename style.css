@@ -206,9 +206,6 @@ tr.selected td {
   background-color: rgba(130, 156, 175, 0.2);
 }
 
-#dtk .left,  #vim-dtk .left  { transform: translate(30px, 0px); }
-#dtk .right, #vim-dtk .right { transform: translate(-30px, 0px); }
-
 .left  .tucked { transform: translate(  0px, 10px); }
 .left  .comfy  { transform: translate( 64px, 10px); }
 .left  .reachy { transform: translate(128px, 10px); }
@@ -216,6 +213,10 @@ tr.selected td {
 .right .comfy  { transform: translate(284px, 10px); }
 .right .tucked { transform: translate(348px, 10px); }
 
+/* XXX dirty WebKit fix */
+@supports selector(::-webkit-scrollbar) {
+  .right { transform: translate(-15px, 0); }
+}
 
 kbd { /* key */
   margin: 0 2px;

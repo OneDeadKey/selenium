@@ -28,6 +28,15 @@
 .ortho .col6 { display: none; }
 .none .thumbCluster { display: none !important; }
 
+/* XXX dirty WebKit fixes */
+@supports selector(::-webkit-scrollbar) {
+  .flex #left    { transform: translate(-10px, 53px); }
+  .flex #right   { transform: translate(863px, 50px); }
+  .flex #outline { transform: translate(455px, 191px) scale(3.338, -3.338); }
+  .none  #right,
+  .ortho #right  { transform: translate(772px, 0px); }
+}
+
 .board {
   fill:   rgba(130, 156, 175, 0.40);
   stroke: rgba(130, 156, 175, 0.10);
