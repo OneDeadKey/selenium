@@ -29,7 +29,7 @@
 .none .thumbCluster { display: none !important; }
 
 /* XXX dirty WebKit fixes */
-@supports selector(::-webkit-scrollbar) {
+@supports (-webkit-hyphens: none) {
   .flex #left    { transform: translate(-10px, 53px); }
   .flex #right   { transform: translate(863px, 50px); }
   .flex #outline { transform: translate(455px, 191px) scale(3.338, -3.338); }

@@ -214,7 +214,7 @@ tr.selected td {
 .right .tucked { transform: translate(348px, 10px); }
 
 /* XXX dirty WebKit fix */
-@supports selector(::-webkit-scrollbar) {
+@supports (-webkit-hyphens: none) {
   .right { transform: translate(-15px, 0); }
 }
 
