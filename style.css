@@ -78,6 +78,15 @@ header h1+p {
   margin-bottom: 2em;
 }
 
+h2 a,
+h3 a {
+  display: none;
+}
+h2:hover a,
+h3:hover a {
+  display: inline;
+}
+
 form div {
   display: flex;
   flex-direction: row;
