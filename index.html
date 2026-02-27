@@ -411,82 +411,6 @@
 
       <h2 id="layers">Layers</h2>
 
-      <h3 id="layer-symbols">Symbols</h3>
-      <object type="image/svg+xml" data="keeb.svg" class="sym"></object>
-      <p>All 30 programming symbols are available on this single layer. The most common ones are on
-        the most comfortable positions, and no symbol ever requires <kbd>Shift</kbd>. </p>
-      <p> No same-finger bigrams: this layer has been fine-tuned to chain common programming
-        symbols, either by alternating hands (<code>~/</code>, <code>);</code>, <code>&lt;/&gt;</code>,
-        <code>+=</code>, <code>['']</code>, etc.) or with a single-hand roll (<code>&gt;=</code>,
-        <code>/*</code>, <code>";</code>, <code>()</code>, <code>\"</code>, etc.). </p>
-      <p>It’s also been designed with Vim in mind, to ease advanced navigation tricks like vertical
-        jumps with <code>{}</code>, <code>()</code>, <code>[]</code> and chain them with
-        <code>+-</code>, which are on the <kbd>J</kbd><kbd>K</kbd> positions, to adjust the movement
-        line by line. </p>
-      <p>This Symbols layer is a core part of the <a href="https://ergol.org">Ergol</a> keyboard
-        layout and the <a href="https://github.com/OneDeadKey/arsenik">Arsenik</a> keymap: it’s been
-        tested <em>a lot</em>, all rough edges have been polished over the years. </p>
-      <svg viewBox="0 10 410 57">
-        <g class="left">
-          <g class="tucked thumb">
-            <rect/>
-            <rect class="dimmed colorMod sticky"/>
-            <text class="dimmed colorMod sticky pc">shift</text>
-            <use  class="dimmed layerVim" href="#glyph_caps"/>
-            <text class="layerSym pc">num</text>
-          </g>
-          <g class="comfy thumb">
-            <rect/>
-            <rect class="dimmed holdTap colorNav"/>
-            <text class="dimmed level1  colorNav pc">nav</text>
-            <use  class="dimmed level2"   href="#glyph_backspace"/>
-            <use  class="dimmed layerNav" href="#glyph_delete"/>
-            <use  class="       layerSym" href="#glyph_space"/>
-          </g>
-          <g class="reachy thumb">
-            <rect/>
-            <rect class="dimmed holdTap colorFun"/>
-            <text class="dimmed level1  colorFun pc">fun</text>
-            <use  class="dimmed level2"   href="#glyph_tab"/>
-            <use  class="dimmed layerNav" href="#glyph_btab"/>
-            <use  class="       layerSym" href="#glyph_return"/>
-          </g>
-        </g>
-        <g class="right">
-          <g class="reachy thumb">
-            <rect/>
-            <rect class="dimmed holdTap colorFun"/>
-            <text class="dimmed level1  colorFun pc">fun</text>
-            <use  class="dimmed level2" href="#glyph_return"/>
-          </g>
-          <g class="comfy thumb">
-            <rect/>
-            <rect class="dimmed holdTap borderNav tap-pref"/>
-            <text class="dimmed level1  borderNav pc">nav</text>
-            <use  class="dimmed level2" href="#glyph_space"/>
-            <text class="dimmed layerNav shortcut">fun</text>
-          </g>
-          <g class="tucked thumb">
-            <rect/>
-            <rect class="colorSym sticky"/>
-            <text class="colorSym sticky pc">sym</text>
-            <text class="dimmed layerNav shortcut">altgr</text>
-          </g>
-        </g>
-      </svg>
-      <p>Another major concern has been to ease sequences with non-alpha characters without
-        releasing the <kbd>Sym</kbd> key:</p>
-      <ul>
-        <li>the leftmost thumb key becomes <kbd>num</kbd>, which activates the default numeric layer
-          (either Nav/Num or NumRow, depending on your settings) to type Symbols/Digits combos like
-          <code>(0)</code>, <code>[1]</code>, etc.; </li>
-        <li>the home thumb key mirrors <kbd>Space</kbd>, for long symbol sequences like
-          <code>:(){ :|:& };:</code> (don’t); </li>
-        <li>the rightmost thumb key mirrors <kbd>Enter</kbd>, to avoid a nasty same-thumb bigram
-          on lines ending with a symbol (e.g. <code>;</code>). </li>
-      </ul>
-      <p>Note: the <kbd>num</kbd> key is <em>sticky</em> in all flavors with three thumb keys.</p>
-
       <h3 id="layer-nav-num">Nav/Num</h3>
       <object type="image/svg+xml" data="keeb.svg" class="nav"></object>
       <p>A navigation half-layer on the left:</p>
@@ -500,7 +424,7 @@
       <p>A numpad on the right:</p>
       <ul>
         <li>positive numbers on a 3×3 grid, <kbd>0</kbd> on the homerow; </li>
-        <li>not a full-featured numpad, but enough for numbers and dates.
+        <li>not a full-featured numpad, but enough for numbers and dates.</li>
       </ul>
       <svg viewBox="0 10 410 57">
         <g class="left">
@@ -553,6 +477,90 @@
       <p>The <kbd>nav</kbd> key is accessible from the home position of both thumbs, with a catch:
         it’s a tap-preferred on the right (<kbo>Space</kbo>), a hold-preferred on the left. This
         allows unmissable, single-hand shortcuts. </p>
+
+
+      <h3 id="layer-symbols">Symbols</h3>
+      <object type="image/svg+xml" data="keeb.svg" class="sym"></object>
+      <p>All 30 programming symbols are available on this single layer, wich has been 
+        fine-tuned for comfort of use: </p>
+      <ul>
+        <li> the most common symbols are in the most comfortable positions; </li>
+        <li> no symbol ever requires <kbd>Shift</kbd> </li>
+        <li> common sequences of programming sybols can be typed without uncomfortable same-finger bigrams, 
+          either by alternating hands (<code>~/</code>, <code>);</code>, <code>&lt;/&gt;</code>,
+        <code>+=</code>, <code>['']</code>, etc.) or with a single-hand roll (<code>&gt;=</code>,
+        <code>/*</code>, <code>";</code>, <code>()</code>, <code>\"</code>, etc.). </li>
+      </ul>
+      
+      <p>To furthermore reduce frictions in usage, the thumbs actions on the left hand were modified to ease sequences 
+        with non-alpha characters. These sequence would otherwise involve a nasty change of position of 
+        the right thumb (a same-thumb bigram), which really breaks the flow of typing. The left-hand thumb 
+        cluster of the Symbols layer allow us to access these characters without releasing the <kbd>Sym</kbd> key:</p>
+      <svg viewBox="0 10 410 57">
+        <g class="left">
+          <g class="tucked thumb">
+            <rect/>
+            <rect class="dimmed colorMod sticky"/>
+            <text class="dimmed colorMod sticky pc">shift</text>
+            <use  class="dimmed layerVim" href="#glyph_caps"/>
+            <text class="layerSym pc">num</text>
+          </g>
+          <g class="comfy thumb">
+            <rect/>
+            <rect class="dimmed holdTap colorNav"/>
+            <text class="dimmed level1  colorNav pc">nav</text>
+            <use  class="dimmed level2"   href="#glyph_backspace"/>
+            <use  class="dimmed layerNav" href="#glyph_delete"/>
+            <use  class="       layerSym" href="#glyph_space"/>
+          </g>
+          <g class="reachy thumb">
+            <rect/>
+            <rect class="dimmed holdTap colorFun"/>
+            <text class="dimmed level1  colorFun pc">fun</text>
+            <use  class="dimmed level2"   href="#glyph_tab"/>
+            <use  class="dimmed layerNav" href="#glyph_btab"/>
+            <use  class="       layerSym" href="#glyph_return"/>
+          </g>
+        </g>
+        <g class="right">
+          <g class="reachy thumb">
+            <rect/>
+            <rect class="dimmed holdTap colorFun"/>
+            <text class="dimmed level1  colorFun pc">fun</text>
+            <use  class="dimmed level2" href="#glyph_return"/>
+          </g>
+          <g class="comfy thumb">
+            <rect/>
+            <rect class="dimmed holdTap borderNav tap-pref"/>
+            <text class="dimmed level1  borderNav pc">nav</text>
+            <use  class="dimmed level2" href="#glyph_space"/>
+            <text class="dimmed layerNav shortcut">fun</text>
+          </g>
+          <g class="tucked thumb">
+            <rect/>
+            <rect class="colorSym sticky"/>
+            <text class="colorSym sticky pc">sym</text>
+            <text class="dimmed layerNav shortcut">altgr</text>
+          </g>
+        </g>
+      </svg>
+
+      <ul>
+        <li> The leftmost thumb key now activates the numeric layer of your choice (either Nav/Num or NumRow, 
+          see below) to type Symbols/Digits combos like <code>(0)</code>, <code>[1]</code>, etc. To make things 
+          even better, the <kbd>num</kbd> key is also sticky on this layer for all flavors with three thumb keys; </li>
+        <li> The home thumb key yield a <kbd>Space</kbd>, for long symbol sequences like
+          <code>:(){ :|:& };:</code>; </li>
+        <li> The rightmost thumb key yields <kbd>Enter</kbd>, to seamlessly type lines ending with a 
+          symbol (e.g. <code>;</code>). </li>
+      </ul>
+      <p> Besides these optimisations for programming in general, this layer has truly been designed 
+        with Vim in mind, to ease advanced navigation tricks like vertical jumps with <code>{}</code>, 
+        <code>()</code>, <code>[]</code> and to chain them with <code>+-</code>, which are on the 
+        <kbd>J</kbd><kbd>K</kbd> positions, to adjust the movement line by line. </p>
+      <p>The Symbols layer is a core part of the <a href="https://ergol.org">Ergol</a> keyboard
+        layout and the <a href="https://github.com/OneDeadKey/arsenik">Arsenik</a> keymap: it’s been intensely
+        tested and improved over <em>years</em>, which explains how efficient and fuent it is to use. </p>
 
       <h3 id="layer-fun-media">Fun/Media</h3>
       <object type="image/svg+xml" data="keeb.svg" class="fun"></object>
