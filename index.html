@@ -423,13 +423,11 @@
         <code>+=</code>, <code>['']</code>, etc.) or with a single-hand roll (<code>&gt;=</code>,
         <code>/*</code>, <code>";</code>, <code>()</code>, <code>\"</code>, etc.). </li>
       </ul>
-      <p> Besides general programming and ease of access to usefull symbols, the layer has truly been designed 
-        with Vim in mind, to ease advanced navigation tricks like vertical jumps with <code>{}</code>, 
-        <code>()</code>, <code>[]</code> and to chain them with <code>+-</code>, which are on the 
-        <kbd>J</kbd><kbd>K</kbd> positions, to adjust the movement line by line. </p>
-      <p>The Symbols layer is a core part of the <a href="https://ergol.org">Ergol</a> keyboard
-        layout and the <a href="https://github.com/OneDeadKey/arsenik">Arsenik</a> keymap: it’s been intensely
-        tested and improved over <em>years</em>, to ensure seamless use of these symbols with minimal friction. </p>
+      
+      <p>To furthermore reduce frictions in usage, the thumbs actions on the left hand were modified to ease sequences 
+        with non-alpha characters. These sequence would otherwise involve a nasty change of position of 
+        the right thumb (a same-thumb bigram), which really breaks the flow of typing. The left-hand thumb 
+        cluster of the Symbols layer allow us to access these characters without releasing the <kbd>Sym</kbd> key:</p>
       <svg viewBox="0 10 410 57">
         <g class="left">
           <g class="tucked thumb">
@@ -478,20 +476,24 @@
           </g>
         </g>
       </svg>
-      <p>To reduce frictions in usage, the thumbs actions on the left hand are modified to ease sequences 
-        with non-alpha characters. These sequence would otherwise involve a nasty change of position of 
-        the right thumb (a same-thumb bigram), which really breaks the flow of typing. The left-hand thumb 
-        cluster of the Symbols layer allow us to access these characters without releasing the <kbd>Sym</kbd> key:</p>
+
       <ul>
-        <li>the leftmost thumb key now activates the numeric layer of your choice (either Nav/Num or NumRow, 
+        <li> The leftmost thumb key now activates the numeric layer of your choice (either Nav/Num or NumRow, 
           see below) to type Symbols/Digits combos like <code>(0)</code>, <code>[1]</code>, etc. To make things 
           even better, the <kbd>num</kbd> key is also sticky on this layer for all flavors with three thumb keys; </li>
-        <li>the home thumb key yield a <kbd>Space</kbd>, for long symbol sequences like
+        <li> The home thumb key yield a <kbd>Space</kbd>, for long symbol sequences like
           <code>:(){ :|:& };:</code>; </li>
-        <li>the rightmost thumb key yields <kbd>Enter</kbd>, to seamlessly type lines ending with a 
+        <li> The rightmost thumb key yields <kbd>Enter</kbd>, to seamlessly type lines ending with a 
           symbol (e.g. <code>;</code>). </li>
       </ul>
 
+      <p> Besides these optimisations for programming in general, this layer has truly been designed 
+        with Vim in mind, to ease advanced navigation tricks like vertical jumps with <code>{}</code>, 
+        <code>()</code>, <code>[]</code> and to chain them with <code>+-</code>, which are on the 
+        <kbd>J</kbd><kbd>K</kbd> positions, to adjust the movement line by line. </p>
+      <p>The Symbols layer is a core part of the <a href="https://ergol.org">Ergol</a> keyboard
+        layout and the <a href="https://github.com/OneDeadKey/arsenik">Arsenik</a> keymap: it’s been intensely
+        tested and improved over <em>years</em>, which explains how efficient and fuent it is to use. </p>
 
       <h3 id="layer-nav-num">Nav/Num</h3>
       <object type="image/svg+xml" data="keeb.svg" class="nav"></object>
