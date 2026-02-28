@@ -194,7 +194,6 @@ td {
   text-align: left;
 }
 
-
 #menu tr:hover {
   background-color: var(--bg-accent);
   cursor: pointer;
@@ -216,6 +215,10 @@ tr.selected td {
 /* XXX dirty WebKit fix */
 @supports (-webkit-hyphens: none) {
   .right { transform: translate(-15px, 0); }
+}
+
+i.layer {
+  background-color: var(--bg-key);
 }
 
 kbd { /* key */
