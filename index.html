@@ -110,7 +110,7 @@
           <tr id="menu-tt">
             <th> TT </th>
             <td> <strong>Thumb-taps</strong>: spare your pinkies
-              <br>`Nav` layer with a long press on the <kbd>Space</kbd> key.
+              <br><i class="layer">Nav</i> layer with a long press on the <kbd>Space</kbd> key.
               <br> <kbd>Backspace</kbd>, <kbd>Return</kbd> and <kbd>Shift</kbd> under the thumbs.
             </td>
           </tr>
@@ -283,7 +283,7 @@
       <ul>
         <li> modifiers on the left, except for <kbd>Shift</kbd>; </li>
         <li> <kbd>Space</kbd> and layer-shifts (<kbd>Sym</kbd> and <kbd>Nav</kbd> to access layers) on the right; </li>
-        <li> <kbd>Nav</kbd>+<kbd>OS</kbd> gets to the <kbd>Fun/Media</kbd> layer. </li>
+        <li> <kbd>Nav</kbd>+<kbd>OS</kbd> gets to the <i class="layer">Fun/Media</i> layer. </li>
       </ul>
       <p> Special keys like <kbd>Shift</kbd>, <kbd>Enter</kbd>, <kbd>Backspace</kbd> or
         <kbd>Tab</kbd> remain on lateral columns, like on standard ANSI/ISO keyboards. </p>
@@ -322,8 +322,8 @@
       </svg>
       <p> Learning hold-taps and thumb-shifting is the next step:</p>
       <ul>
-        <li> <kbd>Nav/Num</kbd> is activated with a long press on <kbd>Space</kbd>; </li>
-        <li> introduction to hold-taps: modifier keys <kbd>Ctrl</kbd>, <kbd>OS</kbd> and 
+        <li> <i class="layer">Nav/Num</i> is activated with a long press on <kbd>Space</kbd>; </li>
+        <li> introduction to hold-taps: modifier keys <kbd>Ctrl</kbd>, <kbd>OS</kbd> and
           <kbd>Alt</kbd> act as <kbd>Backspace</kbd>, <kbd>Tab</kbd> and <kbd>Enter</kbd>when tapped; </li>
         <li> <kbd>Shift</kbd> and <kbd>Sym</kbd> are sticky: modifiers when held,
           dead keys when tapped. </li>
@@ -363,7 +363,7 @@
         <li> symmetrical modifiers on the home row (long press), making all keyboard shortcuts
           trivial; </li>
         <li> symmetrical layer-shifts under the thumbs, to handle the half-layers in
-          <kbd>Nav/Num</kbd> and <kbd>Fun/Media</kbd>. </li>
+          <i class="layer">Nav/Num</i> and <i class="layer">Fun/Media</i>. </li>
       </ul>
       <p> <kbd>Shift</kbd> and <kbd>Sym</kbd> are mirrored, not doubled: </p>
       <ul>
@@ -402,7 +402,7 @@
         keebs out there, and Selenium has a flavor for them — which is just a simplified version of
         the default HRM flavor: </p>
       <ul>
-        <li> <kbd>Fun/Media</kbd> is activated by holding both <kbd>Nav/Num</kbd> keys; </li>
+        <li> <i class="layer">Fun/Media</i> is activated by holding both <kbd>Nav</kbd> keys; </li>
         <li> <kbd>Shift</kbd> and <kbd>Sym</kbd> become hold-preferred. </li>
       </ul>
       <p> FTR: Selenium started as a 34-key configuration, and the name is a reference to the 34th
@@ -474,27 +474,27 @@
           </g>
         </g>
       </svg>
-      <p>The <kbd>nav</kbd> key is accessible from the home position of both thumbs, with a catch:
-        it’s a tap-preferred on the right (<kbo>Space</kbo>), a hold-preferred on the left. This
-        allows unmissable, single-hand shortcuts. </p>
+      <p>The <kbd>Nav</kbd> key is accessible from the home position of both thumbs, with a catch:
+        it has tap-preferred priority on the right (<kbd>Space</kbd>), hold-preferred on the left.
+        This allows unmissable, single-hand shortcuts. </p>
 
 
       <h3 id="layer-symbols">Symbols</h3>
       <object type="image/svg+xml" data="keeb.svg" class="sym"></object>
-      <p>All 30 programming symbols are available on this single layer, wich has been 
+      <p>All 30 programming symbols are available on this single layer, wich has been
         fine-tuned for comfort of use: </p>
       <ul>
         <li> the most common symbols are in the most comfortable positions; </li>
         <li> no symbol ever requires <kbd>Shift</kbd> </li>
-        <li> common sequences of programming sybols can be typed without uncomfortable same-finger bigrams, 
+        <li> common sequences of programming sybols can be typed without uncomfortable same-finger bigrams,
           either by alternating hands (<code>~/</code>, <code>);</code>, <code>&lt;/&gt;</code>,
         <code>+=</code>, <code>['']</code>, etc.) or with a single-hand roll (<code>&gt;=</code>,
         <code>/*</code>, <code>";</code>, <code>()</code>, <code>\"</code>, etc.). </li>
       </ul>
-      
-      <p>To furthermore reduce frictions in usage, the thumbs actions on the left hand were modified to ease sequences 
-        with non-alpha characters. These sequence would otherwise involve a nasty change of position of 
-        the right thumb (a same-thumb bigram), which really breaks the flow of typing. The left-hand thumb 
+
+      <p>To furthermore reduce frictions in usage, the thumbs actions on the left hand were modified to ease sequences
+        with non-alpha characters. These sequence would otherwise involve a nasty change of position of
+        the right thumb (a same-thumb bigram), which really breaks the flow of typing. The left-hand thumb
         cluster of the Symbols layer allow us to access these characters without releasing the <kbd>Sym</kbd> key:</p>
       <svg viewBox="0 10 410 57">
         <g class="left">
@@ -546,17 +546,19 @@
       </svg>
 
       <ul>
-        <li> The leftmost thumb key now activates the numeric layer of your choice (either Nav/Num or NumRow, 
-          see below) to type Symbols/Digits combos like <code>(0)</code>, <code>[1]</code>, etc. To make things 
-          even better, the <kbd>num</kbd> key is also sticky on this layer for all flavors with three thumb keys; </li>
+        <li> The leftmost thumb key now activates the numeric layer of your choice (either <i
+          class="layer">Nav/Num</i> or <i class="layer">NumRow</i>, see below) to type
+          Symbols/Digits combos like <code>(0)</code>, <code>[1]</code>, etc. To make things even
+          better, the <kbd>num</kbd> key is also sticky on this layer for all flavors with three
+          thumb keys; </li>
         <li> The home thumb key yield a <kbd>Space</kbd>, for long symbol sequences like
           <code>:(){ :|:& };:</code>; </li>
-        <li> The rightmost thumb key yields <kbd>Enter</kbd>, to seamlessly type lines ending with a 
+        <li> The rightmost thumb key yields <kbd>Enter</kbd>, to seamlessly type lines ending with a
           symbol (e.g. <code>;</code>). </li>
       </ul>
-      <p> Besides these optimisations for programming in general, this layer has truly been designed 
-        with Vim in mind, to ease advanced navigation tricks like vertical jumps with <code>{}</code>, 
-        <code>()</code>, <code>[]</code> and to chain them with <code>+-</code>, which are on the 
+      <p> Besides these optimisations for programming in general, this layer has truly been designed
+        with Vim in mind, to ease advanced navigation tricks like vertical jumps with <code>{}</code>,
+        <code>()</code>, <code>[]</code> and to chain them with <code>+-</code>, which are on the
         <kbd>J</kbd><kbd>K</kbd> positions, to adjust the movement line by line. </p>
       <p>The Symbols layer is a core part of the <a href="https://ergol.org">Ergol</a> keyboard
         layout and the <a href="https://github.com/OneDeadKey/arsenik">Arsenik</a> keymap: it’s been intensely
@@ -575,16 +577,17 @@
       <h2 id="options">Options</h2>
 
       <h3 id="vim-variant">Vim Variant</h3>
-      <p>This variant uses two layers instead of the <kbd>nav/num</kbd> one.</p>
+      <p>This variant uses two layers instead of the <i class="layer">Nav/Num</i> one.</p>
       <object type="image/svg+xml" data="keeb.svg" class="vim"></object>
-      <p>The NumRow layer mostly picks the number row of your keyboard layout (QWERTY, AZERTY…):</p>
+      <p>The <i class="layer">NumRow</i> layer mostly picks the number row of your keyboard layout
+        (QWERTY, AZERTY…):</p>
       <ul>
         <li>Numbers on the homerow, <kbd>Shift</kbd> + number on the top row. This suits experienced
           touch-typists, who are often more efficient with a numrow than with a numpad. </li>
         <li>Comma, period, dash, slash, everything else needed to write numbers, hours and dates
           under the right hand.</li>
       </ul>
-      <p>The VimNav layer offers advanced navigation possibilities:</p>
+      <p>The <i class="layer">VimNav</i> layer offers advanced navigation possibilities:</p>
       <ul>
         <li>the right part has arrows on <kbd>H</kbd><kbd>J</kbd><kbd>K</kbd><kbd>L</kbd>, along
           with home/end and page up/down on the top row — Vim-like cursor movements in any app, no
@@ -626,27 +629,6 @@
           <kbd>Space</kbd> mirrors <kbd>Backspace</kbd>.</li>
       </ul>
       <p>This variant is <em>very</em> popular and extensively tested.</p>
-
-      <!--
-      <h3 id="option-spaceback">Spaceback Variant</h3>
-      <p>If you prefer to have <kbd>Space</kbd> under the <em>left</em> thumb, this option might
-        suit your needs.</p>
-      <object type="image/svg+xml" data="flavors.svg" class="emacs spaceback"></object>
-      <p>Every sentence and ever proper noun start with an uppercase letter and follow a space; so,
-        to avoid a same-thumb bigram, <kbd>Space</kbd> and <kbd>Shift</kbd> must be under two
-        different thumbs; and as the positions of <kbd>Shift</kbd> and <kbd>Sym</kbd> are set by
-        Arsenik, we need a <kbd>Space</kbd> key under the right thumb. </p>
-      <p>The right <kbd>Space</kbd> key cannot be <em>moved</em> without breaking the compatibility
-        with Arsenik, but it can be <em>duplicated</em> on the left side: </p>
-      <ul>
-        <li> <kbd>Backspace</kbd> replaces <kbd>Enter</kbd> under the right thumb; </li>
-        <li> <kbd>Enter</kbd> remains accessible from the <kbd>Sym</kbd> layer; </li>
-        <li> <em>pro</em>: <kbd>Space</kbd> can be used while the right hand holds the mouse;</li>
-        <li> <em>con</em>: the left <kbd>nav</kbd> now has tap-preferred priority, and left-hand
-          shortcuts now require a long press to work.</li>
-      </ul>
-      <p>This variant is still experimental. Testing and feedback are welcome. </p>
-      -->
 
       <h3 id="shift-hrm"><kbd>Shift</kbd> as Pinky HRM</h3>
       TODO
