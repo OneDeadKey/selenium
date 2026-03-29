@@ -12,4 +12,7 @@ Vim variant:
 
 Web page: https://onedeadkey.github.io/selenium/
 
-Reference implementation: https://github.com/Nuclear-Squid/zmk-keyboard-quacken/
+Reference implementations:
+- https://github.com/Nuclear-Squid/zmk-keyboard-quacken/
+- https://github.com/OneDeadKey/zmk-config-selenium/
+- https://github.com/OneDeadKey/qmk-1dk-keymaps
