@@ -47,7 +47,7 @@
     <g id="leftThumb-ez-reachy"  class="specialKey showFun">
       <rect class="colorMod"/>
       <text class="colorMod level0">os</text>
-      <text class="layerNav shortcut">fun</text>
+      <text class="layerNav shortcut">fn</text>
       <use  class="layerSym" href="#glyph_return"/>
     </g>
     <g id="rightThumb-ez-reachy" class="thumb showNav">
@@ -127,7 +127,7 @@
       <rect class="holdTap borderNav tap-pref"/>
       <text class="level1  borderNav pc">nav</text>
       <use  class="level2" href="#glyph_space"/>
-      <text class="layerNav shortcut">fun</text>
+      <text class="layerNav shortcut">fn</text>
     </g>
     <g id="rightThumb-tt-tucked" class="thumb showSym">
       <rect/>
@@ -203,7 +203,7 @@
     <g id="leftThumb-hrm-reachy"  class="thumb showFun">
       <rect/>
       <rect class="holdTap colorFun"/>
-      <text class="level1  colorFun pc">fun</text>
+      <text class="level1  colorFun pc">fn</text>
       <use  class="level2"   href="#glyph_tab"/>
       <use  class="layerNav" href="#glyph_btab"/>
       <use  class="layerSym" href="#glyph_return"/>
@@ -211,7 +211,7 @@
     <g id="rightThumb-hrm-reachy" class="thumb showFun">
       <rect/>
       <rect class="holdTap colorFun"/>
-      <text class="level1  colorFun pc">fun</text>
+      <text class="level1  colorFun pc">fn</text>
       <use  class="level2" href="#glyph_return"/>
     </g>
 
@@ -348,7 +348,7 @@
               <rect class="holdTap borderNum tap-pref"/>
               <text class="level1  borderNum shortcut">num</text>
               <use  class="level2" href="#glyph_space"/>
-              <text class="layerNav shortcut ">fun</text>
+              <text class="layerNav shortcut ">fn</text>
             </g>
           </g>
         </g>
