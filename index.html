@@ -10,7 +10,7 @@
     <meta property="og:image" content="https://onedeadkey.github.io/selenium/selenium-og.png">
     <meta property="og:title" content="Selenium: a flexible Arsenik variant for split keyboards.">
     <meta property="og:description"
-      content="Selenium is a 34/36/42-key configuration with homerow-mods that just work. Beginner-friendly, flexible and reliable at high typing speeds.">
+      content="Selenium is a 34/36/42-key configuration with home row mods that just work. Beginner-friendly, flexible and reliable at high typing speeds.">
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="keeb.css">
     <script src="select.js" defer></script>
@@ -82,23 +82,6 @@
           </span>
         </div>
         <object type="image/svg+xml" data="keeb.svg" class="main"></object>
-        <!--
-        <div style="display: none;">
-          <p>
-            <input type="radio" name="flavor" id="mode-ez" value="ez">
-            <label for="mode-ez"><strong>EZ</strong>: no hold-taps</label>
-            <br>
-            <input type="radio" name="flavor" id="mode-tt" value="tt">
-            <label for="mode-tt"><strong>TT</strong>: thumb-taps</label>
-            <br>
-            <input type="radio" name="flavor" id="mode-hrm" value="hrm" checked>
-            <label for="mode-hrm"><strong>HRM</strong>: homerow-mods</label>
-            <br>
-            <input type="radio" name="flavor" id="mode-2tk" value="2tk">
-            <label for="mode-2tk"><strong>2TK</strong>: two thumb keys</label>
-          </p>
-        </div>
-        -->
         <table id="menu">
           <tr id="menu-ez">
             <th> EZ </th>
@@ -116,8 +99,8 @@
           </tr>
           <tr id="menu-hrm" class="selected">
             <th> HRM </th>
-            <td> <strong>Homerow-mods</strong>: the sane default
-              <br>Symmetrical modifiers on the homerow.
+            <td> <strong>home row mods</strong>: the sane default
+              <br>Symmetrical modifiers on the home row.
               <br>Symmetrical layer-shifts under the thumbs.
             </td>
           </tr>
@@ -142,7 +125,7 @@
         “permissive hold”), and then rely on mitigating measures and fine timing adjustments to limit
         the number of typos.</p>
       <p>In our experience, this doesn’t work reliably for most users and never will, because
-        <strong>homerow-mods and thumb modifiers have two mutually exclusive goals</strong>.
+        <strong>home row mods and thumb modifiers have two mutually exclusive goals</strong>.
         Instead, Selenium uses three distinct kinds of hold-tap behaviors that define which
         action takes priority and timings:</p>
       <table>
@@ -161,7 +144,7 @@
             <strong>Tap-Preferred</strong><br>
             Behaves as a letter key by default, becomes a modifier / layer-shift when pressed longer
             than 300ms.<br>
-            Perfect for <kbd>Space</kbd> and homerow-mods.
+            Perfect for <kbd>Space</kbd> and home row mods.
           </td>
         </tr>
         <tr>
@@ -206,18 +189,18 @@
 
       <h3 id="thumb-shifting">Thumb-Shifting</h3>
       <p>An opiniated choice with Selenium is that the <kbd>Shift</kbd> and <kbd>Symbols</kbd>
-        keys belong to the thumbs, <em>not</em> to the homerow:</p>
+        keys belong to the thumbs, <em>not</em> to the home row:</p>
       <ul>
-        <li>to work seamlessly these keys must have “hold-preferred” priority, which is not suitable for homerow-mods;</li>
+        <li>to work seamlessly these keys must have “hold-preferred” priority, which is not suitable for home row mods;</li>
         <li>this setting makes it <em></em>much easier<em></em> to chain several uppercase letters or symbols.</li>
       </ul>
-      <p>Having <kbd>Shift</kbd> as a homerow-mod is often recommended… and a very common reason why HRMs as a whole are
+      <p>Having <kbd>Shift</kbd> as a home row mod is often recommended… and a very common reason why HRMs as a whole are
         so difficult to tune right: capitalizing a word while typing text requires <kbd>Shift</kbd>
         to have an immediate action, which is exactly what you do <em>NOT</em> want for keyboard
         shortcuts. The problem can be partially mitigated with complex settings and practice, but it
         always ends up showing up at higher typing speeds.</p>
       <p>Instead, placing the <kbd>Shift</kbd> on a thumb key with hold-preferred priority allows us to use a very
-        long tapping-term on the other homerow-mods (300 ms by default), which ensures they’re never misfired. </p>
+        long tapping-term on the other home row mods (300 ms by default), which ensures they’re never misfired. </p>
       <p> It might take a bit to get used to <kbd>Shift</kbd> under the left thumb, but it’s totally
         worth it — even without these timing considerations. Probably the biggest comfort improvement
         you can expect on a keyboard. </p>
@@ -332,7 +315,7 @@
         <kbd>Tab</kbd>/<kbd>Enter</kbd>.
       </p>
 
-      <h3 id="flavor-hrm">HRM: Home-Row Mods</h3>
+      <h3 id="flavor-hrm">HRM: Home Row Mods</h3>
       <svg viewBox="0 10 410 57">
         <g class="left">
           <use class="tucked" href="#sticky-shift"/>
@@ -422,7 +405,7 @@
       </ul>
       <p>A numpad on the right:</p>
       <ul>
-        <li>positive numbers on a 3×3 grid, <kbd>0</kbd> on the homerow; </li>
+        <li>positive numbers on a 3×3 grid, <kbd>0</kbd> on the home row; </li>
         <li>not a full-featured numpad, but enough for numbers and dates.</li>
       </ul>
       <svg viewBox="0 10 410 57">
@@ -562,7 +545,7 @@
         <li>Function keys on the left: <kbd>F1</kbd>-<kbd>F12</kbd> on a 3×4 grid; </li>
         <li>Media keys on the right: prev/play/next, volume +/-/mute, brightness +/-/lock.</li>
       </ul>
-      <p>Note: homerow-mods are always enabled on the Media half-layer, no matter which flavor is
+      <p>Note: home row mods are always enabled on the Media half-layer, no matter which flavor is
         chosen. This is by far the easiest way to do an <kbd>Alt</kbd>‑<kbd>F4</kbd> or a
         <kbd>Ctrl</kbd>‑<kbd>F5</kbd> — and a safe opportunity to start learning HRMs. </p>
 
@@ -574,7 +557,7 @@
       <p>The <i class="layer">NumRow</i> layer mostly picks the number row of your keyboard layout
         (QWERTY, AZERTY…):</p>
       <ul>
-        <li>Numbers on the homerow, <kbd>Shift</kbd> + number on the top row. This suits experienced
+        <li>Numbers on the home row, <kbd>Shift</kbd> + number on the top row. This suits experienced
           touch-typists, who are often more efficient with a numrow than with a numpad. </li>
         <li>Comma, period, dash, slash, everything else needed to write numbers, hours and dates
           under the right hand.</li>
@@ -584,7 +567,7 @@
         <li>the right part has arrows on <kbd>H</kbd><kbd>J</kbd><kbd>K</kbd><kbd>L</kbd>, along
           with home/end and page up/down on the top row — Vim-like cursor movements in any app, no
           matter which keyboard layout you use; </li>
-        <li>the left part has <kbd>Tab</kbd> and <kbd>Shift</kbd><kbd>Tab</kbd> on the homerow
+        <li>the left part has <kbd>Tab</kbd> and <kbd>Shift</kbd><kbd>Tab</kbd> on the home row
           (<kbd>D</kbd><kbd>F</kbd>, mirroring <kbd>J</kbd><kbd>K</kbd> in the right hand),
           <kbd>prev</kbd>/<kbd>next</kbd> on the top row (<kbd>E</kbd><kbd>R</kbd> ), along with
           general keyboard shortcuts. </li>
