@@ -601,6 +601,7 @@
             <text class="level2">P</text>
             <text class="layerSym">`</text>
             <text class="layerNum">@</text>
+            <text class="layerNav">/</text>
           </g>
           <g id="Semicolon" class="key home">
             <rect/>
@@ -705,7 +706,7 @@
                   <text class="layerNum">&amp;</text>
                   <text class="layerNav">7</text>
                   <use  class="layerVim" href="#glyph_pgdown"/>
-                  <text class="layerFun shortcut">prev</text>
+                  <text class="layerFun shortcut">next</text>
                 </g>
                 <g id="KeyJ" class="key home dual">
                   <rect/>
@@ -727,7 +728,7 @@
                   <text class="layerNum">,</text>
                   <text class="layerNav">1</text>
                   <text class="layerVim"></text>
-                  <text class="layerFun shortcut">next</text>
+                  <text class="layerFun shortcut">prev</text>
                 </g>
               </g>
 
@@ -740,7 +741,6 @@
                     <text class="level2">Y</text>
                     <text class="layerSym">@</text>
                     <text class="layerNum">^</text>
-                    <text class="layerNav">/</text>
                     <use  class="layerVim" href="#glyph_home"/>
                   </g>
                   <g id="KeyH" class="key home">
