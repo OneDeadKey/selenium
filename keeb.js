@@ -104,7 +104,11 @@ function setGeometry(name) {
 }
 
 let funState = false;
+let vimState = false;
 function setLayer3(id) {
+  if (id === "nav" && vimState) {
+    id = "vim"
+  }
   document.querySelector("#left").setAttribute("layer3", id);
   document.querySelector("#right").setAttribute("layer3", id);
   funState = (id === "fun");
@@ -120,13 +124,14 @@ const toggleNavFun = () => {
 };
 
 function setConfig(flavor, vim) {
+  vimState = vim;
+
   document.querySelector("#left").setAttribute("class", flavor);
   document.querySelector("#right").setAttribute("class", flavor);
-  const nav = vim ? "vim" : "nav";
-  setLayer3(nav);
+  setLayer3("nav");
   setLayer4("sym");
 
-  const thumb = `${flavor}${vim ? '-vim' : ''}`;
+  const thumb = `${flavor}${vimState ? '-vim' : ''}`;
   ["left", "right"].forEach(id => {
     document.querySelector(`#${id} .thumbCluster`).setAttribute("href", `#${id}Thumb-${thumb}`);
   })
@@ -137,7 +142,7 @@ function setConfig(flavor, vim) {
   })
   document.querySelectorAll(".showNav *").forEach(element => {
     element.setAttribute("style", "cursor: pointer");
-    element.setAttribute("onclick", `setLayer3('${nav}')`);
+    element.setAttribute("onclick", `setLayer3('nav')`);
   })
   document.querySelectorAll(".showFun *").forEach(element => {
     element.setAttribute("style", "cursor: pointer");
