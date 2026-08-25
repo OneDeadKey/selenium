@@ -621,6 +621,7 @@
             <text class="layerNum">/</text>
             <text class="layerNav">.</text>
             <text class="layerVim"></text>
+            <text class="layerFun shortcut">ins</text>
           </g>
         </g>
 
