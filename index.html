@@ -60,7 +60,8 @@
   </head>
   <body>
     <header>
-      <nav><a href="https://onedeadkey.github.io">⮝ OneDeadKey</a></nav>
+      <nav><a href="https://onedeadkey.github.io">⮝ OneDeadKey</a>
+        | <a href="faq">FAQ</a></nav>
       <h1>Selenium</h1>
       <p>A configurable <a href="https://github.com/OneDeadKey/arsenik">Arsenik</a>
         variant for split keyboards.</p>
@@ -635,8 +636,15 @@
       </ul>
     </main>
 
+    <script> // anchors
+      document.querySelectorAll("h2[id], h3[id]").forEach((heading) => {
+        heading.innerHTML = `${heading.innerHTML} <a href="#${heading.id}">#</a>`;
+      });
+    </script>
+
     <footer>
       <a href="https://unlicense.org">Unlicensed</a> 2025-2026 by
       <a href="https://github.com/OneDeadKey/selenium">OneDeadKey</a> contributors.
     </footer>
+  </body>
 </html>
