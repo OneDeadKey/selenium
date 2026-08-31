@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf8">
+    <title>Frequently Asked Questions</title>
+    <meta name="viewport"     content="width=device-width, initial-scale=1">
+    <meta name="description"  content="Frequently asked questions about Selenium, a configurable Arsenik variant for split keyboards.">
+    <link type="image/svg+xml" rel="icon" href="favicon.svg" sizes="any">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="keeb.css">
+    <script src="select.js" defer></script>
+    <script src="keeb.js"></script>
+  </head>
+  <body>
+    <header>
+      <nav><a href="/">⮝ Selenium</a></nav>
+      <h1>Frequently Asked Questions</h1>
+    </header>
+
+    <main>
+      <h2 id="aekeynox">Ækeynox</h2>
+
+      <h3 id="symbols">The Symbols layer is messed up</h3>
+      <p>There are two probable causes:</p>
+      <ul>
+        <li>Kanata, KMonad, Keyd or another similar service is running (easy fix)</li>
+        <li>your Selenium implementation has not been configured for the host keyboard layout.</li>
+      </ul>
+      <p>Symbols are sent as key codes, not characters. By default, Ækeynox assumes the host
+        computer is configured in US QWERTY; if not, make sure the proper layout has been selected
+        in your Ækeynox settings.</p>
+      <p>Besides, most non-ASCII keyboard layouts behave differently, depending on the host OS.
+        By default, Ækeynox expect the host to be a PC; if not, make sure the <code>MACOS</code>
+        flag is set.</p>
+
+      <h3 id="nav-shortcuts">Shortcuts in the Navigation layer don’t work as expected</h3>
+      <p>Same probable causes and fixes as for Symbols (above): make sure Kanata isn’t running,
+        and check the host layout/OS configuration.</p>
+
+      <h3 id="oryx-moergo">Will ZSA/Oryx or MoErgo layout editor be officially supported?</h3>
+      <p>Unlikely: we focus on free/libre software, and we don’t see how the various configuration
+        options could be implemented in these proprietary tools.</p>
+      <p>Under the hood, Oryx and MoErgo Layout Editor are based on QMK and ZMK, respectively; as
+        we have Ækeynox implementations for both of them, we’ll rather support ZSA and MoErgo
+        keyboards in Ækeynox. We don’t see any use case where our implementations would lack
+        anything compared to their commercial alternatives; please open a ticket if you think
+        otherwise.</p>
+
+      <h2 id="keymap">Keymap</h2>
+
+      <h3 id="tt-ctrl-backspace">[TT] How do I do a Ctrl-Backspace?</h3>
+      <p>In Thumb-Taps mode, <kbd>Ctrl</kbd>‑<kbd>Space</kbd> is mapped to
+        <kbd>Ctrl</kbd>‑<kbd>Backspace</kbd>.</p>
+
+      <h3 id="permissive-hold">[HRM] I find HRMs error-prone, should I enable <code>PERMISSIVE_HOLD</code>?</h3>
+      <p>TL;DR: no. Especially if you struggle with home row mods, e.g. trigging unwanted modifiers
+        as you type some text.</p>
+      <p>As far as we know, this advice was relevant back in the days when QMK’s default behavior
+        for mod-taps was “hold-preferred”: the “permissive hold” alternative was <em>less</em>
+        error-prone for home row mods. Via and/or Vial might still have this “hold-preferred”
+        default, but QMK has used “tap-preferred” by default for a long time now — and activating
+        <code>PERMISSIVE_HOLD</code> would <em>increase</em> the count of false positives.</p>
+      <p>Ækeynox is very opiniated on <a href="/#timing-is-key">timing priorities</a>, and sets a
+        “tap-preferred” priority for home row mods along with a high <code>TAPPING_TERM</code>
+        (300 ms), which is a very safe default for beginners and fast typists, but forces to slow
+        down to use modifiers.</p>
+      <p>There are several ways to deal with this delay for modifiers:</p>
+      <ul>
+        <li>consider it’s a feature: the intention <em>must</em> be expressed
+          (and we strongly recommend this approach)</li>
+        <li>use an alternative navigation layer relying on <a
+            href="https://github.com/qmk/qmk_firmware/blob/user-keymaps-still-present/users/callum/readme.md#oneshot-modifiers">Callum
+            mods</a>, which is a very safe alternative to mod-taps</li>
+        <li>use advanced timing options à la <code>PERMISSIVE_HOLD</code>, along with mitigation
+          measures to limit false positives
+          <ul>
+            <li>QMK: <code>PERMISSIVE_HOLD</code> +
+              <a href="https://getreuer.info/posts/keyboards/achordion/">Accordion</a>-like safeguards:
+              <a href="https://docs.qmk.fm/tap_hold#chordal-hold">chordal hold</a> (supported by Vial and Oryx),
+              <a href="https://docs.qmk.fm/tap_hold#speculative-hold">speculative hold</a>[](),
+              <a href="https://docs.qmk.fm/tap_hold#flow-tap">flow tap</a>…
+            </li>
+            <li>ZMK: “balanced” behavior +
+              <a href="https://zmk.dev/docs/behaviors/hold-tap#advanced-configuration">positional hold-tap configuration</a> or
+              <a href="https://github.com/urob/zmk-config#timeless-homerow-mods">timeless HRMs</a>.
+            </li>
+          </ul>
+        </li>
+      </ul>
+      <p>Both features are <a
+        href="https://github.com/OneDeadKey/selenium/issues/42">planned</a>:</p>
+      <ul>
+        <li> a Callum-style navigation layer is already experimented in the <a
+          href="https://github.com/OneDeadKey/zmk-config-aekeynox/pull/107">ZMK implementation</a> </li>
+        <li> an option <i lang="fr">à la</i> “permissive hold” will be proposed, unset by default. </li>
+      </ul>
+    </main>
+
+    <footer>
+      <a href="https://unlicense.org">Unlicensed</a> 2025-2026 by
+      <a href="https://github.com/OneDeadKey/selenium">OneDeadKey</a> contributors.
+    </footer>
+</html>
