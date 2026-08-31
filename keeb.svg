@@ -655,7 +655,7 @@
               <text class="layerSym">:</text>
               <text class="layerNum">:</text>
               <text class="layerNav">3</text>
-              <text class="layerVim"></text>
+              <text class="layerVim">🖰→</text>
               <text class="layerFun shortcut">bri-</text>
             </g>
           </g>
@@ -691,7 +691,7 @@
                 <text class="layerSym">;</text>
                 <text class="layerNum">.</text>
                 <text class="layerNav">2</text>
-                <text class="layerVim"></text>
+                <text class="layerVim">🖰↑</text>
                 <text class="layerFun shortcut">vol-</text>
               </g>
            </g>
@@ -727,7 +727,7 @@
                   <text class="layerSym">!</text>
                   <text class="layerNum">,</text>
                   <text class="layerNav">1</text>
-                  <text class="layerVim"></text>
+                  <text class="layerVim">🖰↓</text>
                   <text class="layerFun shortcut">prev</text>
                 </g>
               </g>
@@ -759,7 +759,7 @@
                     <text class="layerSym">|</text>
                     <text class="layerNum">-</text>
                     <text class="layerNav">,</text>
-                    <text class="layerVim"></text>
+                    <text class="layerVim">←🖰</text>
                   </g>
                 </g>
                 <g class="col1m">
