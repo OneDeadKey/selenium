@@ -76,7 +76,11 @@ text {
 .specialKey text {
   font-size: 14px;
 }
-text.pc {
+text.mac {
+  font-size: 14px;
+  transform: translate(0, 2px);
+}
+text.pc, text.fn {
   font-size: 12px;
 }
 text.shortcut {
@@ -114,19 +118,12 @@ use.layerVim {
 .matrix .layerFun { display: none; }
 .matrix .layerSym { display: none; }
 .matrix .layerNum { display: none; }
-.matrix .mac      { display: none !important; }
 
 [layer3="nav"] .layerNav { display: block; }
 [layer3="vim"] .layerVim { display: block; }
 [layer3="fun"] .layerFun { display: block; }
 [layer4="sym"] .layerSym { display: block; }
 [layer4="num"] .layerNum { display: block; }
-
-.tt .holdTap, .tt .borderMod,
-.ez .holdTap, .ez .borderMod { display: none; }
-
-/* Selenium currently forces HRM in the 'Media' half-layer */
-#right[layer3="fun"] .borderMod { display: block; }
 
 #select {
   transform: translate(70px, 280px);
@@ -136,6 +133,20 @@ use.layerVim {
   text-align: left;
   text-anchor: start;
 }
+
+.dual .holdTap { display: none; }
+.hrm .holdTap,
+#right[layer3="fun"] .holdTap { display: block; }
+
+.holdTap .pc,
+.holdTap .mac { display: none; }
+.pc .holdTap .pc,
+.mac .holdTap .mac { display: block; }
+
+.specialKey .pc,
+.specialKey .mac { display: none; }
+:host(.pc) .specialKey .pc,
+:host(.mac) .specialKey .mac { display: block; }
 
 
 /*****************************************************************************
