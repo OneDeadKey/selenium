@@ -166,7 +166,7 @@ object { /* keymap */
   max-width: 26em;
 }
 
-svg, object.spaceback {
+svg {
   display: block;
   margin: auto;
   max-width: 60%;

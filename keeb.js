@@ -119,16 +119,19 @@ const toggleNavFun = () => {
   setLayer3(funState ? "nav" : "fun");
 };
 
-function setConfig(flavor, vim) {
-  document.querySelector("#left").setAttribute("class", flavor);
-  document.querySelector("#right").setAttribute("class", flavor);
+function setConfig(flavor, vim, mac) {
   const nav = vim ? "vim" : "nav";
   setLayer3(nav);
   setLayer4("sym");
 
-  const thumb = `${flavor}${vim ? '-vim' : ''}`;
+  const mode = vim ? "-vim" : "";
+  const host = mac ? "mac" : "pc";
+  const hrm = flavor === "hrm" || flavor === "2tk" ? "hrm" : "";
+  const variant = hrm === "" && mac ? "-mac" : "";
   ["left", "right"].forEach(id => {
-    document.querySelector(`#${id} .thumbCluster`).setAttribute("href", `#${id}Thumb-${thumb}`);
+    document.querySelector(`#${id}`).setAttribute("class", `${hrm} ${host}`);
+    document.querySelector(`#${id} .thumbCluster`)
+      .setAttribute("href", `#${id}Thumb-${flavor}${variant}${mode}`);
   })
 
   document.querySelectorAll(".toggleNavFun *").forEach(element => {
@@ -171,7 +174,7 @@ const drawKeys = () => {
   document.querySelectorAll("rect.sticky").forEach(rect => {
     rect.setAttribute("width",  ikw / 2);
   });
-  document.querySelectorAll("rect.holdTap").forEach(rect => {
+  document.querySelectorAll("rect.holdTap, .holdTap rect").forEach(rect => {
     rect.setAttribute("y", padding + ikh / 2);
     rect.setAttribute("width",  ikw / 2);
     rect.setAttribute("height", ikh / 2);
