@@ -1,6 +1,15 @@
 <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 300">
   <link xmlns="http://www.w3.org/1999/xhtml" rel="stylesheet" href="keeb.css" type="text/css"/>
+  <style>
+    .glyph {
+      transform: scale(0.4) translate(-24px, -36px);
+      stroke-width: 3px;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+      fill: none;
+    }
+  </style>
 
   <g id="outline">
     <g class="flex board">
@@ -11,27 +20,25 @@
   </g>
 
   <defs>
-    <path class="symbol" transform="scale(0.4) translate(-24, -30)" id="glyph_backspace" d="M22,19l10,10 M22,29l10-10 M6,24l10,13h26v-26h-26z"/>
-    <path class="symbol" transform="scale(0.4) translate(-24, -30)" id="glyph_delete"    d="M16,19l10,10 M16,29l10-10 M42,24l-10,13h-26v-26h26z"/>
-    <path class="symbol" transform="scale(0.4) translate(-24, -30)" id="glyph_return"    d="M42,13V27H6 m8-8l-8,8l8,8"/>
-    <path class="symbol" transform="scale(0.4) translate(-24, -30)" id="glyph_space"     d="M42,24V32H6V24"/>
-    <path class="symbol" transform="scale(0.4) translate(-24, -30)" id="glyph_escape"    d="M24,24l-18-18 m0,10v-10h10 M24,6A18,18,0,1,1,6,24"/>
-    <path class="symbol" transform="scale(0.4) translate(-24, -30)" id="glyph_up"        d="M24,42v-36 m-8,6l8-8l8,8"/>
-    <path class="symbol" transform="scale(0.4) translate(-24, -30)" id="glyph_down"      d="M24,6v36 m-8,-6l8,8l8-8"/>
-    <path class="symbol" transform="scale(0.4) translate(-24, -30)" id="glyph_pgup"      d="M16,32h16 M16,24h16 M24,42v-36 m-8,6l8-8l8,8"/>
-    <path class="symbol" transform="scale(0.4) translate(-24, -30)" id="glyph_pgdown"    d="M16,16h16 M16,24h16 M24,6v36 m-8,-6l8,8l8-8"/>
-    <path class="symbol" transform="scale(0.4) translate(-24, -30)" id="glyph_left"      d="M42,24h-36 m6-8l-8,8l8,8"/>
-    <path class="symbol" transform="scale(0.4) translate(-24, -30)" id="glyph_right"     d="M6,24h36 m-6-8l8,8l-8,8"/>
-    <path class="symbol" transform="scale(0.4) translate(-24, -30)" id="glyph_tab"       d="M6,24h27 m-6-8l8,8l-8,8 M42,12V36"/>
-    <path class="symbol" transform="scale(0.4) translate(-24, -30)" id="glyph_btab"      d="M42,24h-27 m6-8l-8,8l8,8 M6,12V36"/>
-    <path class="symbol" transform="scale(0.4) translate(-24, -30)" id="glyph_home"      d="M42,42l-28-28 m0,10v-10h10 m8-8h-26v26"/>
-    <path class="symbol" transform="scale(0.4) translate(-24, -30)" id="glyph_end"       d="M6,6l28,28 m0-10v10h-10 m-8,8h26v-26"/>
-    <!-- <path class="symbol" transform="scale(0.4) translate(-24, -30)" id="glyph_prevpg"    d="M33,24h-27 m6-8l-8,8l8,8 M24,6V42H42V6z"/> -->
-    <!-- <path class="symbol" transform="scale(0.4) translate(-24, -30)" id="glyph_nextpg"    d="M15,24h27 m-6-8l8,8l-8,8 M24,6V42H6V6z"/> -->
-    <path class="symbol" transform="scale(0.4) translate(-24, -30)" id="glyph_prev"      d="M24,6A18,18,0,1,1,24,42A18,18,0,1,1,24,6 M26,16l-8,8l8,8"/>
-    <path class="symbol" transform="scale(0.4) translate(-24, -30)" id="glyph_next"      d="M24,6A18,18,0,1,1,24,42A18,18,0,1,1,24,6 M22,16l8,8l-8,8"/>
-    <path class="symbol" transform="scale(0.4) translate(-24, -30)" id="glyph_shift"     d="M23,7l14,20h-7v16h-14v-16h-7l14,-20"/>
-    <path class="symbol" transform="scale(0.4) translate(-24, -30)" id="glyph_caps"      d="M24,7l14,20h-7v6h-14v-6h-7l14,-20 M31,38v5h-14v-5z"/>
+    <path class="glyph" id="glyph_backspace" d="M22,19l10,10 M22,29l10-10 M6,24l10,13h26v-26h-26z"/>
+    <path class="glyph" id="glyph_delete"    d="M16,19l10,10 M16,29l10-10 M42,24l-10,13h-26v-26h26z"/>
+    <path class="glyph" id="glyph_return"    d="M42,13V27H6 m8-8l-8,8l8,8"/>
+    <path class="glyph" id="glyph_space"     d="M42,24V32H6V24"/>
+    <path class="glyph" id="glyph_escape"    d="M24,24l-18-18 m0,10v-10h10 M24,6A18,18,0,1,1,6,24"/>
+    <path class="glyph" id="glyph_up"        d="M24,42v-36 m-8,6l8-8l8,8"/>
+    <path class="glyph" id="glyph_down"      d="M24,6v36 m-8,-6l8,8l8-8"/>
+    <path class="glyph" id="glyph_pgup"      d="M16,32h16 M16,24h16 M24,42v-36 m-8,6l8-8l8,8"/>
+    <path class="glyph" id="glyph_pgdown"    d="M16,16h16 M16,24h16 M24,6v36 m-8,-6l8,8l8-8"/>
+    <path class="glyph" id="glyph_left"      d="M42,24h-36 m6-8l-8,8l8,8"/>
+    <path class="glyph" id="glyph_right"     d="M6,24h36 m-6-8l8,8l-8,8"/>
+    <path class="glyph" id="glyph_tab"       d="M6,24h27 m-6-8l8,8l-8,8 M42,12V36"/>
+    <path class="glyph" id="glyph_btab"      d="M42,24h-27 m6-8l-8,8l8,8 M6,12V36"/>
+    <path class="glyph" id="glyph_home"      d="M42,42l-28-28 m0,10v-10h10 m8-8h-26v26"/>
+    <path class="glyph" id="glyph_end"       d="M6,6l28,28 m0-10v10h-10 m-8,8h26v-26"/>
+    <path class="glyph" id="glyph_prev"      d="M24,6A18,18,0,1,1,24,42A18,18,0,1,1,24,6 M26,16l-8,8l8,8"/>
+    <path class="glyph" id="glyph_next"      d="M24,6A18,18,0,1,1,24,42A18,18,0,1,1,24,6 M22,16l8,8l-8,8"/>
+    <path class="glyph" id="glyph_shift"     d="M23,7l14,20h-7v16h-14v-16h-7l14,-20"/>
+    <path class="glyph" id="glyph_caps"      d="M24,7l14,20h-7v6h-14v-6h-7l14,-20 M31,38v5h-14v-5z"/>
 
     <!-- easy mode (no dual keys) -->
     <g id="leftThumb-ez-tucked"  class="specialKey">
