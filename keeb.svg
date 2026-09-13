@@ -51,15 +51,15 @@
       <text class="colorMod level0">alt</text>
       <text class="layerSym shortcut">num</text>
     </g>
-    <g id="leftThumb-ez-comfy"  class="specialKey">
+    <g id="leftThumb-ez-comfy"  class="specialKey showFun">
       <rect class="colorMod"/>
       <text class="colorMod level0">ctrl</text>
+      <text class="layerNav shortcut">fn</text>
       <use  class="layerSym" href="#glyph_space"/>
     </g>
-    <g id="leftThumb-ez-reachy" class="specialKey showFun">
+    <g id="leftThumb-ez-reachy" class="specialKey">
       <rect class="colorMod"/>
       <text class="colorMod level0">os</text>
-      <text class="layerNav shortcut">fn</text>
       <use  class="layerSym" href="#glyph_return"/>
     </g>
     <g id="leftThumb-ez-mac-tucked" class="specialKey">
@@ -67,15 +67,15 @@
       <text class="colorMod level0">⌃</text>
       <text class="layerSym shortcut">num</text>
     </g>
-    <g id="leftThumb-ez-mac-comfy"  class="specialKey">
+    <g id="leftThumb-ez-mac-comfy"  class="specialKey showFun">
       <rect class="colorMod"/>
       <text class="colorMod level0">⌘</text>
+      <text class="layerNav shortcut">fn</text>
       <use  class="layerSym" href="#glyph_space"/>
     </g>
-    <g id="leftThumb-ez-mac-reachy" class="specialKey showFun">
+    <g id="leftThumb-ez-mac-reachy" class="specialKey">
       <rect class="colorMod"/>
       <text class="colorMod level0">⌥</text>
-      <text class="layerNav shortcut">fn</text>
       <use  class="layerSym" href="#glyph_return"/>
     </g>
     <g id="rightThumb-ez-reachy" class="thumb showNav">
@@ -142,7 +142,7 @@
       <use  class="layerVim" href="#glyph_caps"/>
       <text class="layerSym shortcut">num</text>
     </g>
-    <g id="leftThumb-tt-comfy"   class="thumb">
+    <g id="leftThumb-tt-comfy"   class="thumb showFun">
       <rect/>
       <rect class="holdTap colorMod"/>
       <text class="level1  colorMod pc">ctrl</text>
@@ -150,7 +150,7 @@
       <use  class="layerNav" href="#glyph_delete"/>
       <use  class="layerSym" href="#glyph_space"/>
     </g>
-    <g id="leftThumb-tt-reachy"  class="thumb showFun">
+    <g id="leftThumb-tt-reachy"  class="thumb">
       <rect/>
       <rect class="holdTap colorMod"/>
       <text class="level1  colorMod pc">os</text>
@@ -158,7 +158,7 @@
       <use  class="layerNav" href="#glyph_btab"/>
       <use  class="layerSym" href="#glyph_return"/>
     </g>
-    <g id="leftThumb-tt-mac-comfy" class="thumb">
+    <g id="leftThumb-tt-mac-comfy" class="thumb showFun">
       <rect/>
       <rect class="holdTap colorMod"/>
       <text class="level1  colorMod mac">⌘</text>
@@ -166,7 +166,7 @@
       <use  class="layerNav" href="#glyph_delete"/>
       <use  class="layerSym" href="#glyph_space"/>
     </g>
-    <g id="leftThumb-tt-mac-reachy"  class="thumb showFun">
+    <g id="leftThumb-tt-mac-reachy"  class="thumb">
       <rect/>
       <rect class="holdTap colorMod"/>
       <text class="level1  colorMod mac">⌥</text>
