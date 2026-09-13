@@ -186,12 +186,11 @@
       <text class="level1  colorMod pc">alt</text>
       <use  class="level2" href="#glyph_return"/>
     </g>
-    <g id="rightThumb-tt-comfy"  class="thumb toggleNavFun">
+    <g id="rightThumb-tt-comfy"  class="thumb showNav">
       <rect/>
       <rect class="holdTap borderNav tap-pref"/>
       <text class="level1  borderNav pc">nav</text>
       <use  class="level2" href="#glyph_space"/>
-      <text class="layerNav shortcut">fn</text>
     </g>
     <g id="rightThumb-tt-tucked" class="thumb showSym">
       <rect/>
@@ -307,6 +306,13 @@
       <text class="level1  colorFun pc">fn</text>
       <use  class="level2" href="#glyph_return"/>
     </g>
+    <g id="rightThumb-hrm-comfy"  class="thumb toggleNavFun">
+      <rect/>
+      <rect class="holdTap borderNav tap-pref"/>
+      <text class="level1  borderNav pc">nav</text>
+      <use  class="level2" href="#glyph_space"/>
+      <text class="layerNav shortcut">fn</text>
+    </g>
 
     <!-- homerow-mods + Emacs -->
     <g class="leftThumb"  id="leftThumb-hrm">
@@ -324,7 +330,7 @@
       <g class="tucked thumb">
         <use href="#rightThumb-tt-tucked"/>
         <g class="comfy thumb">
-          <use href="#rightThumb-tt-comfy"/>
+          <use href="#rightThumb-hrm-comfy"/>
           <g class="reachy thumb">
             <use href="#rightThumb-hrm-reachy"/>
           </g>
@@ -354,7 +360,7 @@
       <g class="tucked thumb">
         <use href="#rightThumb-tt-tucked"/>
         <g class="comfy thumb">
-          <use href="#rightThumb-tt-comfy"/>
+          <use href="#rightThumb-hrm-comfy"/>
           <g class="reachy thumb">
             <g class="key showNum">
               <rect/>
