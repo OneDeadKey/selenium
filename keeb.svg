@@ -135,7 +135,7 @@
     <use class="rightThumb" id="rightThumb-ez-mac-vim" href="#rightThumb-ez-mac"/>
 
     <!-- thumb-taps -->
-    <g id="leftThumb-tt-tucked"  class="thumb">
+    <g id="leftThumb-tt-tucked"  class="thumb showNum">
       <rect/>
       <rect class="colorMod sticky"/>
       <text class="colorMod sticky pc">shift</text>
@@ -158,7 +158,7 @@
       <use  class="layerNav" href="#glyph_btab"/>
       <use  class="layerSym" href="#glyph_return"/>
     </g>
-    <g id="leftThumb-tt-mac-comfy" class="thumb showFun">
+    <g id="leftThumb-tt-mac-comfy"   class="thumb showFun">
       <rect/>
       <rect class="holdTap colorMod"/>
       <text class="level1  colorMod mac">⌘</text>
@@ -174,13 +174,13 @@
       <use  class="layerNav" href="#glyph_btab"/>
       <use  class="layerSym" href="#glyph_return"/>
     </g>
-    <g id="rightThumb-tt-mac-reachy" class="thumb showFun">
+    <g id="rightThumb-tt-mac-reachy" class="thumb">
       <rect/>
       <rect class="holdTap colorMod"/>
       <text class="level1  colorMod mac">⌃</text>
       <use  class="level2" href="#glyph_return"/>
     </g>
-    <g id="rightThumb-tt-reachy" class="thumb showFun">
+    <g id="rightThumb-tt-reachy" class="thumb">
       <rect/>
       <rect class="holdTap colorMod"/>
       <text class="level1  colorMod pc">alt</text>
@@ -284,7 +284,7 @@
     <use class="rightThumb" id="rightThumb-tt-mac-vim" href="#rightThumb-tt-mac"/>
 
     <!-- homerow-mods -->
-    <g id="leftThumb-hrm-comfy"   class="thumb showNav">
+    <g id="leftThumb-hrm-comfy"   class="thumb toggleNavFun">
       <rect/>
       <rect class="holdTap colorNav"/>
       <text class="level1  colorNav pc">nav</text>
@@ -420,13 +420,7 @@
             <text class="layerSym shortcut">num</text>
           </g>
           <g class="reachy thumb">
-            <g class="key showNav">
-              <rect/>
-              <rect class="holdTap colorNav"/>
-              <text class="level1  colorNav pc">nav</text>
-              <use  class="level2"   href="#glyph_backspace"/>
-              <use  class="layerSym" href="#glyph_space"/>
-            </g>
+            <use href="#leftThumb-hrm-comfy"/>
           </g>
         </g>
       </g>
