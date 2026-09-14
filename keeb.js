@@ -103,7 +103,9 @@ function setGeometry(name) {
   });
 }
 
+let vimVariant = false;
 let funState = false;
+
 function setLayer3(id) {
   document.querySelector("#left").setAttribute("layer3", id);
   document.querySelector("#right").setAttribute("layer3", id);
@@ -115,14 +117,21 @@ function setLayer4(id) {
   document.querySelector("#right").setAttribute("layer4", id);
 }
 
-const toggleNavFun = () => {
-  setLayer3(funState ? "nav" : "fun");
-};
+const showFun = () => { setLayer3("fun"); }
+const showSym = () => { setLayer4("sym"); }
+const showNav = () => {
+  setLayer3(vimVariant ? "vim" : "nav");
+}
+const showNum = () => {
+  vimVariant ? setLayer4("num") : setLayer3("nav");
+}
+const toggleNavFun = () => { funState ? showNav() : showFun(); };
+const resetNavFun  = () => { funState ? showFun() : showNav(); };
 
 function setConfig(flavor, vim, mac) {
-  const nav = vim ? "vim" : "nav";
-  setLayer3(nav);
-  setLayer4("sym");
+  vimVariant = vim;
+  resetNavFun();
+  showSym();
 
   const mode = vim ? "-vim" : "";
   const host = mac ? "mac" : "pc";
@@ -140,19 +149,19 @@ function setConfig(flavor, vim, mac) {
   })
   document.querySelectorAll(".showNav *").forEach(element => {
     element.setAttribute("style", "cursor: pointer");
-    element.setAttribute("onclick", `setLayer3('${nav}')`);
+    element.setAttribute("onclick", "showNav()");
   })
   document.querySelectorAll(".showFun *").forEach(element => {
     element.setAttribute("style", "cursor: pointer");
-    element.setAttribute("onclick", "setLayer3('fun')");
+    element.setAttribute("onclick", "showFun()");
   })
   document.querySelectorAll(".showNum *").forEach(element => {
     element.setAttribute("style", "cursor: pointer");
-    element.setAttribute("onclick", "setLayer4('num')");
+    element.setAttribute("onclick", "showNum()");
   })
   document.querySelectorAll(".showSym *").forEach(element => {
     element.setAttribute("style", "cursor: pointer");
-    element.setAttribute("onclick", "setLayer4('sym')");
+    element.setAttribute("onclick", "showSym()");
   })
 }
 

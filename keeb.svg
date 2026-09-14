@@ -41,41 +41,36 @@
     <path class="glyph" id="glyph_caps"      d="M24,7l14,20h-7v6h-14v-6h-7l14,-20 M31,38v5h-14v-5z"/>
 
     <!-- easy mode (no dual keys) -->
-    <g id="leftThumb-ez-tucked" class="specialKey">
+    <g id="leftThumb-ez-tucked" class="specialKey showNum">
       <rect class="colorMod"/>
       <text class="colorMod level0">alt</text>
       <text class="layerSym shortcut">num</text>
     </g>
-    <g id="leftThumb-ez-tucked" class="specialKey">
-      <rect class="colorMod"/>
-      <text class="colorMod level0">alt</text>
-      <text class="layerSym shortcut">num</text>
-    </g>
-    <g id="leftThumb-ez-comfy"  class="specialKey">
+    <g id="leftThumb-ez-comfy"  class="specialKey showFun">
       <rect class="colorMod"/>
       <text class="colorMod level0">ctrl</text>
+      <text class="layerNav shortcut">fn</text>
       <use  class="layerSym" href="#glyph_space"/>
     </g>
-    <g id="leftThumb-ez-reachy" class="specialKey showFun">
+    <g id="leftThumb-ez-reachy" class="specialKey">
       <rect class="colorMod"/>
       <text class="colorMod level0">os</text>
-      <text class="layerNav shortcut">fn</text>
       <use  class="layerSym" href="#glyph_return"/>
     </g>
-    <g id="leftThumb-ez-mac-tucked" class="specialKey">
+    <g id="leftThumb-ez-mac-tucked" class="specialKey showNum">
       <rect class="colorMod"/>
       <text class="colorMod level0">⌃</text>
       <text class="layerSym shortcut">num</text>
     </g>
-    <g id="leftThumb-ez-mac-comfy"  class="specialKey">
+    <g id="leftThumb-ez-mac-comfy"  class="specialKey showFun">
       <rect class="colorMod"/>
       <text class="colorMod level0">⌘</text>
+      <text class="layerNav shortcut">fn</text>
       <use  class="layerSym" href="#glyph_space"/>
     </g>
-    <g id="leftThumb-ez-mac-reachy" class="specialKey showFun">
+    <g id="leftThumb-ez-mac-reachy" class="specialKey">
       <rect class="colorMod"/>
       <text class="colorMod level0">⌥</text>
-      <text class="layerNav shortcut">fn</text>
       <use  class="layerSym" href="#glyph_return"/>
     </g>
     <g id="rightThumb-ez-reachy" class="thumb showNav">
@@ -135,14 +130,14 @@
     <use class="rightThumb" id="rightThumb-ez-mac-vim" href="#rightThumb-ez-mac"/>
 
     <!-- thumb-taps -->
-    <g id="leftThumb-tt-tucked"  class="thumb">
+    <g id="leftThumb-tt-tucked"  class="thumb showNum">
       <rect/>
       <rect class="colorMod sticky"/>
       <text class="colorMod sticky pc">shift</text>
       <use  class="layerVim" href="#glyph_caps"/>
       <text class="layerSym shortcut">num</text>
     </g>
-    <g id="leftThumb-tt-comfy"   class="thumb">
+    <g id="leftThumb-tt-comfy"   class="thumb showFun">
       <rect/>
       <rect class="holdTap colorMod"/>
       <text class="level1  colorMod pc">ctrl</text>
@@ -150,7 +145,7 @@
       <use  class="layerNav" href="#glyph_delete"/>
       <use  class="layerSym" href="#glyph_space"/>
     </g>
-    <g id="leftThumb-tt-reachy"  class="thumb showFun">
+    <g id="leftThumb-tt-reachy"  class="thumb">
       <rect/>
       <rect class="holdTap colorMod"/>
       <text class="level1  colorMod pc">os</text>
@@ -158,7 +153,7 @@
       <use  class="layerNav" href="#glyph_btab"/>
       <use  class="layerSym" href="#glyph_return"/>
     </g>
-    <g id="leftThumb-tt-mac-comfy" class="thumb">
+    <g id="leftThumb-tt-mac-comfy"   class="thumb showFun">
       <rect/>
       <rect class="holdTap colorMod"/>
       <text class="level1  colorMod mac">⌘</text>
@@ -166,7 +161,7 @@
       <use  class="layerNav" href="#glyph_delete"/>
       <use  class="layerSym" href="#glyph_space"/>
     </g>
-    <g id="leftThumb-tt-mac-reachy"  class="thumb showFun">
+    <g id="leftThumb-tt-mac-reachy"  class="thumb">
       <rect/>
       <rect class="holdTap colorMod"/>
       <text class="level1  colorMod mac">⌥</text>
@@ -174,24 +169,23 @@
       <use  class="layerNav" href="#glyph_btab"/>
       <use  class="layerSym" href="#glyph_return"/>
     </g>
-    <g id="rightThumb-tt-mac-reachy" class="thumb showFun">
+    <g id="rightThumb-tt-mac-reachy" class="thumb">
       <rect/>
       <rect class="holdTap colorMod"/>
       <text class="level1  colorMod mac">⌃</text>
       <use  class="level2" href="#glyph_return"/>
     </g>
-    <g id="rightThumb-tt-reachy" class="thumb showFun">
+    <g id="rightThumb-tt-reachy" class="thumb">
       <rect/>
       <rect class="holdTap colorMod"/>
       <text class="level1  colorMod pc">alt</text>
       <use  class="level2" href="#glyph_return"/>
     </g>
-    <g id="rightThumb-tt-comfy"  class="thumb toggleNavFun">
+    <g id="rightThumb-tt-comfy"  class="thumb showNav">
       <rect/>
       <rect class="holdTap borderNav tap-pref"/>
       <text class="level1  borderNav pc">nav</text>
       <use  class="level2" href="#glyph_space"/>
-      <text class="layerNav shortcut">fn</text>
     </g>
     <g id="rightThumb-tt-tucked" class="thumb showSym">
       <rect/>
@@ -285,7 +279,7 @@
     <use class="rightThumb" id="rightThumb-tt-mac-vim" href="#rightThumb-tt-mac"/>
 
     <!-- homerow-mods -->
-    <g id="leftThumb-hrm-comfy"   class="thumb showNav">
+    <g id="leftThumb-hrm-comfy"   class="thumb toggleNavFun">
       <rect/>
       <rect class="holdTap colorNav"/>
       <text class="level1  colorNav pc">nav</text>
@@ -307,6 +301,13 @@
       <text class="level1  colorFun pc">fn</text>
       <use  class="level2" href="#glyph_return"/>
     </g>
+    <g id="rightThumb-hrm-comfy"  class="thumb toggleNavFun">
+      <rect/>
+      <rect class="holdTap borderNav tap-pref"/>
+      <text class="level1  borderNav pc">nav</text>
+      <use  class="level2" href="#glyph_space"/>
+      <text class="layerNav shortcut">fn</text>
+    </g>
 
     <!-- homerow-mods + Emacs -->
     <g class="leftThumb"  id="leftThumb-hrm">
@@ -324,7 +325,7 @@
       <g class="tucked thumb">
         <use href="#rightThumb-tt-tucked"/>
         <g class="comfy thumb">
-          <use href="#rightThumb-tt-comfy"/>
+          <use href="#rightThumb-hrm-comfy"/>
           <g class="reachy thumb">
             <use href="#rightThumb-hrm-reachy"/>
           </g>
@@ -354,7 +355,7 @@
       <g class="tucked thumb">
         <use href="#rightThumb-tt-tucked"/>
         <g class="comfy thumb">
-          <use href="#rightThumb-tt-comfy"/>
+          <use href="#rightThumb-hrm-comfy"/>
           <g class="reachy thumb">
             <g class="key showNum">
               <rect/>
@@ -414,13 +415,7 @@
             <text class="layerSym shortcut">num</text>
           </g>
           <g class="reachy thumb">
-            <g class="key showNav">
-              <rect/>
-              <rect class="holdTap colorNav"/>
-              <text class="level1  colorNav pc">nav</text>
-              <use  class="level2"   href="#glyph_backspace"/>
-              <use  class="layerSym" href="#glyph_space"/>
-            </g>
+            <use href="#leftThumb-hrm-comfy"/>
           </g>
         </g>
       </g>
