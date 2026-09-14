@@ -2,6 +2,12 @@ const cfg = document.forms[0];
 const obj = document.querySelectorAll("object");
 const svg = obj[0]; // main keyboard display
 
+obj.forEach(item => {
+  item.addEventListener("load", () => {
+    item.className = "loaded";
+  });
+});
+
 const selected = () => document.querySelector("#menu .selected");
 
 drawKeys();
