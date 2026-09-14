@@ -41,12 +41,7 @@
     <path class="glyph" id="glyph_caps"      d="M24,7l14,20h-7v6h-14v-6h-7l14,-20 M31,38v5h-14v-5z"/>
 
     <!-- easy mode (no dual keys) -->
-    <g id="leftThumb-ez-tucked" class="specialKey">
-      <rect class="colorMod"/>
-      <text class="colorMod level0">alt</text>
-      <text class="layerSym shortcut">num</text>
-    </g>
-    <g id="leftThumb-ez-tucked" class="specialKey">
+    <g id="leftThumb-ez-tucked" class="specialKey showNum">
       <rect class="colorMod"/>
       <text class="colorMod level0">alt</text>
       <text class="layerSym shortcut">num</text>
@@ -62,7 +57,7 @@
       <text class="colorMod level0">os</text>
       <use  class="layerSym" href="#glyph_return"/>
     </g>
-    <g id="leftThumb-ez-mac-tucked" class="specialKey">
+    <g id="leftThumb-ez-mac-tucked" class="specialKey showNum">
       <rect class="colorMod"/>
       <text class="colorMod level0">⌃</text>
       <text class="layerSym shortcut">num</text>
