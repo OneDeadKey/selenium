@@ -4,7 +4,7 @@ const svg = obj[0]; // main keyboard display
 
 obj.forEach(item => {
   item.addEventListener("load", () => {
-    item.className = "loaded";
+    item.parentNode.classList.add("loaded");
   });
 });
 

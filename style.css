@@ -59,11 +59,14 @@ h3:hover a {
   display: inline;
 }
 
-form div {
+form {
+  padding: 0 1em;
+}
+
+form .menu {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  padding: 0 1em;
   margin-bottom: 1em;
   justify-content: space-between;
 }

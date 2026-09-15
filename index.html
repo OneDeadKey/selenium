@@ -16,6 +16,7 @@
     <link rel="stylesheet" href="keeb.css">
     <script src="select.js" defer></script>
     <script src="keeb.js"></script>
+
     <svg style="display: none;">
       <style>
         .glyph {
@@ -66,30 +67,41 @@
         </g>
       </defs>
     </svg>
+
     <style>
     /**
      * <object> elements have no height until their content is loaded,
      * which causes a reflow. As their aspect ratio is known (SVG viewbox),
      * <div> containers can be used to reserve the vertical space.
-     * The `loaded` class is added by JS whent their content is loaded.
+     * The `loaded` class is added by JS when their content is loaded.
      */
     object {
       width: 100%;
       opacity: 0;
     }
-    object.loaded {
-      opacity: 1;
-    }
-    div.main-view,
-    div.main-view object {
+    .main-view,
+    .main-view object {
       aspect-ratio: 88/38;
     }
-    div.keymap,
-    div.keymap object {
+    .main-view { /* url(background_main.svg) */
+      background-image: url("data:image/svg+xml, <svg xmlns='http://www.w3.org/2000/svg' viewBox='100 -25 670 275' fill='none'> %3cstyle%3e :root { color-scheme: light dark; } rect { fill: %23fff; stroke: %23666; stroke-width: .5px; opacity: 0.8; } @media (prefers-color-scheme: dark) { rect { fill: %23333; stroke: %23333; }} path { fill: rgba(130, 156, 175, 0.30); } %3c/style%3e <path d='M100-10 h730 v260 h-730z M435-10 v260'/><rect x='121' y='1' rx='4' ry='4' width='298' height='168'/><rect x='451' y='1' rx='4' ry='4' width='298' height='168'/><rect x='451' y='181' rx='4' ry='4' width='178' height='54.67'/><rect x='241' y='181' rx='4' ry='4' width='178' height='54.67'/></svg>");
+    }
+    .keymap,
+    .keymap object {
       aspect-ratio: 10/3;
     }
-    div.keymap {
+    .keymap { /* url(background.svg) */
+      background-image: url("data:image/svg+xml, <svg xmlns='http://www.w3.org/2000/svg' viewBox='100 -10 670 180' fill='none'> %3cstyle%3e :root { color-scheme: light dark; } rect { fill: %23fff; stroke: %23666; stroke-width: .5px; opacity: 0.6; } @media (prefers-color-scheme: dark) { rect { fill: %23333; stroke: %23333; }} %3c/style%3e <rect x='121' y='1' rx='4' ry='4' width='298' height='168'/><rect x='451' y='1' rx='4' ry='4' width='298' height='168'/></svg>");
+    }
+    .main-view, .keymap {
+      background-repeat: no-repeat;
       display: flex; /* XXX hack to avoid a bizarre height offset */
+    }
+    .loaded {
+      background-image: none;
+    }
+    .loaded object {
+      opacity: 1;
     }
     </style>
   </head>
@@ -100,8 +112,9 @@
       <h1>Selenium</h1>
       <p>A configurable <a href="https://github.com/OneDeadKey/arsenik">Arsenik</a>
         variant for split keyboards.</p>
+
       <form>
-        <div>
+        <div class="menu">
           <span>
             <input type="checkbox" name="vim" id="option-vim" value="vim">
             <label for="option-vim">Vim variant</label>

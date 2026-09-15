@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="100 -10 670 180" fill="none">
+  <style>
+  :root {
+    color-scheme: light dark;
+  }
+  rect {
+    fill:   #fff;
+    stroke: #666;
+    stroke-width: .5px;
+    opacity: 0.6;
+  }
+  @media (prefers-color-scheme: dark) { rect {
+    fill:   #333;
+    stroke: #333;
+  }}
+  </style>
+  <rect x="121" y="1" rx="4" ry="4" width="298" height="168"/>
+  <rect x="451" y="1" rx="4" ry="4" width="298" height="168"/>
+</svg>
