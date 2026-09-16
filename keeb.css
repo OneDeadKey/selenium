@@ -83,6 +83,7 @@ text.mac {
 text.pc, text.fn {
   font-size: 12px;
 }
+text.title,
 text.shortcut {
   font-size: 10px;
 }
@@ -95,9 +96,9 @@ text.colorNum, text.borderNum,
 text.colorFun, text.borderFun,
 text.colorSym, text.borderSym,
 text.colorMod, text.borderMod,
-.thumb use.level0,
-.thumb use.level1,
-.thumb use.level2 { opacity: 1; }
+.thumb .level0,
+.thumb .level1,
+.thumb .level2 { opacity: 1; }
 /* ugly but used for manual overrides only */
 .dimmed { opacity: 0.3 !important; }
 
@@ -124,6 +125,18 @@ use.layerVim {
 [layer3="fun"] .layerFun { display: block; }
 [layer4="sym"] .layerSym { display: block; }
 [layer4="num"] .layerNum { display: block; }
+
+[layer3="nav"] .layerVim,
+[layer3="vim"] .layerNav { display: none !important; }
+.thumb  text.title,
+.matrix text.title,
+.key:hover        use.title,
+.thumb:hover  >   use.title,
+.specialKey:hover use.title { display: none; }
+use.title,
+.key:hover        text.title,
+.thumb:hover  >   text.title,
+.specialKey:hover text.title { display: block; }
 
 #select {
   transform: translate(70px, 280px);
