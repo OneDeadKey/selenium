@@ -301,13 +301,6 @@
       <text class="level1  colorFun pc">fn</text>
       <use  class="level2" href="#glyph_return"/>
     </g>
-    <g id="rightThumb-hrm-comfy"  class="thumb toggleNavFun">
-      <rect/>
-      <rect class="holdTap borderNav tap-pref"/>
-      <text class="level1  borderNav pc">nav</text>
-      <use  class="level2" href="#glyph_space"/>
-      <text class="layerNav shortcut">fn</text>
-    </g>
 
     <!-- homerow-mods + Emacs -->
     <g class="leftThumb"  id="leftThumb-hrm">
@@ -325,7 +318,7 @@
       <g class="tucked thumb">
         <use href="#rightThumb-tt-tucked"/>
         <g class="comfy thumb">
-          <use href="#rightThumb-hrm-comfy"/>
+          <use href="#rightThumb-tt-comfy"/>
           <g class="reachy thumb">
             <use href="#rightThumb-hrm-reachy"/>
           </g>
@@ -340,10 +333,10 @@
         <g class="comfy thumb">
           <use href="#leftThumb-hrm-comfy"/>
           <g class="reachy thumb">
-            <g class="key showNum">
+            <g class="key showFun">
               <rect/>
-              <rect class="holdTap colorNum"/>
-              <text class="level1  colorNum shortcut">num</text>
+              <rect class="holdTap colorFun"/>
+              <text class="level1  colorFun pc">fn</text>
               <use  class="level2"   href="#glyph_escape"/>
               <use  class="layerSym" href="#glyph_return"/>
             </g>
@@ -355,7 +348,7 @@
       <g class="tucked thumb">
         <use href="#rightThumb-tt-tucked"/>
         <g class="comfy thumb">
-          <use href="#rightThumb-hrm-comfy"/>
+          <use href="#rightThumb-tt-comfy"/>
           <g class="reachy thumb">
             <g class="key showNum">
               <rect/>
@@ -372,13 +365,13 @@
     <g class="leftThumb"  id="leftThumb-2tk">
       <g class="tucked thumb">
         <g class="comfy thumb">
-          <g class="key">
+          <g class="key showNum">
             <rect/>
             <rect class="holdTap colorMod"/>
             <text class="level1 colorMod pc">shift</text>
             <use  class="level2"   href="#glyph_tab"/>
             <use  class="layerNav" href="#glyph_btab"/>
-            <use  class="layerSym" href="#glyph_caps"/>
+            <text class="layerSym shortcut">num</text>
           </g>
           <g class="reachy thumb">
             <use href="#leftThumb-hrm-comfy"/>
@@ -397,7 +390,13 @@
             <text class="layerNav shortcut">altgr</text>
           </g>
           <g class="reachy thumb">
-            <use href="#rightThumb-tt-comfy"/>
+            <g class="key toggleNavFun">
+              <rect/>
+              <rect class="holdTap borderNav tap-pref"/>
+              <text class="level1  borderNav pc">nav</text>
+              <use  class="level2" href="#glyph_space"/>
+              <text class="layerNav shortcut">fn</text>
+            </g>
           </g>
         </g>
       </g>
