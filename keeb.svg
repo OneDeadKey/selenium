@@ -340,10 +340,10 @@
         <g class="comfy thumb">
           <use href="#leftThumb-hrm-comfy"/>
           <g class="reachy thumb">
-            <g class="key showNum">
+            <g class="key showFun">
               <rect/>
-              <rect class="holdTap colorNum"/>
-              <text class="level1  colorNum shortcut">num</text>
+              <rect class="holdTap colorFun"/>
+              <text class="level1  colorFun pc">fn</text>
               <use  class="level2"   href="#glyph_escape"/>
               <use  class="layerSym" href="#glyph_return"/>
             </g>
