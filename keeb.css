@@ -87,9 +87,6 @@ text.title,
 text.shortcut {
   font-size: 10px;
 }
-text.shortcut {
-  text-anchor: end;
-}
 
 text.level0, use.level0,
 text.level1, use.level1,

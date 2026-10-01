@@ -198,7 +198,6 @@ const drawLabels = () => {
   const x0 = kw * 0.50;
   const x1 = kw * 0.25;
   const x2 = kw * 0.75;
-  const x3 = kw * 0.92;
 
   // const y0 = kh * 0.58;
   const y0 = kh * 0.58;
@@ -221,16 +220,8 @@ const drawLabels = () => {
     text.setAttribute("x", x2);
     text.setAttribute("y", y2);
   });
-  document.querySelectorAll(".shortcut.layerSym, .shortcut.layerNum").forEach(text => {
-    text.setAttribute("x", x3);
-    text.setAttribute("y", y2);
-  });
   document.querySelectorAll(".layerNav, .layerVim, .layerFun",).forEach(text => {
     text.setAttribute("x", x2);
-    text.setAttribute("y", y1);
-  });
-  document.querySelectorAll(".shortcut.layerNav, .shortcut.layerVim, .shortcut.layerFun",).forEach(text => {
-    text.setAttribute("x", x3);
     text.setAttribute("y", y1);
   });
   document.querySelectorAll(".specialKey .level1, .specialKey .level2").forEach(text => {
