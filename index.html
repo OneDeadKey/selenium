@@ -63,7 +63,6 @@
           <rect class="holdTap borderNav tap-pref"/>
           <text class="level1  borderNav pc">nav</text>
           <use  class="level2" href="#glyph_space"/>
-          <text class="layerNav shortcut">fn</text>
         </g>
       </defs>
     </svg>
@@ -435,12 +434,18 @@
             <text class="level1 colorMod pc">shift</text>
             <use  class="level2"   href="#glyph_tab"/>
             <use  class="layerNav" href="#glyph_btab"/>
-            <use  class="layerSym" href="#glyph_caps"/>
+            <text class="layerSym shortcut">num</text>
           </g>
           <use class="reachy" href="#nav-left"/>
         </g>
         <g class="right">
-          <use class="reachy" href="#nav-right"/>
+          <g class="reachy thumb">
+            <rect/>
+            <rect class="holdTap borderNav tap-pref"/>
+            <text class="level1  borderNav pc">nav</text>
+            <use  class="level2" href="#glyph_space"/>
+            <text class="layerNav pc">fn</text>
+          </g>
           <g class="comfy thumb">
             <rect/>
             <rect class="holdTap colorSym"/>
@@ -455,7 +460,9 @@
         the default HRM flavor: </p>
       <ul>
         <li> <i class="layer">Fn/Media</i> is activated by holding both <kbd>Nav</kbd> keys; </li>
-        <li> <kbd>Shift</kbd> and <kbd>Sym</kbd> become hold-preferred. </li>
+        <li> <kbd>Sym</kbd> and <kbd>Shift</kbd> become hold-preferred; </li>
+        <li> <kbd>Sym</kbd>+<kbd>Shift</kbd> makes <kbd>CapsLock</kbd> when tapped,
+          <i class="layer">num</i> when held.</li>
       </ul>
       <p> FTR: Selenium started as a 34-key configuration, and the name is a reference to the 34th
         element of the periodic table. This flavor used to be the default one — and would still be
@@ -656,8 +663,8 @@
           <use class="comfy"  href="#nav-left"/>
           <g class="reachy thumb">
             <rect/>
-            <rect class="holdTap colorNum"/>
-            <text class="level1  colorNum shortcut">num</text>
+            <rect class="holdTap colorFun"/>
+            <text class="level1  colorFun pc">fn</text>
             <use  class="level2"   href="#glyph_escape"/>
             <use  class="layerSym" href="#glyph_return"/>
           </g>
