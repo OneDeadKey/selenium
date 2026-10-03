@@ -307,7 +307,7 @@
     <use class="rightThumb" id="rightThumb-tt-mac-vim" href="#rightThumb-tt-mac"/>
 
     <!-- homerow-mods -->
-    <g id="leftThumb-hrm-comfy"   class="thumb toggleNavFun">
+    <g id="leftThumb-hrm-comfy"   class="thumb showNav">
       <rect/>
       <rect class="holdTap colorNav"/>
       <text class="level1  colorNav pc">nav</text>
@@ -763,8 +763,13 @@
             <text class="layerNum">@</text>
             <text class="layerNav">/</text>
           </g>
-          <g id="Semicolon" class="key home">
+          <g id="Semicolon" class="key home dual">
             <rect/>
+            <g class="pinkyHRM holdTap">
+              <rect class="borderMod tap-pref"/>
+              <text class="borderMod level1 mac">⇧</text>
+              <text class="borderMod level1 pc">sft</text>
+            </g>
             <text class="level1">;</text>
             <text class="level2">:</text>
             <text class="layerSym">"</text>

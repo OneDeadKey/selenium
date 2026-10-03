@@ -147,6 +147,7 @@ use.title,
   text-anchor: start;
 }
 
+.hrm .holdTap.pinkyHRM,
 .dual .holdTap { display: none; }
 .hrm .holdTap,
 #right[layer3="fun"] .holdTap { display: block; }
