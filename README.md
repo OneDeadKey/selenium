@@ -1,6 +1,6 @@
 # Selenium
 
-An [Arsenik] variant for split keyboards.
+An [Arsenik] variant for split keyboards, from 34 keys on.
 
 ![Selenium on a 34-key keyboard](./selenium.png)
 
