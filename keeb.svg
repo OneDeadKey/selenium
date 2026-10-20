@@ -878,7 +878,7 @@
                   <text class="layerNav">7</text>
                   <use  class="layerVim title" href="#glyph_pgdown"/>
                   <text class="layerVim title">pg.dn</text>
-                  <text class="layerFun shortcut">next</text>
+                  <text class="layerFun shortcut">prev</text>
                 </g>
                 <g id="KeyJ" class="key home dual">
                   <rect/>
@@ -902,7 +902,7 @@
                   <text class="layerNum">,</text>
                   <text class="layerNav">1</text>
                   <text class="layerVim">🖰↓</text>
-                  <text class="layerFun shortcut">prev</text>
+                  <text class="layerFun shortcut">next</text>
                 </g>
               </g>
 
