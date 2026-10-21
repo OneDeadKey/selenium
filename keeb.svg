@@ -761,7 +761,8 @@
             <text class="level2">P</text>
             <text class="layerSym">`</text>
             <text class="layerNum">@</text>
-            <text class="layerNav">/</text>
+            <text class="layerNav shortcut" dx="-1em">numpad</text>
+            <text class="layerVim shortcut" dx="-1em">numpad</text>
           </g>
           <g id="Semicolon" class="key home dual">
             <rect/>
@@ -915,6 +916,7 @@
                     <text class="level2">Y</text>
                     <text class="layerSym">@</text>
                     <text class="layerNum">^</text>
+                    <text class="layerNav">/</text>
                     <use  class="layerVim title" href="#glyph_home"/>
                     <text class="layerVim title">home</text>
                   </g>
