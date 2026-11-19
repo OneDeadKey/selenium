@@ -691,7 +691,8 @@
                     <text class="layerNum">%</text>
                     <use  class="layerNav title" href="#glyph_pgup"/>
                     <text class="layerNav title">pg.up</text>
-                    <text class="layerVim"></text>
+                    <use  class="layerVim title" href="#glyph_delete"/>
+                    <text class="layerVim title">del</text>
                   </g>
                   <g id="KeyG" class="key home">
                     <rect/>
@@ -762,6 +763,7 @@
             <text class="layerSym">`</text>
             <text class="layerNum">@</text>
             <text class="layerNav">/</text>
+            <text class="layerFun shortcut">scrlk</text>
           </g>
           <g id="Semicolon" class="key home dual">
             <rect/>
@@ -786,6 +788,7 @@
             <text class="layerNum">/</text>
             <text class="layerNav">.</text>
             <text class="layerVim"></text>
+            <text class="layerFun shortcut">ins</text>
           </g>
         </g>
 
