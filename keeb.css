@@ -130,6 +130,7 @@ use.layerVim {
 [layer3="vim"] .layerNav { display: none !important; }
 .thumb  text.title,
 .matrix text.title,
+.specialKey text.title,
 .key:hover        use.title,
 .thumb:hover  >   use.title,
 .specialKey:hover use.title { display: none; }
@@ -137,6 +138,12 @@ use.title,
 .key:hover        text.title,
 .thumb:hover  >   text.title,
 .specialKey:hover text.title { display: block; }
+
+[layer3]:not([layer3="nav"]) .matrix .key:hover text.title.layerNav,
+[layer3]:not([layer3="vim"]) .matrix .key:hover text.title.layerVim,
+[layer3]:not([layer3="fun"]) .matrix .key:hover text.title.layerFun,
+[layer4]:not([layer4="sym"]) .matrix .key:hover text.title.layerSym,
+[layer4]:not([layer4="num"]) .matrix .key:hover text.title.layerNum { display: none; }
 
 #select {
   transform: translate(70px, 280px);
