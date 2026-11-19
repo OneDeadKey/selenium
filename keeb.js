@@ -105,6 +105,7 @@ function setGeometry(name) {
 
 let vimVariant = false;
 let funState = false;
+let currentFlavor;
 
 function setLayer3(id) {
   document.querySelector("#left").setAttribute("layer3", id);
@@ -130,7 +131,12 @@ const resetNavFun  = () => { funState ? showFun() : showNav(); };
 
 function setConfig(flavor, vim, mac) {
   vimVariant = vim;
-  resetNavFun();
+  if (flavor !== currentFlavor) {
+    currentFlavor = flavor;
+    showNav();
+  } else {
+    resetNavFun();
+  }
   showSym();
 
   const mode = vim ? "-vim" : "";
