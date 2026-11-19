@@ -130,6 +130,7 @@ use.layerVim {
 [layer3="vim"] .layerNav { display: none !important; }
 .thumb  text.title,
 .matrix text.title,
+.specialKey text.title,
 .key:hover        use.title,
 .thumb:hover  >   use.title,
 .specialKey:hover use.title { display: none; }
